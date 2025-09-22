@@ -20,6 +20,7 @@ urlpatterns = [
     path('vendeur/mystore/<uuid:id>/',mystore_index, name="mystore_index"),
     path('vendeur/mystore/<uuid:id>/promotions', mystore_promotion, name="mystore_promotion"),
     path('vendeur/mystore/<uuid:id>/<uuid:id2>/', mystore_details, name="mystore_details"),
+    path('import-data/', import_database, name='import_data'),
 ]
 
 # Configuration des handlers d'erreur
