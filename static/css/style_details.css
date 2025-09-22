@@ -1,0 +1,87 @@
+    :root{
+      --bg: #F7FAFC;
+      --card: #FFFFFF;
+      --muted: #6B7280;
+      --accent: #0EA5A4;
+      --accent-2: #0B7285;
+      --shadow: 0 6px 20px rgba(2,6,23,0.08);
+      --radius: 14px;
+      --max-width: 1200px;
+    }
+
+    *{box-sizing:border-box;}
+    body{
+      margin:0;font-family:'Inter',sans-serif;
+      background:var(--bg);
+      color:#0f172a;
+      scroll-behavior:smooth;
+      line-height:1.6;
+    }
+    .container{max-width:var(--max-width);margin:0 auto;padding:24px}
+
+    /* Product detail */
+    .product-detail{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}
+    @media(max-width:900px){
+      .product-detail{grid-template-columns:1fr;}
+    }
+
+    /* Carousel  ;box-shadow:var(--shadow) */
+    .carousel{position:relative;overflow:hidden;border-radius:var(--radius)}
+    .carousel img{width:100%;display:none; border-radius:var(--radius);transition:opacity .5s ease}
+    .carousel img.active{display:block;opacity:1;}
+    .carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:white;border:none;padding:10px 14px;cursor:pointer;font-size:18px;border-radius:50%;transition:background .2s}
+    .carousel-btn:hover{background:rgba(0,0,0,0.7);}
+    .prev{left:10px}
+    .next{right:10px}
+
+    /* Infos produit */
+    .product-info h2{margin-top:0;font-size:28px;font-weight:700;color:#111827;}
+    .price{font-size:24px;font-weight:700;color:var(--accent);margin:10px 0;}
+    .product-info ul{padding-left:20px;margin:10px 0 20px 0;}
+    .product-info li{margin-bottom:8px;}
+
+    .btn{background:var(--accent);color:white;padding:12px 20px;border:none;border-radius:var(--radius);cursor:pointer;font-weight:600;box-shadow:var(--shadow);margin-right:10px;transition:transform .2s, background .2s}
+    .btn:hover{transform:scale(1.05); background:var(--accent-2);}
+    .btn.whatsapp{background:#25D366;}
+    .btn.whatsapp:hover{background:#1ebe5c;}
+
+    /* Description */
+    .product-description h3{margin-top:0;font-size:22px;color:#111827;}
+    .product-description p{margin-bottom:12px;color:#374151;}
+
+.link-container {
+        display: flex;
+        margin: 25px 0;
+        background: #f8f9fa;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .link-input {
+        flex-grow: 1;
+        padding: 12px 15px;
+        border: none;
+        background: transparent;
+        font-size: 16px;
+        color: #2c3e50;
+    }
+
+    .copy-btn {
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        min-width: 100px;
+    }
+
+    .copy-btn:hover {
+        background: #2980b9;
+    }
+
+    .copy-btn.copied {
+        background: #27ae60;
+    }

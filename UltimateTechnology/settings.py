@@ -11,11 +11,18 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
+import dj_database_url
+import environ
+from dotenv import load_dotenv
 
 from django.conf.global_settings import MEDIA_URL, DEBUG
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+#env = environ.Env()
+#environ.Env.read_env()
+load_dotenv()
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,21 +32,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+w=+_m4c*8azlf=3h&y1pvd@u#$q!i*+wb33#9xy_2hd^m_x!r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 SHOW_CUSTOM_ERRORS = True
 
-ALLOWED_HOSTS = ['4db1350b6a7c90.lhr.life', '127.0.0.1', 'localhost']
-CSRF_TRUSTED_ORIGINS = [
+#ALLOWED_HOSTS = ['4db1350b6a7c90.lhr.life', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
+"""CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
     'http://127.0.0.1:8000',
     'https://4db1350b6a7c90.lhr.life',
-]
+]"""
 
 import time
 META_VERSION = int(time.time())  # Timestamp actuel
 
 # Application definition
-
+import whitenoise
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -47,12 +55,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     'vente_pc',
     'django_resized',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -95,11 +105,18 @@ WSGI_APPLICATION = 'UltimateTechnology.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
+"""
+
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 # Password validation
