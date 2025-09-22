@@ -1,0 +1,17 @@
+
+
+
+.section{margin-bottom:60px;}
+.section.bg-white{background:var(--card);padding:30px;border-radius:var(--radius);box-shadow:var(--shadow);}
+.section img{max-width:100%;border-radius:var(--radius);box-shadow:var(--shadow);}
+
+/* Mission / Vision */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+@media(max-width:900px){.grid-2{grid-template-columns:1fr;}}
+
+/* Équipe */
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
+.team-member{background:var(--card);padding:20px;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow);}
+.team-member img{width:120px;height:120px;border-radius:50%;margin-bottom:12px;}
+.team-member h4{margin:0 0 6px 0;}
+.team-member p{margin:0;font-size:14px;color:var(--muted);}

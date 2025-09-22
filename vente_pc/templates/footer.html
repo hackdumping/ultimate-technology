@@ -1,0 +1,151 @@
+<!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 translate="no" >Ultimate-Technology</h3>
+                    <p>Votre spécialiste en ordinateurs et matériel informatique. Nous proposons les meilleurs produits aux meilleurs prix.</p>
+
+                </div>
+                
+                <div class="footer-column">
+                    <h3 id="categories">Catégories</h3>
+                    <ul>
+                        <li><a href="#categories">Ordinateurs Portables</a></li>
+                        <li><a href="#categories">PC de Bureau</a></li>
+                        <li><a href="#categories">PC Gamer</a></li>
+                        <li><a href="#categories">Accessoires</a></li>
+                        <li><a href="#categories">Périphériques</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 id="informations">Informations</h3>
+                    <ul>
+                        <li><a href="{% url 'a-propos' %}">À propos de nous</a></li>
+                        <li><a href="#informations">Livraison</a></li>
+                        <li><a href="#informations">Politique de confidentialité</a></li>
+                        <li><a href="#informations">Conditions générales</a></li>
+                        <li><a href="#informations">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Douala, Cameroun</li>
+                        <li><i class="fas fa-phone"></i> +237 658 562 221</li>
+                        <li><i class="fas fa-envelope"></i> hackdumping@gmail.com</li>
+                    </ul>
+                    
+                    <div class="social-icons">
+                        <a class="icon_contact" href="https://www.facebook.com/profile.php?id=61576774057709" title="page facebook utltimate-technology" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <!--<a class="icon_contact" href="#informations"><i class="fab fa-youtube"></i></a>
+                        <a class="icon_contact" href="#informations"><i class="fab fa-instagram"></i></a>-->
+                        <a class="icon_contact" href="https://wa.me/+237658630407" target="_blank" title="compte whatsapp de l'admin"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Inscrivez-vous à notre newsletter pour recevoir nos offres exclusives</p>
+                    <form id="form1" method="POST" class="newsletter">
+                        <input type="email" id="email_client" name="email_client" placeholder="Votre adresse email" required>
+                        <button type="submit" id="btnFooter" class="btn">S'inscrire</button>
+                    </form>
+                    <form id="form2" method="POST" style="display:none">
+                        <input type="email" id="client_email" name="email_client" placeholder="Votre adresse email" required>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span>  Ultimate-Technology - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+
+    // ===== SOLUTION SIMPLIFIÉE SANS CORS =====
+function checkInternetConnection() {
+    return new Promise((resolve) => {
+        // 1. Vérification basique
+        if (typeof navigator.onLine !== 'undefined' && !navigator.onLine) {
+            resolve(false);
+            return;
+        }
+
+        // 2. Méthode image pour éviter CORS
+        const img = new Image();
+        let timer = setTimeout(() => {
+            resolve(false);
+        }, 3000);
+
+        img.onload = function() {
+            clearTimeout(timer);
+            resolve(true);
+        };
+
+        img.onerror = function() {
+            clearTimeout(timer);
+            resolve(false);
+        };
+
+        // URL avec cache-buster
+        img.src = 'https://www.google.com/favicon.ico?t=' + Date.now();
+    });
+}
+
+// ===== FONCTION TOAST =====
+function showToast(message) {
+    // Implementation simple du toast
+    const toast = document.createElement('div');
+    toast.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 15px 20px;
+        background: #ff6b6b;
+        color: white;
+        border-radius: 8px;
+        z-index: 10000;
+        max-width: 300px;
+    `;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        document.body.removeChild(toast);
+    }, 5000);
+}
+    document.getElementById('form1').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        // Vérification de connexion sans CORS
+        const isConnected = await checkInternetConnection();
+
+        if (!isConnected) {
+            showToast('❌ Connexion internet requise. Veuillez vérifier votre connexion.');
+            return false;
+        }
+
+        email = document.getElementById('email_client').value;
+
+        const btn = document.getElementById('btnFooter');
+        const originalText = btn.textContent;
+
+        btn.innerHTML = 'Inscription reussi ! <i class="material-icons" style="font-size:0.7rem;font-weight:bold" >check</i>';
+        // Revenir après 1 seconde
+        setTimeout(function() {
+           btn.textContent = originalText;
+        }, 2000);
+
+        document.getElementById('client_email').value = email;
+        document.getElementById('form2').submit();
+
+        document.querySelectorAll('form')[2].reset()
+        document.querySelectorAll('form')[3].reset();
+    });
+
+
+</script>

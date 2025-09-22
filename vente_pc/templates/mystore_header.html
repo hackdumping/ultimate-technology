@@ -1,0 +1,42 @@
+{% load static %}
+<!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+       <a href="/#home" style="color:var(--text);display:block;text-decoration:none;cursor:pointer">
+      <div class="logo" translate="no">
+        <div class="mark" style="background:none"><img src="{% static 'images/ut_logo.png' %}" width="90px" height="90px" style="margin-top:0.5rem;margin-right:0.3rem"></div>
+        <div>
+          <div>Ultimate-Technology</div>
+          <div style="font-size:12px;color:var(--muted)">Boutique d'ordinateurs</div>
+        </div>
+      </div>
+      </a>
+      <nav class="main-nav">
+        <a href="{% url 'mystore_index' id=vendeur.id %}">Accueil</a>
+        <a href="{% url 'mystore_index' id=vendeur.id %}#shop">Boutique</a>
+        <a href="{% url 'mystore_promotion' id=vendeur.id %}">Promotions</a>
+        <!--<a href="{% url 'login_vendeur' %}">Vendeur</a>
+        <a href="{% url 'a-propos' %}">À propos</a>
+        <a href="{% url 'contact' %}">Contact</a>-->
+      </nav>
+      <div class="actions">
+        <div class="search" style="display:none">
+          <input id="searchInput" placeholder="Rechercher (ex: Dell, i7, 16GB)" aria-label="Recherche produits" />
+        </div>
+        <button id="themeToggle" class="icon-btn">🌙</button>
+        <button class="icon-btn mobile-menu-btn">≡</button>
+        <button id="cartBtn" class="icon-btn cart-btn">🛒<span style="display: block; position: absolute; top:-2px; right:0;" id="cartCount" class="cart-count" style="display:none">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu mobile -->
+  <nav id="mobileNav" class="mobile-nav">
+    <div class="mobile-nav-close" id="closeMobileNav">✕</div>
+    <a href="/#home">Accueil</a>
+    <a href="/#shop">Boutique</a>
+    <a href="{% url 'mystore_promotion' id=vendeur.id %}">Promotions</a>
+    <!--<a href="{% url 'login_vendeur' %}">Vendeur</a>
+    <a href="{% url 'a-propos' %}">À propos</a>
+    <a href="{% url 'contact' %}">Contact</a>-->
+  </nav>

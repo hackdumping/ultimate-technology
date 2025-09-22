@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Récupération de Compte - Ultimate-Technology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .email-container {
+            max-width: 550px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .content {
+            padding: 35px;
+        }
+
+        .security-icon {
+            text-align: center;
+            font-size: 65px;
+            margin-bottom: 25px;
+            color: #667eea;
+        }
+
+        .title {
+            color: #2c3e50;
+            font-size: 26px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .message {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.7;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .credentials-container {
+            background: linear-gradient(to right, #f8f9fa, #f1f3f5);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .credential-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .credential-label {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+
+        .credential-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #667eea;
+            letter-spacing: 1.5px;
+            padding: 8px 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border: 1px dashed #ddd;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #2c3e50;
+            border: 1px solid #ddd;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .security-tips {
+            background: #fff3cd;
+            color: #856404;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid #ffc107;
+        }
+
+        .security-tips h3 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            gap: 10px;
+        }
+
+        .tip-icon {
+            color: #856404;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .social-links {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-link {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 15px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .unsubscribe {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #95a5a6;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                padding: 25px 20px;
+            }
+
+            .header {
+                padding: 25px 20px;
+            }
+
+            .security-icon {
+                font-size: 55px;
+            }
+
+            .title {
+                font-size: 22px;
+            }
+
+            .credential-box {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- En-tête -->
+        <div class="header">
+            <div class="logo">ULTIMATE-TECHNOLOGY</div>
+            <div class="tagline">Votre partenaire technologique de confiance</div>
+        </div>
+
+        <!-- Contenu principal -->
+        <div class="content">
+            <div class="security-icon">
+                <i class="fas fa-key"></i>
+            </div>
+            <h1 class="title">Informations de votre compte</h1>
+
+            <p class="message">
+                Vous avez demandé la récupération des informations de votre compte.
+                Voici votre code unique et votre mot de passe.
+            </p>
+
+            <div class="credentials-container">
+                <div class="credential-box">
+                    <div class="credential-label">
+                        <i class="fas fa-code"></i> Code de récupération
+                    </div>
+                    <div class="credential-value">{{ vendeur.id }}</div>
+                </div>
+
+                <div class="credential-box">
+                    <div class="credential-label">
+                        <i class="fas fa-lock"></i> Mot de passe
+                    </div>
+                    <div class="credential-value">{{ vendeur.mdp }}</div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="{{ root }}/vendeur/login/" class="btn btn-primary">
+                    <i class="fas fa-sign-in-alt"></i> Se connecter
+                </a>
+            </div>
+
+            <div class="security-tips">
+                <h3><i class="fas fa-shield-alt"></i> Conseils de sécurité</h3>
+
+                <div class="tip">
+                    <span class="tip-icon">•</span>
+                    <span>Ne partagez jamais vos informations de connexion avec personne</span>
+                </div>
+
+                <div class="tip">
+                    <span class="tip-icon">•</span>
+                    <span>Changez votre mot de passe régulièrement pour plus de sécurité</span>
+                </div>
+
+                <div class="tip">
+                    <span class="tip-icon">•</span>
+                    <span>Utilisez un mot de passe unique pour chaque service en ligne</span>
+                </div>
+
+                <div class="tip">
+                    <span class="tip-icon">•</span>
+                    <span>Si vous suspectez une activité suspecte, contactez-nous immédiatement</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pied de page -->
+        <div class="footer">
+            <div class="social-links" style="padding:5px">
+                <a href="https://wa.me/237658630407" class="social-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i>WhatsApp
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61576774057709" class="social-link" target="_blank">
+                    <i class="fab fa-facebook"></i>Facebook
+                </a>
+                <a href="mailto:hackdumping@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>Email
+                </a>
+            </div>
+
+            <div class="contact-info">
+                <p>Ultimate-Technology © 2025. Tous droits réservés.</p>
+                <p>Service client: (+237) 658-630-407 | Email: hackdumping@gmail.com</p>
+                <p>Heures d'ouverture: Lun - Sam: 8h - 18h</p>
+            </div>
+
+            <div class="unsubscribe">
+                <p>Vous recevez cet email suite à une demande de récupération de compte sur Ultimate-Technology.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

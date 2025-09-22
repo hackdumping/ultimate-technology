@@ -1,0 +1,144 @@
+{% extends 'squelette_vendeur.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero" id="home">
+      <div>
+        <h2 id="bVendeur" translate="no">#{{ vendeur.nom }}</h2>
+          <!-- Bouton pour ouvrir la boîte de dialogue (exemple) -->
+        <button onclick="openLogoutDialog()" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Se déconnecter
+        </button>
+
+          {% if vendeur.forfait.nom == "Confort" %}
+          <h4 style="margin-top:2rem">Partager votre boutique</h4>
+        <div class="link-container" style="background:var(--card);border:1px solid var(--text);margin-top:0" translate="no">
+              <i style="display:block;margin:0.6rem;color:var(--text)" class="large material-icons">share</i>
+              <input style="border-left:1px solid var(--text);color:var(--text);width:30%" type="text" class="link-input" id="link-to-copy" value="{{ url }}" readonly>
+            <button class="copy-btn" id="copy-button" translate="yes" style="font-size:0.8rem;width:0.8rem">Copier</button>
+        </div>
+          {% endif %}
+          <h1>Gerer facilement vos produits ici</h1>
+        <p>Augmenter votre visibilité et facilité la gestion de vos prosuits </p>
+        <div class="cta">
+          <a href="{% url 'ajouter_produit' %}" id="shopNow" class="btn" style="width:12rem">Ajouter des produits</a>
+        </div>
+      </div>
+
+      <!-- Boîte de dialogue de confirmation -->
+        <div id="logoutDialog" class="dialog-overlay" >
+            <div class="dialog-box" style="background:var(--card)">
+                <div class="dialog-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h2 class="dialog-title" style="color:var(--text)">Confirmer la déconnexion</h2>
+                <p class="dialog-message">Êtes-vous sûr de vouloir vous déconnecter ? Vous devrez vous reconnecter pour accéder à votre compte.</p>
+                <form method="POST" id="confirmForm">
+                    {% csrf_token %}
+                    <div class="dialog-buttons">
+                        <button class="dialog-btn btn-cancel" onclick="closeDialog()">
+                            Annuler
+                        </button>
+                        <button type="submit" name="submit" class="dialog-btn btn-confirm">
+                            Se déconnecter
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+      <div class="hero-visual">
+        <img src="{% static 'images/hope.gif' %}" alt="Ordinateur moderne" style="max-width:100%;border-radius:10px"/>
+      </div>
+    </section>
+    <a href="/#home" class="scroll-btn scroll-up fixed-btn"  title="Remonter en haut">
+        ⬆
+    </a>
+
+    <!-- Controls: category, sort, price -->
+    <div class="controls" id="shop">
+      <div>
+        <label class="small">Catégorie</label>
+        <select id="categoryFilter">
+          <option value="all">Tout</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="small">Trier par</label>
+        <select id="sortSelect">
+          <option value="popular">Ajout récent</option>
+          <option value="price-asc">Prix croissant</option>
+          <option value="price-desc">Prix décroissant</option>
+          <option value="name-asc">A → Z</option>
+        </select>
+      </div>
+
+      <div style="flex:1">
+        <label class="small">Rechercher</label>
+        <input id="miniSearch" placeholder="Filtrer noms ou specs" style="width:100%;padding:10px;border-radius:10px;border:1px solid #e6eef2" />
+      </div>
+
+      <div style="margin-left:auto">
+        <label class="small">Prix max</label>
+        <div class="range-wrap"><input id="priceRange" type="range" min="0" max="1000000" step="5000" value="1000000" /></div>
+        <div style="font-size:13px;color:var(--muted)" id="priceLabel">Jusqu'à —</div>
+      </div>
+    </div>
+
+    <!-- Products grid -->
+    <div class="grid" id="products" aria-live="polite"></div>
+
+    <!-- Product Modal
+    <div id="overlay" class="overlay"></div>
+    <div id="productModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <button id="closeModal" class="close" aria-label="Fermer">✕</button>
+      <div id="modalContent"></div>
+    </div>-->
+
+    <script>
+
+
+    // quick handlers
+    document.getElementById('shopNow').addEventListener('click', ()=>{ document.querySelector('#shop').scrollIntoView({behavior:'smooth'})});
+
+        // Afficher/masquer le bouton fixe selon la position
+        window.addEventListener('scroll', function() {
+            const fixedBtn = document.querySelector('.fixed-btn');
+            if (window.scrollY > 500) {
+                fixedBtn.style.display = 'flex';
+            } else {
+                fixedBtn.style.display = 'none';
+            }
+        });
+
+        // Masquer initialement le bouton fixe
+        document.querySelector('.fixed-btn').style.display = 'none';
+
+        //copier le lien
+  function setupCopyButton(buttonId, inputId) {
+    const copyButton = document.getElementById(buttonId);
+    const linkInput = document.getElementById(inputId);
+
+    copyButton.addEventListener('click', function() {
+        // Copier le texte
+        linkInput.select();
+        navigator.clipboard.writeText(linkInput.value).then(function() {
+            // Changer le texte du bouton temporairement
+            const originalText = copyButton.textContent;
+            copyButton.innerHTML = 'Copié ! <i class="material-icons" style="font-size:1rem;font-weight:bold" >check</i>';
+            // Revenir après 1 seconde
+            setTimeout(function() {
+                copyButton.textContent = originalText;
+
+            }, 1000);
+        });
+    });
+    }
+    //document.getElementById('link-to-copy').value = document.URL ;
+
+    setupCopyButton('copy-button', 'link-to-copy');
+        // Masquer le panier
+    panier = document.getElementById('cartBtn');
+    panier.style.display = 'none';
+    </script>
+{% endblock %}

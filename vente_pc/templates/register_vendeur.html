@@ -1,0 +1,137 @@
+{% load static %}
+{% include 'metadata_connexion.html' %}
+<body>
+  {% include 'header.html' %}
+
+  <main>
+    <div class="form-box">
+      <h2>Inscription vendeur</h2>
+      <p style="color: red; font-size : 0.9rem; margin-bottom:25px;text-align:center">{{ msg }}</p>
+      <p style="color: red; font-size : 0.9rem; margin-bottom:25px;text-align:center">{{ msg2 }}</p>
+      <form method="POST" id="registerForm" enctype="multipart/form-data">
+          {% csrf_token %}
+        <div class="form-group">
+          <input type="text" id="company" name="company" placeholder=" " value="{{ donnees.nom }}" required>
+          <label for="company">Nom de la société *</label>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder=" " value="{{ donnees.tel }}" required>
+          <label for="whatsapp">Numéro WhatsApp *</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder=" " value="{{ donnees.email }}" required>
+          <label for="email">Adresse e-mail *</label>
+        </div>
+        <div class="form-group">
+          <input type="password" id="password" name="password" placeholder=" " value="{{ donnees.mdp }}" required>
+          <label for="password">Mot de passe *</label>
+          <span class="toggle-eye" id="eye1">👁️</span>
+        </div>
+        <div class="form-group">
+          <input type="password" id="confirm" name="confirm" placeholder=" " value="{{ donnees.mdp2 }}" required>
+          <label for="confirm">Confirmer le mot de passe *</label>
+          <span class="toggle-eye" id="eye2">👁️</span>
+        </div>
+        <div class="form-group">
+          <input type="text" id="pays" name="pays" placeholder=" " value="{{ donnees.pays }}" required>
+          <label for="shipping">Pays *</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="ville" name="ville" placeholder=" " value="{{ donnees.ville }}" required>
+          <label for="shipping">Ville *</label>
+        </div>
+        <div class="form-group">
+          <input type="number" id="shipping" name="frais" placeholder=" " min="0" value="{{ donnees.frais }}" required>
+          <label for="shipping">Frais de livraison (ville) *</label>
+        </div>
+        <div class="form-group">
+          <select id="plan" name="plan" required>
+            {% for forfait in forfaits %}
+            <option value="{{ forfait.nom }}">{{ forfait.nom }} — {{ forfait.prix }} XAF / mois</option>
+            {% endfor %}
+          </select>
+          <label for="plan">Forfait *</label>
+        </div>
+        <div class="form-group">
+          <input type="file" id="societe" name="logo" accept=".jpg,.jpeg,.png,.svg">
+          <label for="shipping">Logo de la société</label>
+        </div>
+        <button type="submit" id="registerBtn" class="btn">S'inscrire</button>
+        <div class="form-footer">
+          Déjà inscrit ? <a href="{% url 'login_vendeur' %}">Se connecter</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  {% include 'footer.html' %}
+  <script src="{% static 'js/source.js' %}"></script>
+<script>
+
+     if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('registerForm');
+
+            form.addEventListener('submit', function() {
+                // Changer l'URL sans recharger la page
+                if (window.history.replaceState) {
+                    window.history.replaceState(null, null, window.location.href);
+                }
+            });
+        });
+
+     document.getElementById('registerForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        // Vérification de connexion sans CORS
+        const isConnected = await checkInternetConnection();
+
+        if (!isConnected) {
+            showToast('❌ Connexion internet requise. Veuillez vérifier votre connexion.');
+            return false;
+        }
+        document.getElementById('registerForm').submit();
+
+        document.getElementById('registerForm').reset()
+
+    });
+
+    document.getElementById('eye1').addEventListener('click', () => {
+      const input = document.getElementById('password'); //eye.previousElementSibling;
+      if (input.type === "password") {
+        input.type = "text";
+        document.getElementById('eye1').textContent = "🙈";
+      } else {
+        input.type = "password";
+        document.getElementById('eye1').textContent = "👁️";
+      }
+    });
+
+    document.getElementById('eye2').addEventListener('click', () => {
+      const input = document.getElementById('confirm'); //eye.previousElementSibling;
+      if (input.type === "password") {
+        input.type = "text";
+        document.getElementById('eye2').textContent = "🙈";
+      } else {
+        input.type = "password";
+        document.getElementById('eye2').textContent = "👁️";
+      }
+    });
+
+        // Masquer le panier
+    panier = document.getElementById('cartBtn');
+    panier.style.display = 'none';
+
+    // Mobile nav
+    document.querySelector('.mobile-menu-btn').addEventListener('click',()=>document.getElementById('mobileNav').classList.add('open'));
+    document.getElementById('closeMobileNav').addEventListener('click',()=>document.getElementById('mobileNav').classList.remove('open'));
+    document.addEventListener('click', function(event){
+      if(!document.getElementById('mobileNav').contains(event.target) && event.target !== document.querySelector('.mobile-menu-btn')){
+        document.getElementById('mobileNav').classList.remove('open');
+      }
+    });
+</script>
+
+</body>
+</html>

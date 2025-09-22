@@ -1,0 +1,75 @@
+{%include 'metadata.html' %}
+{% include 'header.html' %}
+{% load static %}
+<body>
+  <!-- Page À propos -->
+  <main class="container">
+    <!-- Présentation entreprise -->
+    <section class="section bg-white" style="color:var(--text)">
+      <h1 style="color:var(--text)" >À propos de Ultimate-Technology</h1>
+      <p style="color:var(--text)">
+        Ultimate-Technology est votre boutique spécialisée dans la vente d'ordinateurs portables et de bureau au Cameroun.
+        Nous combinons expertise technique et service client exceptionnel pour offrir la meilleure expérience d'achat possible.
+      </p>
+      <p style="color:var(--text)">
+        Depuis notre création, notre objectif est de fournir des produits de qualité, adaptés aux besoins des professionnels, gamers et étudiants.
+        Nous mettons un point d'honneur à accompagner nos clients dans le choix et l’utilisation de leurs équipements informatiques.
+      </p>
+    </section>
+
+    <!-- Mission / Vision -->
+    <section class="section grid-2">
+      <div>
+        <h2 style="color:var(--text)">Notre Mission</h2>
+        <p style="color:var(--text)">
+          Fournir des ordinateurs et accessoires performants et fiables, tout en garantissant un service après-vente irréprochable.
+          Nous voulons que chaque client reparte satisfait et bien équipé pour ses projets.
+        </p>
+      </div>
+      <div>
+        <h2 style="color:var(--text)">Notre Vision</h2>
+        <p style="color:var(--text)">
+          Devenir la référence incontournable au Cameroun pour l’achat et le conseil en informatique,
+          en mettant l’accent sur la qualité, l’innovation et la proximité avec nos clients.
+        </p>
+      </div>
+    </section>
+
+    <!-- Équipe -->
+    <section class="section bg-white">
+      <h2 style="color:var(--text)">Notre Équipe</h2>
+      <div class="team">
+          {% for staff in staffs %}
+        <div class="team-member">
+          <img src="{{ staff.image.url }}" alt="{{ staff.nom }}">
+          <h4>{{ staff.nom }}</h4>
+            {% if staff.alias != "" %}
+            <p style="font-size:0.8rem">{{ staff.alias }}</p>
+            {% endif %}
+          <p>{{ staff.role }}</p>
+        </div>
+          {% endfor %}
+
+      </div>
+    </section>
+  </main>
+
+{% include 'footer.html' %}
+
+  <script src="{% static 'js/source.js' %}"></script>
+  <script>
+   // Mobile nav
+    document.querySelector('.mobile-menu-btn').addEventListener('click',()=>document.getElementById('mobileNav').classList.add('open'));
+    document.getElementById('closeMobileNav').addEventListener('click',()=>document.getElementById('mobileNav').classList.remove('open'));
+    document.addEventListener('click', function(event){
+      if(!document.getElementById('mobileNav').contains(event.target) && event.target !== document.querySelector('.mobile-menu-btn')){
+        document.getElementById('mobileNav').classList.remove('open');
+      }
+    });
+
+        // Masquer le panier
+    panier = document.getElementById('cartBtn');
+    panier.style.display = 'none';
+  </script>
+</body>
+</html>

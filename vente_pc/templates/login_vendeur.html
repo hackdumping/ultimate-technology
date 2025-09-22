@@ -1,0 +1,94 @@
+{% load static %}
+{% include 'metadata_connexion.html' %}
+<body>
+  {% include 'header.html' %}
+
+  <main>
+    <div class="form-box">
+      <h2>Connexion vendeur</h2>
+      <form method="POST" id="loginForm">
+          {% csrf_token %}
+        <p style="color: red; font-size : 0.9rem; margin-bottom:25px;text-align:center">{{ msg }}</p>
+        <div class="form-group">
+          <input type="text" id="code" name="code" placeholder=" " value="{{ donnees.code }}" required>
+          <label for="code">Code unique (attribué par admin)</label>
+        </div>
+        <div class="form-group">
+          <input type="password" id="loginPass" name="password" placeholder=" " value="{{ donnees.mdp }}" required>
+          <label for="loginPass">Mot de passe</label>
+          <span class="toggle-eye">👁️</span>
+        </div>
+        <button type="submit" id="loginBtn" class="btn">Se connecter</button>
+        <div class="form-footer">
+          <a href="{% url 'recover_vendeur' %}">Mot de passe ou code oublié ?</a><br><br>
+          <a href="{% url 'register_vendeur' %}">Pas encore de compte ?</a><br><br>
+          Besoin d'aide ? <a href="https://wa.me/{{ numero }}" target="_blank">Contactez l'admin</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  {% include 'footer.html' %}
+
+  <script src="{% static 'js/source.js' %}"></script>
+ <script>
+
+        // Masquer le panier
+    panier = document.getElementById('cartBtn');
+    panier.style.display = 'none';
+
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('loginForm');
+
+            form.addEventListener('submit', function() {
+                // Changer l'URL sans recharger la page
+                if (window.history.replaceState) {
+                    window.history.replaceState(null, null, window.location.href);
+                }
+            });
+        });
+
+    document.getElementById('loginForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        // Vérification de connexion sans CORS
+        const isConnected = await checkInternetConnection();
+
+        if (!isConnected) {
+            showToast('❌ Connexion internet requise. Veuillez vérifier votre connexion.');
+            return false;
+        }
+
+        document.getElementById('loginForm').submit();
+
+        document.getElementById('loginForm').reset()
+
+    });
+
+          // Toggle password visibility
+document.querySelectorAll('.toggle-eye').forEach(eye => {
+    eye.addEventListener('click', () => {
+      const loginPass = document.getElementById('loginPass'); //eye.previousElementSibling;
+      if (loginPass.type === "password") {
+        loginPass.type = "text";
+        eye.textContent = "🙈";
+      } else {
+        loginPass.type = "password";
+        eye.textContent = "👁️";
+      }
+    });
+  });
+
+        // Mobile nav
+    document.querySelector('.mobile-menu-btn').addEventListener('click',()=>document.getElementById('mobileNav').classList.add('open'));
+    document.getElementById('closeMobileNav').addEventListener('click',()=>document.getElementById('mobileNav').classList.remove('open'));
+    document.addEventListener('click', function(event){
+      if(!document.getElementById('mobileNav').contains(event.target) && event.target !== document.querySelector('.mobile-menu-btn')){
+        document.getElementById('mobileNav').classList.remove('open');
+      }
+    });
+ </script>
+</body>
+</html>

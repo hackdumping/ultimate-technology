@@ -1,0 +1,106 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Pour WhatsApp spécifiquement -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <!-- Balises supplémentaires recommandées -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ultimate-Technology" translate="no">
+  <title>Ultimate-Technology — Boutique d'ordinateurs</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Favicon simple -->
+  <link rel="icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+  <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+
+    <!-- Pour les appareils Apple -->
+  <link rel="apple-touch-icon" href="{% static 'favicon/apple-touch-icon.png' %}">
+
+
+  <title>Erreur 500 - Ultimate Technology</title>
+  <style>
+
+
+    header h1 {
+      font-size: 1.5rem;
+      text-shadow: 0 20px var(--text);
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .error-code {
+      font-size: 8rem;
+      font-weight: bold;
+      color: #ff7f11;
+    }
+
+    .error-message {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      color: var(--text);
+      font-weight:bold;
+    }
+
+    .error-description {
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      background: var(--accent-2);
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #123c7b;
+    }
+  </style>
+</head>
+<body>
+  {% include './header_error.html' %}
+
+  <main>
+    <div class="error-code">500</div>
+    <div class="error-message">Erreur interne du serveur</div>
+    <p class="error-description">
+      Un problème est survenu de notre côté. Veuillez réessayer plus tard.
+    </p>
+    <a href="{% url 'index' %}" class="btn">Retour à l’accueil</a>
+  </main>
+
+  {% include '../footer.html' %}
+
+<script src="{% static 'js/source.js' %}" ></script>
+</body>
+</html>

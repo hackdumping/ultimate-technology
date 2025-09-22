@@ -1,0 +1,23 @@
+{% load static %}
+<!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+       <a href="/#home" style="color:var(--text);display:block;text-decoration:none;cursor:pointer">
+      <div class="logo" translate="no">
+        <div class="mark" style="background:none"><img src="{% static 'images/ut_logo.png' %}" width="90px" height="90px" style="margin-top:0.5rem;margin-right:0.3rem"></div>
+        <div>
+          <div id="nom1">Ultimate-Technology</div>
+          <div id="nom2" style="color:var(--muted)">Boutique d'ordinateurs</div>
+        </div>
+      </div>
+      </a>
+
+      <div class="actions">
+        <div class="search" style="display:none">
+          <input id="searchInput" placeholder="Rechercher (ex: Dell, i7, 16GB)" aria-label="Recherche produits" />
+        </div>
+        <button id="themeToggle" class="icon-btn">🌙</button>
+      </div>
+    </div>
+  </header>
+

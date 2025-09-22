@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue - Ultimate-Technology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .email-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .welcome-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .welcome-title {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .welcome-message {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .benefits {
+            text-align: left;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .benefits-title {
+            color: #2c3e50;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .benefit-icon {
+            color: #667eea;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .social-links {
+            margin: 20px 0;
+        }
+
+        .social-link {
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .unsubscribe {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #95a5a6;
+        }
+
+        @media (max-width: 500px) {
+            .content {
+                padding: 30px 20px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .welcome-icon {
+                font-size: 50px;
+            }
+
+            .welcome-title {
+                font-size: 22px;
+            }
+
+            .btn {
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- En-tête -->
+        <div class="header">
+            <div class="logo">ULTIMATE-TECHNOLOGY</div>
+            <div class="tagline">Votre partenaire technologique de confiance</div>
+        </div>
+
+        <!-- Contenu principal -->
+        <div class="content">
+            <div class="welcome-icon">🎉</div>
+            <h1 class="welcome-title">Bienvenue dans la communauté de vendeurs !</h1>
+
+            <p class="welcome-message">
+                Merci de vous être inscrit chez Ultimate-Technology.
+                Vous faites maintenant partie de notre communauté vendeur.
+                Vous avez choisi un forfait {{ vendeur.forfait.nom }} qui côute {{ vendeur.forfait.prix }} XAF / mois.
+                Veuillez contacter l'administrateur au <a href="https://wa.me/{{ numero }}" >{{ numero }}</a> pour l'obtention de votre code unique.
+            </p>
+
+        </div>
+
+        <!-- Pied de page -->
+        <div class="footer">
+            <div class="social-links">
+                <a href="https://wa.me/237658630407" class="social-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i>WhatsApp
+                </a>
+                <a class="social-link" href="https://www.facebook.com/profile.php?id=61576774057709" title="page facebook utltimate-technology" target="_blank">
+                    <i class="fab fa-facebook"></i>Facebook
+                </a>
+            </div>
+
+            <div class="contact-info">
+                <p>Ultimate-Technology © 2025. Tous droits réservés.</p>
+                <p>Service client: (+237) 658-630-407 | Email: hackdumping@gmail.com</p>
+                <p>Heures d'ouverture: Lun - Sam: 8h - 18h</p>
+            </div>
+
+            <div class="unsubscribe">
+                <p>Vous recevez cet email parce que vous êtes inscrit chez ultimate-technology en tant que vendeur.<!-- <a href="#" style="color: #95a5a6;">Se désabonner</a>--></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

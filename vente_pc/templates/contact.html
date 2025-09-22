@@ -1,0 +1,141 @@
+{% include 'metadata.html' %}
+{% include 'header.html' %}
+{% load static %}
+<body>
+  <!-- Page Contact -->
+  <main class="container">
+    <section class="section bg-white">
+      <h1 style="color:var(--text)">Contactez-nous</h1>
+      <p style="color:var(--text)">Nous serions ravis de vous aider ! Remplissez le formulaire ci-dessous ou contactez-nous directement via WhatsApp.</p>
+
+      <div class="contact-grid">
+        <!-- Formulaire -->
+        <form class="cForm" id="contactForm1" style="margin-top:4rem">
+          <input type="text" name="name" placeholder="Votre nom" style="background:var(--card);color:var(--text)" required>
+          <input type="email" name="email" placeholder="Votre email" style="background:var(--card);color:var(--text)" required>
+          <textarea name="message" rows="6" placeholder="Votre message" style="background:var(--card);color:var(--text)" required></textarea>
+          <button id="btnContact" type="submit">Envoyer le message</button>
+          <a href="https://wa.me/+237658630407" target="_blank">
+            <button type="button"  class="btn-whatsapp"><i class="fab fa-whatsapp" style="font-size:1.2rem"></i></button>
+          </a>
+        </form>
+          <form class="cForm" id="contactForm2" method="POST" style="display:none">
+          <input type="text" id="nameClient" name="name" placeholder="Votre nom" style="background:var(--card);color:var(--text)" required>
+          <input type="email" id="emailClient" name="email" placeholder="Votre email" style="background:var(--card);color:var(--text)" required>
+          <textarea name="message" id="message" rows="6" placeholder="Votre message" style="background:var(--card);color:var(--text)" required></textarea>
+        </form>
+
+        <!-- Illustration -->
+        <img src="{% static 'images/contact.png' %}"  alt="Illustration contact" class="illustration">
+      </div>
+    </section>
+  </main>
+{% include 'footer.html' %}
+
+  <script src="{% static 'js/source.js' %}"></script>
+
+  <script>
+
+  // Mobile nav
+    document.querySelector('.mobile-menu-btn').addEventListener('click',()=>document.getElementById('mobileNav').classList.add('open'));
+    document.getElementById('closeMobileNav').addEventListener('click',()=>document.getElementById('mobileNav').classList.remove('open'));
+    document.addEventListener('click', function(event){
+      if(!document.getElementById('mobileNav').contains(event.target) && event.target !== document.querySelector('.mobile-menu-btn')){
+        document.getElementById('mobileNav').classList.remove('open');
+      }
+    });
+
+       // ===== SOLUTION SIMPLIFIÉE SANS CORS =====
+function checkInternetConnection() {
+    return new Promise((resolve) => {
+        // 1. Vérification basique
+        if (typeof navigator.onLine !== 'undefined' && !navigator.onLine) {
+            resolve(false);
+            return;
+        }
+
+        // 2. Méthode image pour éviter CORS
+        const img = new Image();
+        let timer = setTimeout(() => {
+            resolve(false);
+        }, 3000);
+
+        img.onload = function() {
+            clearTimeout(timer);
+            resolve(true);
+        };
+
+        img.onerror = function() {
+            clearTimeout(timer);
+            resolve(false);
+        };
+
+        // URL avec cache-buster
+        img.src = 'https://www.google.com/favicon.ico?t=' + Date.now();
+    });
+}
+
+// ===== FONCTION TOAST =====
+function showToast(message) {
+    // Implementation simple du toast
+    const toast = document.createElement('div');
+    toast.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 15px 20px;
+        background: #ff6b6b;
+        color: white;
+        border-radius: 8px;
+        z-index: 10000;
+        max-width: 300px;
+    `;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        document.body.removeChild(toast);
+    }, 5000);
+}
+
+  // Masquer le panier
+    panier = document.getElementById('cartBtn');
+    panier.style.display = 'none';
+
+  contactForm1 = document.getElementById('contactForm1');
+  contactForm1.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Vérification de connexion sans CORS
+    const isConnected = await checkInternetConnection();
+
+    if (!isConnected) {
+       showToast('❌ Connexion internet requise. Veuillez vérifier votre connexion.');
+       return false;
+    }
+
+    nom = contactForm1.name.value;
+    email = contactForm1.email.value;
+    texte = contactForm1.message.value;
+
+    const btn = document.getElementById('btnContact');
+    const originalText = btn.textContent;
+
+    btn.innerHTML = 'Message envoyé ! <i class="material-icons" style="font-size:0.7rem;font-weight:bold" >check</i>';
+    // Revenir après 1 seconde
+    setTimeout(function() {
+       btn.textContent = originalText;
+    }, 2020);
+
+    document.getElementById('nameClient').value = nom;
+    document.getElementById('emailClient').value = email;
+    document.getElementById('message').value = texte;
+    document.getElementById('contactForm2').submit();
+
+    document.querySelectorAll('.cForm')[0].reset()
+    document.querySelectorAll('.cForm')[1].reset();
+});
+
+  </script>
+</body>
+</html>

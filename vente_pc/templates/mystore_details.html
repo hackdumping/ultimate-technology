@@ -1,0 +1,133 @@
+{% extends 'mystore_squelette.html' %}
+{% load static %}
+
+{% block content %}
+  <!-- Détails produit -->
+  <main class="container">
+    <div class="product-detail">
+      <!-- Carrousel -->
+      <div class="carousel" id="carousel" style="background:none;border:none">
+        <img src="{{ produit.image.url }}" class="active" alt="Vue 1 ordinateur">
+          {% if produit.image2 %}
+        <img src="{{ produit.image2.url }}" alt="Vue 2 ordinateur">
+          {% endif %}
+          {% if produit.image3 %}
+        <img src="{{ produit.image3.url }}" alt="Vue 3 ordinateur">
+          {% endif %}
+        <button class="carousel-btn prev">‹</button>
+        <button class="carousel-btn next">›</button>
+      </div>
+
+      <!-- Infos produit -->
+      <div class="product-info">
+        <h2 id="nom_pro">{{ produit.marque.nom }} {{ produit.model }}</h2>
+          {% if produit.est_promo %}
+          <h4 style="border:2px dashed var(--text);border-radius: 20px;text-align:center;padding:0.8rem;background:var(--card);font-family:'liberation Mono'">PRODUIT EN PROMOTION</h4>
+          {% endif %}
+        <p class="price" id="nouveau_prix" style="font-size:1.5rem"></p>
+          <p id="ancien_prix" style="color:gray;text-decoration:line-through;font-size:1rem;"></p>
+          {% if produit.est_vendue %}
+          <p style="font-family:'liberation Mono', Cambria" translate="no">[ EN RUPTURE ]</p>
+          {% else %}
+          <p style="font-family:'liberation Mono', Cambria" translate="no">[ EN STOCK ]</p>
+          {% endif %}
+        <ul>
+          <li>Processeur : {{ produit.cpu }}</li>
+          <li>Mémoire RAM : {{ produit.ram }}</li>
+          <li>Stockage : {{ produit.stockage }}</li>
+            {% if produit.graphic != "" %}
+          <li>Carte graphique : {{ produit.graphic }}</li>
+            {% endif %}
+        </ul>
+        <div style="margin-top:20px; display:column">
+          <!--<button class="btn" id="addToCart">Ajouter au panier</button>-->
+            {% if produit.est_vendue %}
+          <a href="{{ lien }}" target="_blank" style="border:none;text-decoration:none" translate="no" aria-disabled="true">
+            <button class="btn whatsapp" style="font-size:1rem;background:#119933;width:12rem" translate="yes" disabled>Commander sur <i class="fab fa-whatsapp" style="font-size:1.2rem"></i></button>
+          </a>
+            {% else %}
+            <a href="{{ lien }}" target="_blank" style="border:none;text-decoration:none" translate="no">
+            <button class="btn whatsapp" style="font-size:1rem;background:#119933;width:12rem" translate="yes" disabled="{{ produit.est_vendue }}">Commander sur <i class="fab fa-whatsapp" style="font-size:1.2rem"></i></button>
+          </a>
+            {% endif %}
+          <div class="link-container" style="background:var(--card);border:1px solid var(--text)" translate="no">
+              <i style="display:block;margin:0.6rem;color:var(--text)" class="large material-icons">share</i>
+              <input style="border-left:1px solid var(--text);color:var(--text);width:30%" type="text" class="link-input" id="link-to-copy" value="" readonly>
+            <button class="copy-btn" id="copy-button" translate="yes">Copier</button>
+        </div>
+        </div>
+
+        <!-- Description -->
+        <div class="product-description" style="margin-top:30px">
+          <h3 style="color:var(--text)">Description du produit</h3>
+          <div style="white-space: pre-wrap;">{{ produit.description }}</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script>
+      // Mobile nav
+    document.querySelector('.mobile-menu-btn').addEventListener('click',()=>document.getElementById('mobileNav').classList.add('open'));
+    document.getElementById('closeMobileNav').addEventListener('click',()=>document.getElementById('mobileNav').classList.remove('open'));
+    document.addEventListener('click', function(event){
+      if(!document.getElementById('mobileNav').contains(event.target) && event.target !== document.querySelector('.mobile-menu-btn')){
+        document.getElementById('mobileNav').classList.remove('open');
+      }
+    });
+
+    // Masquer le panier
+    panier = document.getElementById('cartBtn');
+    panier.style.display = 'none';
+
+      // gerer la monais
+      money = n => new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'XAF', maximumFractionDigits: 0 }).format(n);
+      promo = "{{ produit.est_promo }}";
+      if(promo == "True"){
+        ancien_prix = {{ produit.nouveau_prix}} ;
+        nouveau_prix = {{ produit.prix_promo }} ;
+      }else{
+        ancien_prix = {{ produit.ancien_prix }} ;
+        nouveau_prix = {{ produit.nouveau_prix }} ;
+      }
+      document.getElementById('link-to-copy').value = document.URL;
+      document.getElementById('ancien_prix').innerHTML = ancien_prix != 0 ? `${money(ancien_prix)}` : "";
+      document.getElementById('nouveau_prix').innerHTML = `${money(nouveau_prix)}`
+
+    // Carrousel
+    const carousel=document.getElementById('carousel');
+    const imgs=carousel.querySelectorAll('img');
+    const prev=carousel.querySelector('.prev');
+    const next=carousel.querySelector('.next');
+    let idx=0;
+    function show(i){
+      imgs.forEach((img,j)=>img.classList.toggle('active',j===i));
+    }
+    prev.onclick=()=>{idx=(idx-1+imgs.length)%imgs.length;show(idx);}
+    next.onclick=()=>{idx=(idx+1)%imgs.length;show(idx);}
+    setInterval(()=>{idx=(idx+1)%imgs.length;show(idx)},5000);
+
+      //copier le lien
+  function setupCopyButton(buttonId, inputId) {
+    const copyButton = document.getElementById(buttonId);
+    const linkInput = document.getElementById(inputId);
+
+    copyButton.addEventListener('click', function() {
+        // Copier le texte
+        linkInput.select();
+        navigator.clipboard.writeText(linkInput.value).then(function() {
+            // Changer le texte du bouton temporairement
+            const originalText = copyButton.textContent;
+            copyButton.innerHTML = 'Copié ! <i class="material-icons" style="font-size:1rem;font-weight:bold" >check</i>';
+            // Revenir après 1 seconde
+            setTimeout(function() {
+                copyButton.textContent = originalText;
+
+            }, 1000);
+        });
+    });
+}
+
+  </script>
+{% endblock %}

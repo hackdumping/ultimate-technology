@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de Commande - Ultimate-Technology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: #667eea;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f4f4f4;
+            padding-bottom: 8px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 16px;
+            color: #333;
+            word-break: break-word;
+        }
+
+        /* Container responsive pour le tableau */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 20px 0;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .product-table {
+            width: 100%;
+            min-width: 500px;
+            border-collapse: collapse;
+        }
+
+        .product-table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .product-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            word-break: break-word;
+        }
+
+        .product-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .price-highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .total-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .total-label {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .total-amount {
+            font-size: 24px;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .delivery-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .social-links {
+            margin: 20px 0;
+        }
+
+        .social-link {
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+            font-weight: bold;
+        }
+
+        .btn-secondary {
+            background: #95a5a6;
+        }
+
+        @media (max-width: 600px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .product-table {
+                font-size: 14px;
+            }
+
+            .product-table th,
+            .product-table td {
+                padding: 8px;
+            }
+
+            .btn {
+                display: block;
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- En-tête -->
+        <div class="header">
+            <div class="logo">ULTIMATE-TECHNOLOGY</div>
+            <div class="tagline">Votre partenaire technologique de confiance</div>
+        </div>
+
+        <!-- Contenu principal -->
+        <div class="content">
+            <div class="section">
+                <h2>Merci pour votre commande !</h2>
+                <p>Cher(e) <strong>{{ name }}</strong>, nous avons bien reçu votre commande et la traitons dans les plus brefs délais.</p>
+            </div>
+
+            <!-- Informations client -->
+            <div class="section">
+                <div class="section-title">Informations Client</div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Nom complet</div>
+                        <div class="info-value">{{ name }}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Email</div>
+                        <div class="info-value">{{ email }}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Téléphone/WhatsApp</div>
+                        <div class="info-value">{{ phone }}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Adresse de livraison</div>
+                        <div class="info-value">{{ address }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Détails de la commande -->
+            <div class="section">
+                <div class="section-title">Détails de votre commande</div>
+                <div class="table-container">
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>Produit</th>
+                                <th>Prix unitaire</th>
+                                <th>Quantité</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody style="overflow-x:scroll">
+                            <!-- Produit i -->
+                            {% for produit in produits %}
+                            <tr>
+                                <td>
+                                    <strong>{{ produit.marque }} {{ produit.model }}</strong><br>
+                                    <small>Réf: {{ root }}/{{ produit.id }}</small>
+                                </td>
+                                <td>
+                                    {% if produit.est_promo %}
+                                    <span class="price-highlight">{{ produit.prix_promo }} FCFA</span><br>
+                                    <small style="text-decoration: line-through;">{{ produit.nouveau_prix }} FCFA</small>
+                                    {% else %}
+                                    <span class="price-highlight">{{ produit.nouveau_prix }} FCFA</span><br>
+                                    {% if produit.ancien_prix %}
+                                    <small style="text-decoration: line-through;">{{ produit.ancien_prix }} FCFA[</small>]
+                                    {% endif %}
+                                    {% endif %}
+                                </td>
+                                <td>{{ produit.qte }}</td>
+                                {% if produit.est_promo %}
+                                <td>{{ produit.solde_promo }} FCFA</td>
+                                {% else %}
+                                 <td>{{ produit.solde_reel }} FCFA</td>
+                                {% endif %}
+                            </tr>
+                            {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Frais de livraison -->
+            <!--<div class="delivery-note">
+                <strong>Information livraison :</strong>
+                Les frais de livraison sont de {{ frais }} FCFA si nous nous trouvons dans la même ville.
+                Pour les autres villes, nos conseillers vous contacteront pour préciser les frais.
+            </div>-->
+
+            <!-- Total -->
+            <div class="total-section">
+                <div class="total-label">Total de la commande:</div>
+                <div class="total-amount">{{ total }} FCFA</div>
+            </div>
+
+            <!-- Actions -->
+            <div style="text-align: center; margin-top: 30px;">
+                <!--<a href="https://wa.me/237658630407" class="btn">Suivre ma commande</a>-->
+                <a href="https://wa.me/237658630407" class="btn btn-secondary">Contacter le support</a>
+            </div>
+        </div>
+
+        <!-- Pied de page -->
+        <div class="footer">
+            <div class="social-links">
+                <a href="https://wa.me/237658630407" class="social-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i>WhatsApp
+                </a>
+                <a class="social-link" href="https://www.facebook.com/profile.php?id=61576774057709" title="page facebook utltimate-technology" target="_blank">
+                    <i class="fab fa-facebook"></i>Facebook
+                </a>
+            </div>
+
+            <div class="contact-info">
+                <p>Ultimate-Technology © 2025. Tous droits réservés.</p>
+                <p>Service client: (+237) 658-630-407 | Email: hackdumping@gmail.com</p>
+                <p>Heures d'ouverture: Lun - Sam: 8h - 18h</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

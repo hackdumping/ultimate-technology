@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Nouveau message de contact</title>
+    <style>
+        /* RESET CSS */
+        body, table, td, a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+            border-collapse: collapse;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        /* MAIN STYLES */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333333;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        .email-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .email-body {
+            padding: 40px 30px;
+        }
+
+        .message-title {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .info-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            display: flex;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 100px;
+            padding-right: 3px;
+        }
+
+        .info-value {
+            color: #495057;
+            flex: 1;
+        }
+
+        .message-content {
+            background: #e8f4fc;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            line-height: 1.6;
+        }
+
+        .action-button {
+            display: block;
+            width: 70px;
+            margin: 30px auto;
+            padding: 14px 25px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .email-footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .social-links {
+            margin: 20px 0;
+        }
+
+        .social-link {
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* RESPONSIVE STYLES */
+        @media only screen and (max-width: 600px) {
+            .email-body {
+                padding: 30px 20px;
+            }
+
+            .info-item {
+                flex-direction: column;
+                margin-bottom: 20px;
+            }
+
+            .info-label {
+                margin-bottom: 5px;
+                min-width: auto;
+                padding-right: 4px;
+            }
+
+            .message-title {
+                font-size: 22px;
+            }
+
+            .action-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <table class="email-container" width="100%" cellpadding="0" cellspacing="0" border="0">
+            <!-- HEADER -->
+            <tr>
+                <td class="email-header">
+                    <div class="logo">ULTIMATE-TECHNOLOGY</div>
+                    <p>Votre partenaire technologique de confiance</p>
+                </td>
+            </tr>
+
+            <!-- BODY -->
+            <tr>
+                <td class="email-body">
+                    <h1 class="message-title">📩 Nouveau vendeur enregistré</h1>
+
+                    <div class="info-card">
+                        <div class="info-item">
+                            <span class="info-label">Code unique : </span>
+                            <span class="info-value">{{ vendeur.id }}</span>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-label">Email : </span>
+                            <span class="info-value">{{ vendeur.email }}</span>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-label">Nom : </span>
+                            <span class="info-value">{{ vendeur.nom }}</span>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-label">Pays : </span>
+                            <span class="info-value">{{ vendeur.pays }}</span>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-label">WhatsApp : </span>
+                            <span class="info-value">{{ vendeur.tel }}</span>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-label">Pays : </span>
+                            <span class="info-value">{{ vendeur.pays.nom }}</span>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-label">Ville : </span>
+                            <span class="info-value">{{ vendeur.ville.nom }}</span>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-label">Fais de livraison : </span>
+                            <span class="info-value">{{ vendeur.frais }} XAF</span>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-label">Forfait choisi: </span>
+                            <span class="info-value">{{ vendeur.forfait.nom }} - {{ vendeur.forfait.prix }} XAF</span>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-label">Date d'insertion : </span>
+                            <span class="info-value">{{ insertion }}</span>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-label">Date d'expiration du forfait : </span>
+                            {% if expiration != "" %}
+                            <span class="info-value">{{ expiration }}</span>
+                            {% endif %}
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-label">Logo : </span>
+                            <span class="info-value">{{ root }}{{ vendeur.logo.url }}</span>
+                        </div>
+
+                    </div>
+
+                    <a href="mailto:{{ vendeur.email }}" class="action-button" style="width:100px">
+                        ✉️ Répondre par email
+                    </a>
+                    <a href="https://wa.me/{{ vendeur.tel }}" class="action-button" style="width:100px;background:green;">
+                        ✉️ Répondre par WhatsApp
+                    </a>
+                </td>
+            </tr>
+
+            <!-- FOOTER -->
+            <tr>
+                <td class="email-footer">
+                    <div class="social-links">
+                        <a href="https://wa.me/237658630407" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a class="social-link" href="https://www.facebook.com/profile.php?id=61576774057709" title="page facebook utltimate-technology" target="_blank">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                </div>
+
+                <div class="contact-info">
+                    <p>Ultimate-Technology © 2025. Tous droits réservés.</p>
+                    <p>Service client: (+237) 658-630-407 | Email: hackdumping@gmail.com</p>
+                    <p>Heures d'ouverture: Lun - Sam: 8h - 18h</p>
+                </div>
+
+                    <p style="font-size: 12px; margin-top: 20px; opacity: 0.6;">
+                        Cet email a été généré automatiquement suite à une inscription d'un vendeur.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

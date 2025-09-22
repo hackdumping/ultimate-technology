@@ -1,0 +1,83 @@
+{% extends 'squelette.html' %}
+{% block content %}
+  <!-- Content -->
+  <main class="container">
+    <h1>Nos Promotions</h1>
+    <!-- Controls: category, sort, price -->
+    <div class="controls" id="shop">
+      <div>
+        <label class="small">Catégorie</label>
+        <select id="categoryFilter">
+          <option value="all">Tout</option>
+        </select>
+      </div>
+
+        <div>
+          <label class="small">Pays</label>
+          <select id="countryFilter">
+            <option value="all">Tous</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="small">Ville</label>
+          <select id="cityFilter">
+            <option value="all">Toutes</option>
+          </select>
+        </div>
+
+      <div>
+        <label class="small">Trier par</label>
+        <select id="sortSelect">
+          <option value="popular">Ajout recent</option>
+          <option value="price-asc">Prix croissant</option>
+          <option value="price-desc">Prix décroissant</option>
+          <option value="name-asc">A → Z</option>
+        </select>
+      </div>
+
+      <div style="flex:1">
+        <label class="small">Rechercher</label>
+        <input id="miniSearch" placeholder="Filtrer noms ou specs" style="width:100%;padding:10px;border-radius:10px;border:1px solid #e6eef2" />
+      </div>
+
+      <div style="margin-left:auto">
+        <label class="small">Prix max</label>
+        <div class="range-wrap"><input id="priceRange" type="range" min="0" max="1000000" step="5000" value="1000000" /></div>
+        <div style="font-size:13px;color:var(--muted)" id="priceLabel">Jusqu'à —</div>
+      </div>
+    </div>
+      <!-- Products grid -->
+    <div class="grid" id="products" aria-live="polite"></div>
+
+      <!-- Product Modal
+    <div id="overlay" class="overlay"></div>
+    <div id="productModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <button id="closeModal" class="close" aria-label="Fermer">✕</button>
+      <div id="modalContent"></div>
+    </div>-->
+
+  </main>
+
+  <script>
+    // Menu mobile
+    const mobileBtn=document.querySelector('.mobile-menu-btn');
+    const mobileNav=document.getElementById('mobileNav');
+    const closeMobileNav=document.getElementById('closeMobileNav');
+    mobileBtn.addEventListener('click',()=>mobileNav.classList.add('open'));
+    closeMobileNav.addEventListener('click',()=>mobileNav.classList.remove('open'));
+
+    // Recherche instantanée
+    searchInput=document.getElementById('searchInput');
+    const cards=document.querySelectorAll('.product-card');
+    searchInput.addEventListener('input',()=>{
+      const val=searchInput.value.toLowerCase();
+      cards.forEach(card=>{
+        const name=card.dataset.name.toLowerCase();
+        card.style.display=name.includes(val)?'flex':'none';
+      });
+    });
+
+
+  </script>
+{% endblock %}

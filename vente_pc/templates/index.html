@@ -1,0 +1,121 @@
+{% extends 'squelette.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero" id="home">
+      <div>
+
+        <h1>Les meilleurs ordinateurs, choisis pour vous.</h1>
+        <p id="texte" >Ultimate‑Technology propose une sélection soignée d'ordinateurs portables et de bureau pour les professionnels, gamers et créatifs — avec garantie et support local.</p>
+        <div class="cta">
+          <button id="shopNow" class="btn" style="width:12rem">Visiter la boutique</button>
+        </div>
+
+        <div class="features">
+          <div class="spec-badge">Vente</div>
+          <div class="spec-badge">Dépannage</div>
+          <div class="spec-badge">Maintenance</div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img src="{% static 'images/hope.gif' %}" alt="Ordinateur moderne" style="max-width:100%;border-radius:10px"/>
+      </div>
+    </section>
+    <a href="/#home" class="scroll-btn scroll-up fixed-btn"  title="Remonter en haut">
+        ⬆
+    </a>
+
+    <!-- Controls: category, sort, price -->
+    <div class="controls" id="shop">
+      <div>
+        <label class="small">Catégorie</label>
+        <select id="categoryFilter">
+          <option value="all">Tout</option>
+        </select>
+      </div>
+
+        <div>
+          <label class="small">Pays</label>
+          <select id="countryFilter">
+            <option value="all">Tous</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="small">Ville</label>
+          <select id="cityFilter">
+            <option value="all">Toutes</option>
+          </select>
+        </div>
+
+<!--
+      <div>
+        <label class="small">Pays</label>
+        <select id="paysFilter">
+          <option value="all">Tout</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="small">Ville</label>
+        <select id="villeFilter">
+          <option value="all">Tout</option>
+        </select>
+      </div>
+-->
+      <div>
+        <label class="small">Trier par</label>
+        <select id="sortSelect">
+          <option value="popular">Ajout récent</option>
+          <option value="price-asc">Prix croissant</option>
+          <option value="price-desc">Prix décroissant</option>
+          <option value="name-asc">A → Z</option>
+        </select>
+      </div>
+
+      <div style="flex:1">
+        <label class="small">Rechercher</label>
+        <input id="miniSearch" placeholder="Filtrer noms ou specs" style="width:100%;padding:10px;border-radius:10px;border:1px solid #e6eef2" />
+      </div>
+
+      <div style="margin-left:auto">
+        <label class="small">Prix max</label>
+        <div class="range-wrap"><input id="priceRange" type="range" min="0" max="1000000" step="5000" value="1000000" /></div>
+        <div style="font-size:13px;color:var(--muted)" id="priceLabel">Jusqu'à —</div>
+      </div>
+    </div>
+
+    <!-- Products grid -->
+    <div class="grid" id="products" aria-live="polite"></div>
+
+    <!-- Product Modal
+    <div id="overlay" class="overlay"></div>
+    <div id="productModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <button id="closeModal" class="close" aria-label="Fermer">✕</button>
+      <div id="modalContent"></div>
+    </div>-->
+
+    <script>
+
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+
+    // quick handlers
+    document.getElementById('shopNow').addEventListener('click', ()=>{ document.querySelector('#shop').scrollIntoView({behavior:'smooth'})});
+
+        // Afficher/masquer le bouton fixe selon la position
+        window.addEventListener('scroll', function() {
+            const fixedBtn = document.querySelector('.fixed-btn');
+            if (window.scrollY > 500) {
+                fixedBtn.style.display = 'flex';
+            } else {
+                fixedBtn.style.display = 'none';
+            }
+        });
+
+        // Masquer initialement le bouton fixe
+        document.querySelector('.fixed-btn').style.display = 'none';
+    </script>
+{% endblock %}
