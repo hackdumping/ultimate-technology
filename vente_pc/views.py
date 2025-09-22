@@ -60,21 +60,6 @@ def statut_produit(est_vendue):
     else:
         return "EN STOCK"
 
-@csrf_exempt
-def import_database(request):
-    """Vue temporaire pour importer les données"""
-    if request.method == 'POST' and request.POST.get('secret') == 'import123':
-        try:
-            call_command('loaddata', 'data.json')
-            return HttpResponse("✅ Données importées avec succès!")
-        except Exception as e:
-            return HttpResponse(f"❌ Erreur: {e}")
-    return HttpResponse("""
-    <form method="post">
-        <input type="hidden" name="secret" value="import123">
-        <button type="submit">Importer les données</button>
-    </form>
-    """)
 
 @csrf_exempt
 def index(request):
