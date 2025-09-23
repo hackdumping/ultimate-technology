@@ -17,3 +17,5 @@ jsonschema-specifications==2023.12.1
 py-ubjson==0.16.1
 simplejson==3.19.3
 ujson==5.10.0
+django-cloudinary-storage==0.3.0
+cloudinary==1.44.1

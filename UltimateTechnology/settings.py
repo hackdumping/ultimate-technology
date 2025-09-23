@@ -16,7 +16,7 @@ import dj_database_url
 import environ
 from dotenv import load_dotenv, find_dotenv
 
-from django.conf.global_settings import MEDIA_URL, DEBUG
+from django.conf.global_settings import MEDIA_URL, DEBUG, DEFAULT_FILE_STORAGE
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -60,6 +60,8 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'vente_pc',
     'django_resized',
+    'cloudinary_storage',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -177,10 +179,32 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+
+# connexion cloudinary
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dxcbksigt',
+    'API_KEY': '529168959236142',
+    'API_SECRET': 'd0pkAYk8Ba-BaLM61RRP56MjLqk',
+    'QUALITY': 'auto:good',
+    'FORMAT': 'webp',
+    'SECURE': True,
+    'MEDIA_TAG': 'media',
+}
+import cloudinary
+cloudinary.config(
+    cloud_name = 'dxcbksigt',
+    api_key = '529168959236142',
+    api_secret = 'd0pkAYk8Ba-BaLM61RRP56MjLqk',
+    secure = True
+)
+
+#Definir cloudinary comme fichier de stockage par defaut
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage',
+
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 NUMERO = "+237658562221"
 

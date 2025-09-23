@@ -1,0 +1,446 @@
+{
+  "timestamp": "2025-09-23T22:39:43.131107",
+  "migrated_files": [
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/staff/profil.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667015/staff/profil.jpg",
+      "public_id": "staff/profil"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo3_pKHR33G.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667017/produits/lenovo3_pKHR33G.jpg",
+      "public_id": "produits/lenovo3_pKHR33G"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2_c6xblvV.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667018/produits/lenovo2_c6xblvV.jpg",
+      "public_id": "produits/lenovo2_c6xblvV"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo_F9QMIIh.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667019/produits/lenovo_F9QMIIh.jpg",
+      "public_id": "produits/lenovo_F9QMIIh"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2_FhW156j.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667021/produits/lenovo2_FhW156j.jpg",
+      "public_id": "produits/lenovo2_FhW156j"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo_Dfaj2HU.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667022/produits/lenovo_Dfaj2HU.jpg",
+      "public_id": "produits/lenovo_Dfaj2HU"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell_rPQfGou.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667024/produits/dell_rPQfGou.jpg",
+      "public_id": "produits/dell_rPQfGou"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo3_d6KMmjc.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667026/produits/lenovo3_d6KMmjc.jpg",
+      "public_id": "produits/lenovo3_d6KMmjc"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo3_iiqzkq2.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667028/produits/lenovo3_iiqzkq2.jpg",
+      "public_id": "produits/lenovo3_iiqzkq2"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo_BEEzq2Y.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667029/produits/lenovo_BEEzq2Y.jpg",
+      "public_id": "produits/lenovo_BEEzq2Y"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2_AhKst6p.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667030/produits/lenovo2_AhKst6p.jpg",
+      "public_id": "produits/lenovo2_AhKst6p"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell_GhkKvEK.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667032/produits/dell_GhkKvEK.jpg",
+      "public_id": "produits/dell_GhkKvEK"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell_8XJGiER.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667033/produits/dell_8XJGiER.jpg",
+      "public_id": "produits/dell_8XJGiER"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo_DW1l8kB.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667035/produits/lenovo_DW1l8kB.jpg",
+      "public_id": "produits/lenovo_DW1l8kB"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo_61Qupjx.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667036/produits/lenovo_61Qupjx.jpg",
+      "public_id": "produits/lenovo_61Qupjx"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell2_6kuIacQ.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667039/produits/dell2_6kuIacQ.jpg",
+      "public_id": "produits/dell2_6kuIacQ"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell2_OUhbo9c.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667041/produits/dell2_OUhbo9c.jpg",
+      "public_id": "produits/dell2_OUhbo9c"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell_4cKayiJ.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667042/produits/dell_4cKayiJ.jpg",
+      "public_id": "produits/dell_4cKayiJ"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo_3oUmIPY.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667043/produits/lenovo_3oUmIPY.jpg",
+      "public_id": "produits/lenovo_3oUmIPY"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo3_IBhTmrQ.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667047/produits/lenovo3_IBhTmrQ.jpg",
+      "public_id": "produits/lenovo3_IBhTmrQ"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2_8KCBgJY.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667048/produits/lenovo2_8KCBgJY.jpg",
+      "public_id": "produits/lenovo2_8KCBgJY"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2_hozzryM.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667050/produits/lenovo2_hozzryM.jpg",
+      "public_id": "produits/lenovo2_hozzryM"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2_FAT6J8T.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667051/produits/lenovo2_FAT6J8T.jpg",
+      "public_id": "produits/lenovo2_FAT6J8T"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2_vP1Clyd.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667053/produits/lenovo2_vP1Clyd.jpg",
+      "public_id": "produits/lenovo2_vP1Clyd"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo3_aUPHFXx.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667055/produits/lenovo3_aUPHFXx.jpg",
+      "public_id": "produits/lenovo3_aUPHFXx"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo_TjJu3Bt.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667056/produits/lenovo_TjJu3Bt.jpg",
+      "public_id": "produits/lenovo_TjJu3Bt"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2_ZlAa0Mz.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667058/produits/lenovo2_ZlAa0Mz.jpg",
+      "public_id": "produits/lenovo2_ZlAa0Mz"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667059/produits/lenovo.jpg",
+      "public_id": "produits/lenovo"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2_1EI2dfX.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667061/produits/lenovo2_1EI2dfX.jpg",
+      "public_id": "produits/lenovo2_1EI2dfX"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell_2ulLFVl.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667062/produits/dell_2ulLFVl.jpg",
+      "public_id": "produits/dell_2ulLFVl"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo_dgcXG00.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667065/produits/lenovo_dgcXG00.jpg",
+      "public_id": "produits/lenovo_dgcXG00"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo3_Rnxp0I2.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667066/produits/lenovo3_Rnxp0I2.jpg",
+      "public_id": "produits/lenovo3_Rnxp0I2"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell2_TbsbTBm.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667068/produits/dell2_TbsbTBm.jpg",
+      "public_id": "produits/dell2_TbsbTBm"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell2_87xpwEs.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667069/produits/dell2_87xpwEs.jpg",
+      "public_id": "produits/dell2_87xpwEs"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/HP_9qvdVzB.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667071/produits/HP_9qvdVzB.jpg",
+      "public_id": "produits/HP_9qvdVzB"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell2.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667072/produits/dell2.jpg",
+      "public_id": "produits/dell2"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo_BL0Y0N0.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667074/produits/lenovo_BL0Y0N0.jpg",
+      "public_id": "produits/lenovo_BL0Y0N0"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/HP.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667076/produits/HP.jpg",
+      "public_id": "produits/HP"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/HP_rRhXKDo.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667077/produits/HP_rRhXKDo.jpg",
+      "public_id": "produits/HP_rRhXKDo"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell_64RXY6a.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667079/produits/dell_64RXY6a.jpg",
+      "public_id": "produits/dell_64RXY6a"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell3.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667080/produits/dell3.jpg",
+      "public_id": "produits/dell3"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2_qZpzVmW.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667082/produits/lenovo2_qZpzVmW.jpg",
+      "public_id": "produits/lenovo2_qZpzVmW"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2_0AyphZy.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667083/produits/lenovo2_0AyphZy.jpg",
+      "public_id": "produits/lenovo2_0AyphZy"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo_BqvslgC.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667085/produits/lenovo_BqvslgC.jpg",
+      "public_id": "produits/lenovo_BqvslgC"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/HP_1bio6cP.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667086/produits/HP_1bio6cP.jpg",
+      "public_id": "produits/HP_1bio6cP"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo3_b8X1Tkg.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667088/produits/lenovo3_b8X1Tkg.jpg",
+      "public_id": "produits/lenovo3_b8X1Tkg"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell_4bn30aU.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667090/produits/dell_4bn30aU.jpg",
+      "public_id": "produits/dell_4bn30aU"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2_pmbdcT7.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667091/produits/lenovo2_pmbdcT7.jpg",
+      "public_id": "produits/lenovo2_pmbdcT7"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo_izJptjF.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667093/produits/lenovo_izJptjF.jpg",
+      "public_id": "produits/lenovo_izJptjF"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell_hihydFk.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667095/produits/dell_hihydFk.jpg",
+      "public_id": "produits/dell_hihydFk"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo3.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667097/produits/lenovo3.jpg",
+      "public_id": "produits/lenovo3"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/HP2_zNcovaO.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667099/produits/HP2_zNcovaO.jpg",
+      "public_id": "produits/HP2_zNcovaO"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo3_0OZiMdx.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667101/produits/lenovo3_0OZiMdx.jpg",
+      "public_id": "produits/lenovo3_0OZiMdx"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo_c4OhVag.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667103/produits/lenovo_c4OhVag.jpg",
+      "public_id": "produits/lenovo_c4OhVag"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/HP2.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667104/produits/HP2.jpg",
+      "public_id": "produits/HP2"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667107/produits/dell.jpg",
+      "public_id": "produits/dell"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2_aD8F7CG.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667109/produits/lenovo2_aD8F7CG.jpg",
+      "public_id": "produits/lenovo2_aD8F7CG"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo3_Q9MYUXd.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667110/produits/lenovo3_Q9MYUXd.jpg",
+      "public_id": "produits/lenovo3_Q9MYUXd"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell_Whyqswb.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667112/produits/dell_Whyqswb.jpg",
+      "public_id": "produits/dell_Whyqswb"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo_Hghsffv.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667114/produits/lenovo_Hghsffv.jpg",
+      "public_id": "produits/lenovo_Hghsffv"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo3_0astsrR.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667116/produits/lenovo3_0astsrR.jpg",
+      "public_id": "produits/lenovo3_0astsrR"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo3_3rdhLaW.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667118/produits/lenovo3_3rdhLaW.jpg",
+      "public_id": "produits/lenovo3_3rdhLaW"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo_HIRO7nM.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667119/produits/lenovo_HIRO7nM.jpg",
+      "public_id": "produits/lenovo_HIRO7nM"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667121/produits/lenovo2.jpg",
+      "public_id": "produits/lenovo2"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo_Dhuc2r6.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667123/produits/lenovo_Dhuc2r6.jpg",
+      "public_id": "produits/lenovo_Dhuc2r6"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/logos/17582863148936004269809066900047_7YdRgdt.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667130/logos/17582863148936004269809066900047_7YdRgdt.jpg",
+      "public_id": "logos/17582863148936004269809066900047_7YdRgdt"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/logos/17582863148936004269809066900047_XSnU8uT.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667141/logos/17582863148936004269809066900047_XSnU8uT.jpg",
+      "public_id": "logos/17582863148936004269809066900047_XSnU8uT"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/logos/1758286727816237176831953803276_Qn1RUxG.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667148/logos/1758286727816237176831953803276_Qn1RUxG.jpg",
+      "public_id": "logos/1758286727816237176831953803276_Qn1RUxG"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/logos/1758286727816237176831953803276_1sIBx80.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667155/logos/1758286727816237176831953803276_1sIBx80.jpg",
+      "public_id": "logos/1758286727816237176831953803276_1sIBx80"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/logos/17582863148936004269809066900047.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667168/logos/17582863148936004269809066900047.jpg",
+      "public_id": "logos/17582863148936004269809066900047"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/logos/photo.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667170/logos/photo.jpg",
+      "public_id": "logos/photo"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/logos/1758286727816237176831953803276_MjzQPV8.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667175/logos/1758286727816237176831953803276_MjzQPV8.jpg",
+      "public_id": "logos/1758286727816237176831953803276_MjzQPV8"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/logos/1758286727816237176831953803276_SHsvZpx.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667182/logos/1758286727816237176831953803276_SHsvZpx.jpg",
+      "public_id": "logos/1758286727816237176831953803276_SHsvZpx"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/logos/1758286727816237176831953803276.jpg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667190/logos/1758286727816237176831953803276.jpg",
+      "public_id": "logos/1758286727816237176831953803276"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell3_tySWoyI.jpeg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667192/produits/dell3_tySWoyI.jpg",
+      "public_id": "produits/dell3_tySWoyI"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo3_nNOLeci.jpeg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667193/produits/lenovo3_nNOLeci.jpg",
+      "public_id": "produits/lenovo3_nNOLeci"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2_NE4hVe2.jpeg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667195/produits/lenovo2_NE4hVe2.jpg",
+      "public_id": "produits/lenovo2_NE4hVe2"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2.jpeg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667196/produits/lenovo2.jpg",
+      "public_id": "produits/lenovo2"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/hp3.jpeg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667197/produits/hp3.jpg",
+      "public_id": "produits/hp3"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo3_w87KIVK.jpeg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667198/produits/lenovo3_w87KIVK.jpg",
+      "public_id": "produits/lenovo3_w87KIVK"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/hp2.jpeg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667200/produits/HP2.jpg",
+      "public_id": "produits/HP2"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo2_8Fdewf9.jpeg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667201/produits/lenovo2_8Fdewf9.jpg",
+      "public_id": "produits/lenovo2_8Fdewf9"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell2_YfKIBIF.jpeg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667202/produits/dell2_YfKIBIF.jpg",
+      "public_id": "produits/dell2_YfKIBIF"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell2.jpeg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667203/produits/dell2.jpg",
+      "public_id": "produits/dell2"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/lenovo3.jpeg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667205/produits/lenovo3.jpg",
+      "public_id": "produits/lenovo3"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/produits/dell3.jpeg",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667206/produits/dell3.jpg",
+      "public_id": "produits/dell3"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/logos/dumping.png",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667208/logos/dumping.png",
+      "public_id": "logos/dumping"
+    },
+    {
+      "local_path": "/home/dumping/django/Ultimate-Technology/media/logos/logo_page.png",
+      "cloudinary_url": "https://res.cloudinary.com/dxcbksigt/image/upload/v1758667209/logos/logo_page.png",
+      "public_id": "logos/logo_page"
+    }
+  ],
+  "errors": []
+}

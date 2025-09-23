@@ -1,0 +1,2248 @@
+{
+  "timestamp": "2025-09-23T23:31:24.531108",
+  "summary": {
+    "total_migrated": 0,
+    "total_tables": 17
+  },
+  "errors": [
+    {
+      "table": "django_admin_log",
+      "error": "relation \"django_admin_log\" does not exist\nLINE 1: INSERT INTO django_admin_log (\"id\", \"object_id\", \"object_rep...\n                    ^\n",
+      "row_data": [
+        1,
+        "1",
+        "Dell",
+        1,
+        "[{\"added\": {}}]",
+        8,
+        1,
+        "2025-09-11 03:37:12.214417"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        2,
+        "cac1f0c1-a985-47fd-b62e-c46c9cd572a2",
+        "Dell Latitude 7450",
+        1,
+        "[{\"added\": {}}]",
+        7,
+        1,
+        "2025-09-11 03:45:23.238823"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        3,
+        "2",
+        "Lenovo",
+        1,
+        "[{\"added\": {}}]",
+        8,
+        1,
+        "2025-09-11 03:51:44.753385"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        4,
+        "71ccdb16-c829-4289-8f79-fbaf310fb567",
+        "Lenovo T460s  \u00e9cran tactile --- RAM 8GB  DDR4 - 256GB SSD",
+        1,
+        "[{\"added\": {}}]",
+        7,
+        1,
+        "2025-09-11 03:55:07.721385"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        5,
+        "f16c1ae4-a5fc-4f55-9eed-49a04d281ef4",
+        "Dell Latitude 5580 --- RAM 16GB PC4 - 512GB SSD",
+        1,
+        "[{\"added\": {}}]",
+        7,
+        1,
+        "2025-09-11 04:02:31.659539"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        6,
+        "3",
+        "HP",
+        1,
+        "[{\"added\": {}}]",
+        8,
+        1,
+        "2025-09-11 04:04:07.062225"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        7,
+        "e77713b1-0e7d-44b6-8d65-c040003930bd",
+        "HP PROBOOK 455G3 --- RAM 8Go - 500Go HDD",
+        1,
+        "[{\"added\": {}}]",
+        7,
+        1,
+        "2025-09-11 04:07:27.574883"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        8,
+        "ee41c984-ba04-4d15-922f-231f4317e869",
+        "HP EliteBook  745 G6 --- RAM 16 Go DDR4 - SSD M2 NVME 256 Go",
+        1,
+        "[{\"added\": {}}]",
+        7,
+        1,
+        "2025-09-11 04:14:33.412262"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        9,
+        "ee41c984-ba04-4d15-922f-231f4317e869",
+        "HP EliteBook  745 G6 --- RAM 16 Go DDR4 - SSD M2 NVME 256 Go",
+        2,
+        "[{\"changed\": {\"fields\": [\"Nouveau prix\", \"Prix promo\"]}}]",
+        7,
+        1,
+        "2025-09-11 06:39:57.305786"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        10,
+        "f16c1ae4-a5fc-4f55-9eed-49a04d281ef4",
+        "Dell Latitude 5580 --- RAM 16GB PC4 - 512GB SSD",
+        2,
+        "[{\"changed\": {\"fields\": [\"Description\", \"Nouveau prix\", \"Prix promo\"]}}]",
+        7,
+        1,
+        "2025-09-11 06:41:52.931738"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        11,
+        "722fdcf9-6206-457e-b75d-08cd3e092ce7",
+        "Dell Latitude 5400 --- RAM 16 Go - 512Go SSD",
+        1,
+        "[{\"added\": {}}]",
+        7,
+        1,
+        "2025-09-11 07:08:40.421354"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        12,
+        "5791800e-f57f-4c36-96fa-9aeba059134d",
+        "Dell Latitude 5310 ecran tactile --- RAM 8 Go - 256 Go",
+        1,
+        "[{\"added\": {}}]",
+        7,
+        1,
+        "2025-09-11 07:15:00.607264"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        13,
+        "e7e9f0f4-c64a-4031-a908-05ac13695294",
+        "Dell Latitude 5450 --- RAM 8 Go DDR3 - 500 Go HDD",
+        1,
+        "[{\"added\": {}}]",
+        7,
+        1,
+        "2025-09-11 07:21:41.266632"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        14,
+        "f6afe236-4e7e-406b-820a-9d3b3d74f277",
+        "Lenovo V15-G4 IRU --- RAM 8 Go RAM DDR4 - 256Go SSD M.2",
+        1,
+        "[{\"added\": {}}]",
+        7,
+        1,
+        "2025-09-11 07:33:58.766719"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        15,
+        "722fdcf9-6206-457e-b75d-08cd3e092ce7",
+        "Dell Latitude 5400 --- RAM 16 Go - 512Go SSD",
+        2,
+        "[{\"changed\": {\"fields\": [\"Cpu\"]}}]",
+        7,
+        1,
+        "2025-09-12 00:07:30.052855"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        16,
+        "f6afe236-4e7e-406b-820a-9d3b3d74f277",
+        "Lenovo V15-G4 IRU --- RAM 8 Go RAM DDR4 - 256Go SSD M.2",
+        2,
+        "[{\"changed\": {\"fields\": [\"Cpu\"]}}]",
+        7,
+        1,
+        "2025-09-12 00:08:45.091680"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        17,
+        "e7e9f0f4-c64a-4031-a908-05ac13695294",
+        "Dell Latitude 5450 --- RAM 8 Go DDR3 - 500 Go HDD",
+        2,
+        "[]",
+        7,
+        1,
+        "2025-09-12 00:08:56.544688"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        18,
+        "5791800e-f57f-4c36-96fa-9aeba059134d",
+        "Dell Latitude 5310 ecran tactile --- RAM 8 Go - 256 Go",
+        2,
+        "[{\"changed\": {\"fields\": [\"Cpu\"]}}]",
+        7,
+        1,
+        "2025-09-12 00:09:17.840252"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        19,
+        "722fdcf9-6206-457e-b75d-08cd3e092ce7",
+        "Dell Latitude 5400 --- RAM 16 Go - 512Go SSD",
+        2,
+        "[]",
+        7,
+        1,
+        "2025-09-12 00:09:27.787641"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        20,
+        "ee41c984-ba04-4d15-922f-231f4317e869",
+        "HP EliteBook  745 G6 --- RAM 16 Go DDR4 - SSD M2 NVME 256 Go",
+        2,
+        "[{\"changed\": {\"fields\": [\"Cpu\"]}}]",
+        7,
+        1,
+        "2025-09-12 00:09:51.627041"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        21,
+        "e77713b1-0e7d-44b6-8d65-c040003930bd",
+        "HP PROBOOK 455G3 --- RAM 8 Go - 500Go HDD",
+        2,
+        "[{\"changed\": {\"fields\": [\"Cpu\", \"Ram\"]}}]",
+        7,
+        1,
+        "2025-09-12 00:10:13.254898"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        22,
+        "f16c1ae4-a5fc-4f55-9eed-49a04d281ef4",
+        "Dell Latitude 5580 --- RAM 16 Go PC4 - 512 Go SSD",
+        2,
+        "[{\"changed\": {\"fields\": [\"Cpu\", \"Ram\", \"Stockage\"]}}]",
+        7,
+        1,
+        "2025-09-12 00:11:02.498708"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        23,
+        "71ccdb16-c829-4289-8f79-fbaf310fb567",
+        "Lenovo ThinkPad T460s  \u00e9cran tactile --- RAM 8 Go  DDR4 - 256 Go SSD",
+        2,
+        "[{\"changed\": {\"fields\": [\"Model\", \"Cpu\", \"Ram\", \"Stockage\"]}}]",
+        7,
+        1,
+        "2025-09-12 00:11:51.653056"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        24,
+        "cac1f0c1-a985-47fd-b62e-c46c9cd572a2",
+        "Dell Latitude 7450 --- RAM 32 Go DDR5 - 512 Go SSD M.2",
+        2,
+        "[]",
+        7,
+        1,
+        "2025-09-12 00:12:14.993182"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        25,
+        "f16c1ae4-a5fc-4f55-9eed-49a04d281ef4",
+        "Dell Latitude 5580 --- RAM 16 Go PC4 - 512 Go SSD",
+        2,
+        "[{\"changed\": {\"fields\": [\"Description\"]}}]",
+        7,
+        1,
+        "2025-09-12 05:50:10.056912"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        26,
+        "5791800e-f57f-4c36-96fa-9aeba059134d",
+        "Dell Latitude 5310 ecran tactile --- RAM 8 Go - 256 Go",
+        2,
+        "[{\"changed\": {\"fields\": [\"Est vendue\"]}}]",
+        7,
+        1,
+        "2025-09-13 18:53:59.891994"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        27,
+        "1",
+        "Tchoupe Eric -- +237 658 630 407",
+        1,
+        "[{\"added\": {}}]",
+        9,
+        1,
+        "2025-09-14 08:33:35.245640"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        28,
+        "1",
+        "hackdumping@gmail.com",
+        3,
+        "",
+        10,
+        1,
+        "2025-09-16 00:18:27.652466"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        29,
+        "3",
+        "erictchoupe5@gmail.com",
+        3,
+        "",
+        10,
+        1,
+        "2025-09-16 15:12:32.044544"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        30,
+        "2",
+        "hackdumping@gmail.com",
+        3,
+        "",
+        10,
+        1,
+        "2025-09-16 15:12:39.591277"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        31,
+        "4",
+        "erictchoupe5@gmail.com",
+        3,
+        "",
+        10,
+        1,
+        "2025-09-16 15:22:48.843698"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        32,
+        "5",
+        "erictchoupe5@gmail.com",
+        3,
+        "",
+        10,
+        1,
+        "2025-09-16 15:29:27.126175"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        33,
+        "f6afe236-4e7e-406b-820a-9d3b3d74f277",
+        "Lenovo V15-G4 IRU --- RAM 8 Go RAM DDR4 - 256Go SSD M.2",
+        2,
+        "[{\"changed\": {\"fields\": [\"Image2\", \"Image3\"]}}]",
+        7,
+        1,
+        "2025-09-16 16:26:45.897302"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        34,
+        "ee41c984-ba04-4d15-922f-231f4317e869",
+        "HP EliteBook  745 G6 --- RAM 16 Go DDR4 - SSD M2 NVME 256 Go",
+        2,
+        "[{\"changed\": {\"fields\": [\"Est promo\", \"Est vendue\"]}}]",
+        7,
+        1,
+        "2025-09-16 16:31:52.048872"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        35,
+        "e7e9f0f4-c64a-4031-a908-05ac13695294",
+        "Dell Latitude 5450 --- RAM 8 Go DDR3 - 500 Go HDD",
+        2,
+        "[{\"changed\": {\"fields\": [\"Image2\", \"Image3\"]}}]",
+        7,
+        1,
+        "2025-09-16 16:36:18.013539"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        36,
+        "722fdcf9-6206-457e-b75d-08cd3e092ce7",
+        "Dell Latitude 5400 --- RAM 16 Go - 512Go SSD",
+        2,
+        "[{\"changed\": {\"fields\": [\"Image2\", \"Image3\"]}}]",
+        7,
+        1,
+        "2025-09-16 16:41:28.848189"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        37,
+        "e77713b1-0e7d-44b6-8d65-c040003930bd",
+        "HP PROBOOK 455G3 --- RAM 8 Go - 500Go HDD",
+        2,
+        "[{\"changed\": {\"fields\": [\"Image2\", \"Image3\"]}}]",
+        7,
+        1,
+        "2025-09-16 16:45:41.604189"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        38,
+        "f16c1ae4-a5fc-4f55-9eed-49a04d281ef4",
+        "Dell Latitude 5580 --- RAM 16 Go PC4 - 512 Go SSD",
+        2,
+        "[{\"changed\": {\"fields\": [\"Image2\", \"Image3\"]}}]",
+        7,
+        1,
+        "2025-09-16 16:49:05.240525"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        39,
+        "71ccdb16-c829-4289-8f79-fbaf310fb567",
+        "Lenovo ThinkPad T460s  \u00e9cran tactile --- RAM 8 Go  DDR4 - 256 Go SSD",
+        2,
+        "[{\"changed\": {\"fields\": [\"Image2\", \"Image3\"]}}]",
+        7,
+        1,
+        "2025-09-16 16:57:39.580669"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        40,
+        "cac1f0c1-a985-47fd-b62e-c46c9cd572a2",
+        "Dell Latitude 7450 --- RAM 32 Go DDR5 - 512 Go SSD M.2",
+        2,
+        "[{\"changed\": {\"fields\": [\"Image2\", \"Image3\"]}}]",
+        7,
+        1,
+        "2025-09-16 17:01:36.956235"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        41,
+        "6",
+        "hackdumping@gmail.com",
+        3,
+        "",
+        10,
+        1,
+        "2025-09-17 23:57:56.513676"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        42,
+        "1",
+        "Standard - 5000 XAF / mois",
+        1,
+        "[{\"added\": {}}]",
+        12,
+        1,
+        "2025-09-18 11:11:00.251458"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        43,
+        "2",
+        "Confort - 10000 XAF / mois",
+        1,
+        "[{\"added\": {}}]",
+        12,
+        1,
+        "2025-09-18 11:11:20.522880"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        44,
+        "c2b6f5f2-6fe1-4bfe-9706-d5a1f74d0962",
+        "ultimate-technologie[658630407 - forfait Confort - 1 jours restant",
+        3,
+        "",
+        11,
+        1,
+        "2025-09-18 11:54:27.831018"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        45,
+        "707f17e2-7a45-40cf-988e-2ac913c869a1",
+        "ultimate-technologie[658630407 - forfait Confort - 1 jours restant",
+        3,
+        "",
+        11,
+        1,
+        "2025-09-18 12:06:31.505097"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        46,
+        "bd082e09-23c7-4505-9890-576cfc376c8f",
+        "ultimate-technologie[658630407 - forfait Confort - 1 jours restant",
+        2,
+        "[]",
+        11,
+        1,
+        "2025-09-18 12:24:16.761899"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        47,
+        "bd082e09-23c7-4505-9890-576cfc376c8f",
+        "ultimate-technologie[658630407 - forfait Confort - 1 jours restant",
+        3,
+        "",
+        11,
+        1,
+        "2025-09-18 12:24:23.000669"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        48,
+        "f70b069d-0668-4e76-b82c-4a91242b0184",
+        "ultimate-technologie[658630407 - forfait Confort - 1 jours restant",
+        3,
+        "",
+        11,
+        1,
+        "2025-09-18 12:28:09.235431"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        49,
+        "ede0ebab-bc75-4372-acb5-5c7c97cc68c0",
+        "ultimate-technologie[658630407 - forfait Confort - 1 jours restant",
+        3,
+        "",
+        11,
+        1,
+        "2025-09-18 12:29:01.003468"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        50,
+        "f6afe236-4e7e-406b-820a-9d3b3d74f277",
+        "Lenovo V15-G4 IRU --- RAM 8 Go RAM DDR4 - 256Go SSD M.2 en rupture : False",
+        2,
+        "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]",
+        7,
+        1,
+        "2025-09-18 13:19:02.244013"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        51,
+        "e7e9f0f4-c64a-4031-a908-05ac13695294",
+        "Dell Latitude 5450 --- RAM 8 Go DDR3 - 500 Go HDD en rupture : False",
+        2,
+        "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]",
+        7,
+        1,
+        "2025-09-18 13:19:09.583361"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        52,
+        "e7e9f0f4-c64a-4031-a908-05ac13695294",
+        "Dell Latitude 5450 --- RAM 8 Go DDR3 - 500 Go HDD en rupture : False",
+        2,
+        "[]",
+        7,
+        1,
+        "2025-09-18 13:19:19.487505"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        53,
+        "5791800e-f57f-4c36-96fa-9aeba059134d",
+        "Dell Latitude 5310 ecran tactile --- RAM 8 Go - 256 Go en rupture : True",
+        2,
+        "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]",
+        7,
+        1,
+        "2025-09-18 13:19:25.395729"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        54,
+        "722fdcf9-6206-457e-b75d-08cd3e092ce7",
+        "Dell Latitude 5400 --- RAM 16 Go - 512Go SSD en rupture : False",
+        2,
+        "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]",
+        7,
+        1,
+        "2025-09-18 13:19:31.732738"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        55,
+        "722fdcf9-6206-457e-b75d-08cd3e092ce7",
+        "Dell Latitude 5400 --- RAM 16 Go - 512Go SSD en rupture : False",
+        2,
+        "[]",
+        7,
+        1,
+        "2025-09-18 13:19:35.203450"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        56,
+        "ee41c984-ba04-4d15-922f-231f4317e869",
+        "HP EliteBook  745 G6 --- RAM 16 Go DDR4 - SSD M2 NVME 256 Go en rupture : True",
+        2,
+        "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]",
+        7,
+        1,
+        "2025-09-18 13:19:45.949355"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        57,
+        "e77713b1-0e7d-44b6-8d65-c040003930bd",
+        "HP PROBOOK 455G3 --- RAM 8 Go - 500Go HDD en rupture : False",
+        2,
+        "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]",
+        7,
+        1,
+        "2025-09-18 13:19:57.284940"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        58,
+        "f16c1ae4-a5fc-4f55-9eed-49a04d281ef4",
+        "Dell Latitude 5580 --- RAM 16 Go PC4 - 512 Go SSD en rupture : False",
+        2,
+        "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]",
+        7,
+        1,
+        "2025-09-18 13:20:08.307135"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        59,
+        "71ccdb16-c829-4289-8f79-fbaf310fb567",
+        "Lenovo ThinkPad T460s  \u00e9cran tactile --- RAM 8 Go  DDR4 - 256 Go SSD en rupture : False",
+        2,
+        "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]",
+        7,
+        1,
+        "2025-09-18 13:20:17.359185"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        60,
+        "cac1f0c1-a985-47fd-b62e-c46c9cd572a2",
+        "Dell Latitude 7450 --- RAM 32 Go DDR5 - 512 Go SSD M.2 en rupture : False",
+        2,
+        "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]",
+        7,
+        1,
+        "2025-09-18 13:20:23.352403"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        61,
+        "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "ultimate-technology[658630407 - forfait Standard - 1 jours restant",
+        2,
+        "[{\"changed\": {\"fields\": [\"Nom\"]}}]",
+        11,
+        1,
+        "2025-09-18 13:20:50.426832"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        62,
+        "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "ultimate-technology[658630407 - forfait Standard - 1 jours restant",
+        2,
+        "[{\"changed\": {\"fields\": [\"Jours\"]}}]",
+        11,
+        1,
+        "2025-09-18 13:28:49.308676"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        63,
+        "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "ultimate-technology[658630407 - forfait Standard - 1 jours restant",
+        2,
+        "[{\"changed\": {\"fields\": [\"Jours\"]}}]",
+        11,
+        1,
+        "2025-09-18 13:29:59.709374"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        64,
+        "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "ultimate-technology[658630407 - forfait Standard - 0 jours restant",
+        2,
+        "[{\"changed\": {\"fields\": [\"Jours\"]}}]",
+        11,
+        1,
+        "2025-09-18 13:31:14.103742"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        65,
+        "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "ultimate-technology[658630407 - forfait Standard - 1 jours restant",
+        2,
+        "[{\"changed\": {\"fields\": [\"Jours\"]}}]",
+        11,
+        1,
+        "2025-09-18 13:34:32.693191"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        66,
+        "1",
+        "Douala",
+        1,
+        "[{\"added\": {}}]",
+        13,
+        1,
+        "2025-09-18 15:03:12.326705"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        67,
+        "1",
+        "Cameroun",
+        1,
+        "[{\"added\": {}}]",
+        14,
+        1,
+        "2025-09-18 15:03:23.289242"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        68,
+        "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "ultimate-technology[658630407 - forfait Standard - 0 jours restant",
+        2,
+        "[{\"changed\": {\"fields\": [\"Pays\", \"Ville\"]}}]",
+        11,
+        1,
+        "2025-09-18 15:03:49.857256"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        69,
+        "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "ultimate-technology[658630407 - forfait Standard - 0 jours restant",
+        2,
+        "[]",
+        11,
+        1,
+        "2025-09-18 17:58:15.413922"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        70,
+        "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "ultimate-technology[658630407 - forfait Confort - 0 jours restant",
+        2,
+        "[{\"changed\": {\"fields\": [\"Forfait\"]}}]",
+        11,
+        1,
+        "2025-09-18 18:40:44.889124"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        71,
+        "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "ultimate-technology[658630407 - forfait Confort - 1 jours restant",
+        2,
+        "[{\"changed\": {\"fields\": [\"Jours\"]}}]",
+        11,
+        1,
+        "2025-09-18 21:57:54.119059"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        72,
+        "2",
+        "Yaounde",
+        1,
+        "[{\"added\": {}}]",
+        13,
+        1,
+        "2025-09-18 23:22:39.938014"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        73,
+        "48dba2ce-6aa5-414d-8a14-f268a1afae1e",
+        "computer-market[699700012 - forfait Standard - 8 jours restant",
+        1,
+        "[{\"added\": {}}]",
+        11,
+        1,
+        "2025-09-18 23:24:32.235272"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        74,
+        "e77713b1-0e7d-44b6-8d65-c040003930bd",
+        "HP PROBOOK 455G3 --- RAM 8 Go - 500Go HDD en rupture : False",
+        2,
+        "[{\"changed\": {\"fields\": [\"Image\"]}}]",
+        7,
+        1,
+        "2025-09-20 07:51:07.451198"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        75,
+        "3",
+        "Hp",
+        2,
+        "[{\"changed\": {\"fields\": [\"Nom\"]}}]",
+        8,
+        1,
+        "2025-09-21 03:17:38.357471"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        76,
+        "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "ultimate-technology[658630407 - forfait Confort - 0 jours restant",
+        2,
+        "[{\"changed\": {\"fields\": [\"Jours\"]}}]",
+        11,
+        1,
+        "2025-09-21 15:20:09.814105"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        77,
+        "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "ultimate-technology[658630407 - forfait Confort - 0 jours restant",
+        2,
+        "[{\"changed\": {\"fields\": [\"Jours\"]}}]",
+        11,
+        1,
+        "2025-09-21 20:10:37.566283"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        78,
+        "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "ultimate-technology[658630407 - forfait Confort - 1 jours restant",
+        2,
+        "[{\"changed\": {\"fields\": [\"Jours\"]}}]",
+        11,
+        1,
+        "2025-09-21 20:12:02.560156"
+      ]
+    },
+    {
+      "table": "django_admin_log",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        79,
+        "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "ultimate-technology[658562221 - forfait Confort - 1 jours restant",
+        2,
+        "[{\"changed\": {\"fields\": [\"Tel\"]}}]",
+        11,
+        1,
+        "2025-09-22 13:09:52.089726"
+      ]
+    },
+    {
+      "table": "django_content_type",
+      "error": "relation \"django_content_type\" does not exist\nLINE 1: INSERT INTO django_content_type (\"id\", \"app_label\", \"model\")...\n                    ^\n",
+      "row_data": [
+        1,
+        "admin",
+        "logentry"
+      ]
+    },
+    {
+      "table": "django_content_type",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        2,
+        "auth",
+        "permission"
+      ]
+    },
+    {
+      "table": "django_content_type",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        3,
+        "auth",
+        "group"
+      ]
+    },
+    {
+      "table": "django_content_type",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        4,
+        "auth",
+        "user"
+      ]
+    },
+    {
+      "table": "django_content_type",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        5,
+        "contenttypes",
+        "contenttype"
+      ]
+    },
+    {
+      "table": "django_content_type",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        6,
+        "sessions",
+        "session"
+      ]
+    },
+    {
+      "table": "django_content_type",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        7,
+        "vente_pc",
+        "produit"
+      ]
+    },
+    {
+      "table": "django_content_type",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        8,
+        "vente_pc",
+        "marque"
+      ]
+    },
+    {
+      "table": "django_content_type",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        9,
+        "vente_pc",
+        "staff"
+      ]
+    },
+    {
+      "table": "django_content_type",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        10,
+        "vente_pc",
+        "client"
+      ]
+    },
+    {
+      "table": "django_content_type",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        11,
+        "vente_pc",
+        "vendeur"
+      ]
+    },
+    {
+      "table": "django_content_type",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        12,
+        "vente_pc",
+        "forfait"
+      ]
+    },
+    {
+      "table": "django_content_type",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        13,
+        "vente_pc",
+        "ville"
+      ]
+    },
+    {
+      "table": "django_content_type",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        14,
+        "vente_pc",
+        "pays"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "relation \"auth_permission\" does not exist\nLINE 1: INSERT INTO auth_permission (\"id\", \"content_type_id\", \"coden...\n                    ^\n",
+      "row_data": [
+        1,
+        1,
+        "add_logentry",
+        "Can add log entry"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        2,
+        1,
+        "change_logentry",
+        "Can change log entry"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        3,
+        1,
+        "delete_logentry",
+        "Can delete log entry"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        4,
+        1,
+        "view_logentry",
+        "Can view log entry"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        5,
+        2,
+        "add_permission",
+        "Can add permission"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        6,
+        2,
+        "change_permission",
+        "Can change permission"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        7,
+        2,
+        "delete_permission",
+        "Can delete permission"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        8,
+        2,
+        "view_permission",
+        "Can view permission"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        9,
+        3,
+        "add_group",
+        "Can add group"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        10,
+        3,
+        "change_group",
+        "Can change group"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        11,
+        3,
+        "delete_group",
+        "Can delete group"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        12,
+        3,
+        "view_group",
+        "Can view group"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        13,
+        4,
+        "add_user",
+        "Can add user"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        14,
+        4,
+        "change_user",
+        "Can change user"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        15,
+        4,
+        "delete_user",
+        "Can delete user"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        16,
+        4,
+        "view_user",
+        "Can view user"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        17,
+        5,
+        "add_contenttype",
+        "Can add content type"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        18,
+        5,
+        "change_contenttype",
+        "Can change content type"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        19,
+        5,
+        "delete_contenttype",
+        "Can delete content type"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        20,
+        5,
+        "view_contenttype",
+        "Can view content type"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        21,
+        6,
+        "add_session",
+        "Can add session"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        22,
+        6,
+        "change_session",
+        "Can change session"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        23,
+        6,
+        "delete_session",
+        "Can delete session"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        24,
+        6,
+        "view_session",
+        "Can view session"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        25,
+        7,
+        "add_produit",
+        "Can add produit"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        26,
+        7,
+        "change_produit",
+        "Can change produit"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        27,
+        7,
+        "delete_produit",
+        "Can delete produit"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        28,
+        7,
+        "view_produit",
+        "Can view produit"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        29,
+        8,
+        "add_marque",
+        "Can add marque"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        30,
+        8,
+        "change_marque",
+        "Can change marque"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        31,
+        8,
+        "delete_marque",
+        "Can delete marque"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        32,
+        8,
+        "view_marque",
+        "Can view marque"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        33,
+        9,
+        "add_staff",
+        "Can add staff"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        34,
+        9,
+        "change_staff",
+        "Can change staff"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        35,
+        9,
+        "delete_staff",
+        "Can delete staff"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        36,
+        9,
+        "view_staff",
+        "Can view staff"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        37,
+        10,
+        "add_client",
+        "Can add client"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        38,
+        10,
+        "change_client",
+        "Can change client"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        39,
+        10,
+        "delete_client",
+        "Can delete client"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        40,
+        10,
+        "view_client",
+        "Can view client"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        41,
+        11,
+        "add_vendeur",
+        "Can add vendeur"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        42,
+        11,
+        "change_vendeur",
+        "Can change vendeur"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        43,
+        11,
+        "delete_vendeur",
+        "Can delete vendeur"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        44,
+        11,
+        "view_vendeur",
+        "Can view vendeur"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        45,
+        12,
+        "add_forfait",
+        "Can add forfait"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        46,
+        12,
+        "change_forfait",
+        "Can change forfait"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        47,
+        12,
+        "delete_forfait",
+        "Can delete forfait"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        48,
+        12,
+        "view_forfait",
+        "Can view forfait"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        49,
+        13,
+        "add_ville",
+        "Can add ville"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        50,
+        13,
+        "change_ville",
+        "Can change ville"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        51,
+        13,
+        "delete_ville",
+        "Can delete ville"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        52,
+        13,
+        "view_ville",
+        "Can view ville"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        53,
+        14,
+        "add_pays",
+        "Can add pays"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        54,
+        14,
+        "change_pays",
+        "Can change pays"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        55,
+        14,
+        "delete_pays",
+        "Can delete pays"
+      ]
+    },
+    {
+      "table": "auth_permission",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        56,
+        14,
+        "view_pays",
+        "Can view pays"
+      ]
+    },
+    {
+      "table": "auth_user",
+      "error": "relation \"auth_user\" does not exist\nLINE 1: INSERT INTO auth_user (\"id\", \"password\", \"last_login\", \"is_s...\n                    ^\n",
+      "row_data": [
+        1,
+        "pbkdf2_sha256$600000$9SuF7PqcnrCy4djuzbYm7t$Bxcwt67/v2lanQZr/4qK7jXQkbzEVedihSrBlSLyCjA=",
+        "2025-09-22 13:09:24.726559",
+        1,
+        "dumping",
+        "",
+        "hackdumping@gmail.com",
+        1,
+        1,
+        "2025-09-11 01:36:40.610611",
+        ""
+      ]
+    },
+    {
+      "table": "django_session",
+      "error": "relation \"django_session\" does not exist\nLINE 1: INSERT INTO django_session (\"session_key\", \"session_data\", \"...\n                    ^\n",
+      "row_data": [
+        "g5an456chd0evv2q8tlxcnxbhxmw3zc3",
+        ".eJxFkNGOwiAQRX9lw-uKDrRo7ZOJPu8vNLSMFbdlGgpGY_z3na6b7OOcc4E7PMUNg8McRf0UHTkUtbBt27WtVdLAzsiy1CArhVYWbaULg5VSrRMrEWjkcB6SH21CmbC7BBqof7Cb7GNmebQjRsqBScKBwdZU2wJK2DHB0fqFXWz37fI4-dAf-oWtO755JUY3sT2c3goKMAxvfhiWjifKdrAMztF6fsoAAA8Uz9an5l3tSIFBEv98iv4uagW_YcetGx9mjMlT4LwGbSTspao-lK71vtZmvStBF8UnQA0g_s7gfSn2RQGZ8MLE02aK5LJP84Z_o8d5E6hZ1Po69Zy6Uo7cUr1eP9JDccY:1uza9U:yU6EKS7rm4ng9nN5b49ENJaxrWfe9VdPxG-ZM8RfbVE",
+        "2025-10-03 12:23:48.050012"
+      ]
+    },
+    {
+      "table": "django_session",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        "bqkx1euzxw2vxhoju26f3xa5x0ultqie",
+        ".eJxFj8FuwjAQRH-l8rUY1nYcOzkhgdRbpVbqGTmJCaaJHTk2AiH-vZtSqcd9M7s7cycX6zubI6nvpA2dJTUxTdM2jWFUgpK0KDhQzayhotFcSKsZazqyIj6MaM5DcqNJlibbnnwYQn9DbTK3GcWdGW0M2SNJdkBQSl0KKEAhsaNxCzuZ9rvL4-R8v-0Xtm7x8oqM3YTqdv-UQIBEeHHDsGTch2wGg-AYjcNXEgBwCPFoXDo8o-2CR5DIP5-iu5Kawa-5w9QH52cbkwse_Ry4pFBRpl8Yr3lVc7lWBXAhXgFqAPK3Y69LsPfgLRIsHHDaTDF02aV5s4B5w5TUXJeKK81KLhRTpRaskkKD4Ko8fHj2-XV9W5-nHo-cQ45Ygj0eP4NEd6E:1uzzxl:X5Sg2sWcSNmL_cyqHPbfWk8Xwz2oPFH-c39oaayz5Tw",
+        "2025-10-04 15:57:25.089568"
+      ]
+    },
+    {
+      "table": "django_session",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        "rkn1rzo4mt9q0rvpvjg6hk8h10b9u3tm",
+        ".eJxFj8FuwjAQRH-l8rUY1nYcOzkhgdRbpVbqGTmJCaaJHTk2AiH-vZtSqcd9M7s7cycX6zubI6nvpA2dJTUxTdM2jWFUgpK0KDhQzayhotFcSKsZazqyIj6MaM5DcqNJlibbnnwYQn9DbTK3GcWdGW0M2SNJdkBQSl0KKEAhsaNxCzuZ9rvL4-R8v-0Xtm7x8oqM3YTqdv-UQIBEeHHDsGTch2wGg-AYjcNXEgBwCPFoXDo8o-2CR5DIP5-iu5Kawa-5w9QH52cbkwse_Ry4pFBRpl8Yr3lVc7lWBXAhXgFqAPK3Y69LsPfgLRIsHHDaTDF02aV5s4B5w5TUXJeKK81KLhRTpRaskkKD4Ko8fHj2-XV9W5-nHo-cQ45Ygj0eP4NEd6E:1v006Z:5CgOhxWGEy6-ZUP38vD4eG0pJD8Njq_49aSEoB-qBWc",
+        "2025-10-04 16:06:31.058900"
+      ]
+    },
+    {
+      "table": "django_session",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        "ymbq47e3hy6ho108i0al4ukvolphvxhr",
+        ".eJxFj8FuwjAQRH-l8rUY1nYcOzkhgdRbpVbqGTmJCaaJHTk2AiH-vZtSqcd9M7s7cycX6zubI6nvpA2dJTUxTdM2jWFUgpK0KDhQzayhotFcSKsZazqyIj6MaM5DcqNJlibbnnwYQn9DbTK3GcWdGW0M2SNJdkBQSl0KKEAhsaNxCzuZ9rvL4-R8v-0Xtm7x8oqM3YTqdv-UQIBEeHHDsGTch2wGg-AYjcNXEgBwCPFoXDo8o-2CR5DIP5-iu5Kawa-5w9QH52cbkwse_Ry4pFBRpl8Yr3lVc7lWBXAhXgFqAPK3Y69LsPfgLRIsHHDaTDF02aV5s4B5w5TUXJeKK81KLhRTpRaskkKD4Ko8fHj2-XV9W5-nHo-cQ45Ygj0eP4NEd6E:1v006h:JpV_rmJpmDuBYbjFWv32jhu8ht8C4J0lX0IFluJLRWU",
+        "2025-10-04 16:06:39.006676"
+      ]
+    },
+    {
+      "table": "django_session",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        "pv7mo8gg352g7zpy6ssd9ehpmhbfxr5b",
+        ".eJxFj8FuwjAQRH-l8rUY1nYcOzkhgdRbpVbqGTmJCaaJHTk2AiH-vZtSqcd9M7s7cycX6zubI6nvpA2dJTUxTdM2jWFUgpK0KDhQzayhotFcSKsZazqyIj6MaM5DcqNJlibbnnwYQn9DbTK3GcWdGW0M2SNJdkBQSl0KKEAhsaNxCzuZ9rvL4-R8v-0Xtm7x8oqM3YTqdv-UQIBEeHHDsGTch2wGg-AYjcNXEgBwCPFoXDo8o-2CR5DIP5-iu5Kawa-5w9QH52cbkwse_Ry4pFBRpl8Yr3lVc7lWBXAhXgFqAPK3Y69LsPfgLRIsHHDaTDF02aV5s4B5w5TUXJeKK81KLhRTpRaskkKD4Ko8fHj2-XV9W5-nHo-cQ45Ygj0eP4NEd6E:1v0AOD:wWOQij2vydSUKlHlWixoRUZufZK0DPzrZtoHWLyjagA",
+        "2025-10-05 03:05:25.375662"
+      ]
+    },
+    {
+      "table": "django_session",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        "j3amge9fdu5ezihivjhi2gxtat3u3amq",
+        ".eJxFj8FuwjAQRH-l8rUY1nYcOzkhgdRbpVbqGTmJCaaJHTk2AiH-vZtSqcd9M7s7cycX6zubI6nvpA2dJTUxTdM2jWFUgpK0KDhQzayhotFcSKsZazqyIj6MaM5DcqNJlibbnnwYQn9DbTK3GcWdGW0M2SNJdkBQSl0KKEAhsaNxCzuZ9rvL4-R8v-0Xtm7x8oqM3YTqdv-UQIBEeHHDsGTch2wGg-AYjcNXEgBwCPFoXDo8o-2CR5DIP5-iu5Kawa-5w9QH52cbkwse_Ry4pFBRpl8Yr3lVc7lWBXAhXgFqAPK3Y69LsPfgLRIsHHDaTDF02aV5s4B5w5TUXJeKK81KLhRTpRaskkKD4Ko8fHj2-XV9W5-nHo-cQ45Ygj0eP4NEd6E:1v0QPq:29A03exfqIacqQqfC71PRED30NTxaWCTL6mdXQ2ieJY",
+        "2025-10-05 20:12:10.676393"
+      ]
+    },
+    {
+      "table": "django_session",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        "dhlawb2tnv5e5iias9vl7vfwzidqsuvf",
+        ".eJxFj9GOwiAQRX9lw-uKDrRo7ZOJPu8vGFrGitsyBMFojP--03WTfSGZcy_M4SluGByWJNqn6MmhaIXtur7rrJIGNkbWtQbZKLSy6hpdGWyU6pxYiEATl8uY_WQzyoz9OdBIw4OzaB9XDvd2wkQlMMk4MlibZl1BDRsmOFk_s7Ptv12Zog_DbpjZsueXF2JykdPd4R1BBYbhzY_j7HigYkfL4JSs51UGAHigdLI-H99qewoMsvjnMfm7aBX8lh1bH324YsqeAvc1aCNhK1XzoXSrt602y00Nuqo-AVoA8XcH77PYFwVkwh8mnlYxkSs-X1czeJ_HaAdcxjBw7UIlsaZ6vX4AR1NyOA:1v0SXY:zQS8AaopIJ3OyRN_oson8YDf4MUws_4LgUQJzM0y8vk",
+        "2025-10-05 22:28:16.910013"
+      ]
+    },
+    {
+      "table": "vente_pc_marque",
+      "error": "relation \"vente_pc_marque\" does not exist\nLINE 1: INSERT INTO vente_pc_marque (\"id\", \"nom\") VALUES (1, 'Dell')\n                    ^\n",
+      "row_data": [
+        1,
+        "Dell"
+      ]
+    },
+    {
+      "table": "vente_pc_marque",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        2,
+        "Lenovo"
+      ]
+    },
+    {
+      "table": "vente_pc_marque",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        3,
+        "Hp"
+      ]
+    },
+    {
+      "table": "vente_pc_staff",
+      "error": "relation \"vente_pc_staff\" does not exist\nLINE 1: INSERT INTO vente_pc_staff (\"id\", \"nom\", \"role\", \"tel\", \"ima...\n                    ^\n",
+      "row_data": [
+        1,
+        "Tchoupe Eric",
+        "Fondateur & Informaticien",
+        "+237 658 630 407",
+        "staff/profil.jpg",
+        "2025-09-14 08:33:35.244639",
+        "Hack Dumping"
+      ]
+    },
+    {
+      "table": "vente_pc_forfait",
+      "error": "relation \"vente_pc_forfait\" does not exist\nLINE 1: INSERT INTO vente_pc_forfait (\"id\", \"nom\", \"prix\") VALUES (1...\n                    ^\n",
+      "row_data": [
+        1,
+        "Standard",
+        5000
+      ]
+    },
+    {
+      "table": "vente_pc_forfait",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        2,
+        "Confort",
+        10000
+      ]
+    },
+    {
+      "table": "vente_pc_pays",
+      "error": "relation \"vente_pc_pays\" does not exist\nLINE 1: INSERT INTO vente_pc_pays (\"id\", \"nom\") VALUES (1, 'Cameroun...\n                    ^\n",
+      "row_data": [
+        1,
+        "Cameroun"
+      ]
+    },
+    {
+      "table": "vente_pc_ville",
+      "error": "relation \"vente_pc_ville\" does not exist\nLINE 1: INSERT INTO vente_pc_ville (\"id\", \"nom\") VALUES (1, 'Douala'...\n                    ^\n",
+      "row_data": [
+        1,
+        "Douala"
+      ]
+    },
+    {
+      "table": "vente_pc_ville",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        2,
+        "Yaounde"
+      ]
+    },
+    {
+      "table": "vente_pc_produit",
+      "error": "relation \"vente_pc_produit\" does not exist\nLINE 1: INSERT INTO vente_pc_produit (\"id\", \"model\", \"cpu\", \"ram\", \"...\n                    ^\n",
+      "row_data": [
+        "cac1f0c1a98547fdb62ec46c9cd572a2",
+        "Latitude 7450",
+        "Core Ultra 7 14th G\u00e9n\u00e9ration",
+        "32 Go DDR5",
+        "512 Go SSD M.2",
+        "",
+        "\u24d8 Ordinateur Portable Dell Latitude 7450 | Core Ultra 7 14th G\u00e9n\u00e9ration | 32Go RAM | 512 Go SSD AVEC Intel AI Boost l'unit\u00e9 de traitement neuronal (NPU) int\u00e9gr\u00e9e aux processeurs Intel\u00ae Core\u2122 Ultra, qui acc\u00e9l\u00e8re les charges de travail d'intelligence artificielle (IA) et d'apprentissage automatique de mani\u00e8re efficace et \u00e0 faible consommation d'\u00e9nergie.\r\n\r\n\u2728 Intel\u00ae Core\u2122 Ultra 7 de 14e g\u00e9n\u00e9ration (12 Mo de cache, 10 c\u0153urs, 14 threads, jusqu'\u00e0 4,7 GHz Turbo)\r\n\r\n\u2728 32 Go DDR5, 6400 MT/s, double canal, non ECC\r\n\r\n\u2728 SSD M.2 2230 PCIe NVMe de 512 Go, classe 35\r\n\r\n\u2728 \u00c9cran FHD 36,0 cm (14\") (1 920 x 1 200), 250 cd/m\u00b2, faible r\u00e9flexion, avec IPS, cam\u00e9ra FHD IR, WLAN/WWAN (4G)\r\n\r\n\r\n\u2728 Wi-Fi 6E AX211, 2 x 2, 802.11ax, avec Bluetooth\u00ae\r\n\r\n\u2728 1200p \u00e0 30 ips, cam\u00e9ra grand \u00e9cran FHD RVB, microphones double rang\u00e9e\r\n\r\n\u2728 Clickpad de pr\u00e9cision avec prise en charge des gestes multi-touch\r\n\r\n\u2728 Clavier r\u00e9tro\u00e9clair\u00e9 \u00e0 pointage unique avec lecteur d'empreinte digitale & D\u00e9verrouillage Facial\r\n\r\n\u2728 2 ports Thunderbolt\u2122 4 avec mode alternatif DisplayPort\u2122/USB",
+        380000,
+        350000,
+        0,
+        1,
+        "2025-09-11 03:45:23.236909",
+        1,
+        0,
+        0,
+        "abbcbba15075442081ea3b8235e811bd",
+        "produits/dell.jpg",
+        "produits/dell2_YfKIBIF.jpeg",
+        "produits/dell3_tySWoyI.jpeg"
+      ]
+    },
+    {
+      "table": "vente_pc_produit",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        "71ccdb16c82942898f79fbaf310fb567",
+        "ThinkPad T460s  \u00e9cran tactile",
+        "Intel core i5 6300U @2.81 GHz",
+        "8 Go  DDR4",
+        "256 Go SSD",
+        "Intel HD Graphics 520 4GB",
+        "\ud83d\udcbb  *Lenovo T460s  \u00e9cran tactile \ud83d\udca6  ultra slim et rapide d\u00e9marrages en 5 secondes\u2728\ufe0f\u2728\ufe0f\r\n\r\n\ud83d\udc49\ud83c\udffcIntel core i5 6300U   6eme g\u00e9n\u00e9ration\r\n\ud83d\udc49\ud83c\udffe CPU: 2.81 GHz   ultra rapide \r\n\ud83d\udc49\ud83c\udffc \u00c9cran tactile et ulta Slim \r\n\ud83d\udc49\ud83c\udffcRam 8GB  ddr4 extensible a 24GB \r\n\ud83d\udc49\ud83c\udffcdisque dur 256GB SSD extensible\r\n\ud83d\udc49\ud83c\udffccarte graphique Intel HD Graphics 520 4GB \r\n\ud83d\udc49\ud83c\udffc\u00e9cran 14\" UHD tactile \ud83d\udca6\r\n\ud83d\udc49\ud83c\udffc Autonomie de batterie puissant \r\n\ud83d\udc49\ud83c\udffcPort USB 3.0 , port HDMI , bluetooth ,wifi ,Webcam \r\nLecteur sim\ud83e\udd29\r\n\ud83d\udc49\ud83c\udffc Bonus : Microsoft Office d\u00e9j\u00e0 install\u00e9e gratuitement ainsi qu'un antivirus virus 2025",
+        0,
+        130000,
+        0,
+        1,
+        "2025-09-11 03:55:07.720460",
+        2,
+        0,
+        0,
+        "abbcbba15075442081ea3b8235e811bd",
+        "produits/lenovo.jpg",
+        "produits/lenovo2_8Fdewf9.jpeg",
+        "produits/lenovo3_w87KIVK.jpeg"
+      ]
+    },
+    {
+      "table": "vente_pc_produit",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        "f16c1ae4a5fc4f559eed49a04d281ef4",
+        "Latitude 5580",
+        "Intel core i5-6600U @ 2.60Ghz",
+        "16 Go PC4",
+        "512 Go SSD",
+        "NVIDIA Gforce 950MX  2GB d\u00e9di\u00e9 GDDR5",
+        "\ud83d\udd34 *DELL 5580, workstation  encore appel\u00e9 \u00ab SATAN 2 \u00bb  ( i5)  de 6em et  7em g\u00e9n\u00e9ration coupl\u00e9 \u00e0 \ud83d\ude3316GB Ram\ud83d\ude33 extensible jusqu'\u00e0 64GB Ram \ud83e\udd15 et une carte graphique professionnelle avec 2GB d\u00e9di\u00e9 NVIDIA Gforce 950MX GDDR5\ud83d\udd25* \r\n\r\nLogiciels support\u00e9s :  Lumion (Logiciel d'architecture le plus lourd) Toute la gamme Adobe Tous logiciels de dessin en ing\u00e9nierie ( AutoCad, SoliWork, ..) Tous les jeux vid\u00e9os m\u00eame les plus r\u00e9cents\r\n\r\n\ud83d\udc49 Intel core i5 2.60Ghz  6600U \r\n\ud83d\udc49Ram 16GB PC4  extensible a 64GB  \r\n\ud83d\udc49disque dur *512GB SSD* (extensinle jusqu'a 1TB)\r\n\ud83d\udc49 carte graphique NVIDIA Gforce 950MX  2GB d\u00e9di\u00e9 GDDR5\ud83d\udd25 \r\n\ud83d\udc49Clavier r\u00e9tro-\u00e9clair\u00e9 \r\n\ud83d\udc49\u00e9cran 15.6\" POUCES \r\n\ud83d\udc49 ports type-C  - empreinte digitale- ports USB - \u00e9couteur-HDMI-VGA-Carte SD. \r\n\r\nOFFERT:\r\n\ud83c\udf81 Windows 11/10 professionnel 64bits\r\n\ud83c\udf81 Suite office d\u00e9j\u00e0 install\u00e9e\r\n\ud83c\udf81 Chargeur d'origine",
+        200000,
+        185000,
+        1,
+        1,
+        "2025-09-11 04:02:31.650493",
+        1,
+        180000,
+        1,
+        "abbcbba15075442081ea3b8235e811bd",
+        "produits/dell_2ulLFVl.jpg",
+        null,
+        null
+      ]
+    },
+    {
+      "table": "vente_pc_produit",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        "e77713b10e7d44b68d65c040003930bd",
+        "PROBOOK 455G3",
+        "AMD Radeon R5 @ 2.20Ghz",
+        "8 Go",
+        "500Go HDD",
+        "4GO de Carte graphique total 1GO d\u00e9di\u00e9 AMD  Radeon graphique",
+        "ORDINATEURS HP PROBOOK 455G3 AMD Radeon R5 \u00c9QUIVALENT a UN CORE-I5 de 6eme G\u00c9N\u00c9RATION ET COUPL\u00c9 \u00e0 8Go \u2728\ud83c\udf41\r\n\r\n*et avec une carte graphique professionnelle 1Go d\u00e9di\u00e9e*\ud83d\udd25\ud83d\udd25 \r\n\r\nLogiciel supporter (  Logiciel d'architecture) tout la gamme Adobe et logiciel de dessin ing\u00e9nierie (AutoCad achicard etc...) tout les jeux vid\u00e9o m\u00eame les plus r\u00e9cents \r\n\r\n \r\n\ud83c\udf41Fr\u00e9quence 2.20ghz up  4.Ghz  turbo bost \r\n\r\n\ud83c\udf41Disque dur 500Go  extensible \r\n\r\n\ud83c\udf418Go de RAM extensible jusqu'\u00e0 64Go \r\n\r\n\ud83c\udf414GO de Carte graphique total 1GO d\u00e9di\u00e9 AMD  Radeon graphique \ud83d\udd25\r\n\r\n\ud83c\udf41\u00c9CRAN 15.6 Pouces FHD avec PAV\u00c9 NUM\u00c9RIQUE \ud83d\udd25\r\n\r\n\ud83c\udf41Windows 10 professionnelle \r\n\r\n\ud83c\udf41 -ports USB- WEBCAM HDMI WIFI BLUETOOTH PORT R\u00e9seau etc....\r\n\r\n\u263a\ufe0fBonus : Microsoft Office d\u00e9j\u00e0 install\u00e9 et activ\u00e9  gratuitement",
+        0,
+        125000,
+        0,
+        1,
+        "2025-09-11 04:07:27.573262",
+        3,
+        0,
+        0,
+        "abbcbba15075442081ea3b8235e811bd",
+        "produits/HP_rRhXKDo.jpg",
+        "produits/hp2.jpeg",
+        "produits/hp3.jpeg"
+      ]
+    },
+    {
+      "table": "vente_pc_produit",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        "722fdcf96206457eb75d08cd3e092ce7",
+        "Latitude 5400",
+        "intel Core i7-8665U @ 2,0GHz",
+        "16 Go",
+        "512Go SSD",
+        "Intel UHD 620 coupl\u00e9 a 8Go m\u00e9moire graphique total",
+        "\ud83d\udcbb *Ordinateur Portable Mobile\u2728 DELL LATITUDE 5400 intel CORE I7 de   8th G\u00e9n\u00e9ration et 16GB de RAM*\u2728\ufe0f\u2728\ufe0f\r\n \r\n\u2733\ufe0f *Intel Core i7-8665U @ 2,0GHz up to ~3.5 GHz ,*\r\n\r\n\u2733\ufe0f *16 GB RAM extensible* , \r\n\r\n\u2733\ufe0f *Stockage 512Go SSD  extensible* \r\n\r\n\u2733\ufe0f Windows 11 Professionnel 64 bit,\r\n\r\n\u2733\ufe0f Carte Graphique professionnelle Intel UHD 620 coupl\u00e9 a 8Go m\u00e9moire graphique total extensible, \r\n\r\n\u2733\ufe0f \u00c9cran 14.1\" FHD IPS , \r\n\r\n\u2733\ufe0f clavier retro-eclair\u00e9 Webcam, Wi-Fi + Ethernet, Bluetooth, , Clavier R\u00e9tro-\u00e9clair\u00e9, 2 x USB 3.1 Type-C / 3 x USB 3.0 / 1 x HDMI / 1 x Mini-Display Port,  ....",
+        180000,
+        170000,
+        0,
+        1,
+        "2025-09-11 07:08:40.419290",
+        1,
+        0,
+        0,
+        "abbcbba15075442081ea3b8235e811bd",
+        "produits/dell_8XJGiER.jpg",
+        null,
+        null
+      ]
+    },
+    {
+      "table": "vente_pc_produit",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        "5791800ef57f4c3696fa9aeba059134d",
+        "Latitude 5310 ecran tactile",
+        "intel Core i5-1065U @ 1.90 GHz",
+        "8 Go",
+        "256 Go",
+        "Intel UHD 620 professionnelle",
+        "Ordinateur portable tactile rotatif \u00e0 360 degr\u00e9s \u2728 DELL LATITUDE 5310 CORE i5 coupl\u00e9 \u00e0 un processeur de 10e g\u00e9n\u00e9ration\ud83d\udd25 |8gb RAM | 256GB SSD STOCKAGE \r\n\r\n\ud83c\udf41 Intel Core i5-1065U @ 1.90 GHz jusqu'\u00e0 ~3.5 GHz Turbo-boost,\r\n\r\n\ud83c\udf41 8GB RAM extensible ,\r\n\r\n\ud83c\udf41 256 Go de stockage SSD extensible,\r\n\r\n\ud83c\udf41 Windows 11 Professional 64 bit,\r\n\r\n \ud83c\udf41 Intel UHD 620 carte graphique professionnelle ,\r\n\r\n\ud83c\udf41 13.3\" FHD IPS 360-degree rotative touchscreen ,\r\n\r\n\ud83c\udf41 Webcam, Wi-Fi + Ethernet, Bluetooth, , Clavier r\u00e9tro\u00e9clair\u00e9, 2 x USB 3.1 Type-C / 3 x USB 3.0 / 1 x HDMI / 1 x Mini-Display Port, ....",
+        185000,
+        170000,
+        0,
+        1,
+        "2025-09-11 07:15:00.603556",
+        1,
+        0,
+        1,
+        "abbcbba15075442081ea3b8235e811bd",
+        "produits/dell_hihydFk.jpg",
+        null,
+        null
+      ]
+    },
+    {
+      "table": "vente_pc_produit",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        "e7e9f0f4c64a4031a90805ac13695294",
+        "Latitude 5450",
+        "core i5-53000U @ 2.30Ghz",
+        "8 Go DDR3",
+        "500 Go HDD",
+        "INTEL ULTRA HD GRAPHIC 520 4Gb Total",
+        "\u24d8  DELL 5450 | Ultra slim laptop | Core i5 coupl\u00e9 \u00e0 un processeur de 5\u00e8me g\u00e9n\u00e9ration | 8gb RAM .\r\n\r\n \u00b0Pour l'infographie, la programmation, la gestion de donn\u00e9es, les \u00e9tudiants, la comptabilit\u00e9/le marketing num\u00e9rique, le montage vid\u00e9o de base, les \u00e9tudes de dessin technique, etc...\r\n\r\n Caract\u00e9ristiques\r\n\r\n\u2733\ufe0fDELL  5450 i5-53000U (5\u00e8me g\u00e9n\u00e9ration) Cpu : 2.30Ghz UP to ~ 3.5 GHz Turbo-boost \u26a1\ufe0f\r\n\r\n\u2733\ufe0f RAM 8 GB DDR3 Extensible jusqu'\u00e0 32gb\r\n\r\n\u2733\ufe0f Disque dur 500 Go de STOCKAGE  extensible \r\n\r\n\u2733\ufe0f M\u00e9moire graphique INTEL ULTRA HD GRAPHIC 520 4Gb Total  \r\n\r\n\u2733\ufe0f \u00c9cran : 14.1'' Inch full HD \r\n\r\n\u2733\ufe0f Sortie USB 3.O,  WiFi, Bluetooth, HDMI, PLAYER, webcam \r\n\r\n\u2733\ufe0f Windows 10 Pro -OFFICE 2021 d\u00e9j\u00e0 install\u00e9 et activ\u00e9 \r\n\r\n\u2733\ufe0f Autonomie de la batterie \ud83d\udcaa\ud83c\udffc",
+        95000,
+        90000,
+        0,
+        1,
+        "2025-09-11 07:21:41.264857",
+        1,
+        0,
+        0,
+        "abbcbba15075442081ea3b8235e811bd",
+        "produits/dell_4cKayiJ.jpg",
+        "produits/dell2.jpeg",
+        "produits/dell3.jpeg"
+      ]
+    },
+    {
+      "table": "vente_pc_produit",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        "f6afe2364e7e406b820a9d3b3d74f277",
+        "V15-G4 IRU",
+        "intel Core i5-13420H",
+        "8 Go RAM DDR4",
+        "256Go SSD M.2",
+        "Intel(R) UHD Graphics Family",
+        "\u24d8 Ordinateur Portable Lenovo V15-G4 IRU\r\n\r\n\u2728Processeur : Intel Core i5-13420H 13\u00e8me g\u00e9n\u00e9ration (4 Performance-Cores 4.6 GHz Turbo + 4 Efficient-Cores 3.4 GHz Turbo - 12 Threads - Cache 12 Mo),\r\n\r\n\u2728Ram : 8 Go RAM DDR4 3200MHz, \r\n\r\n\u2728Disque Dur : 256Go SSDSSD (Solid State Drive) M.2 - PCI-E 4.0 4x,\r\n\r\n\u2728Syst\u00e8me Windows 11, \r\n\r\n\u2728Graphisme : Carte graphique Intel(R) UHD Graphics Family, \r\n\r\n\u2728\u00c9cran 15.6\" FHD IPS R\u00e9solution 1920 x 1080 Px, 60Hz\r\n\r\n\u2728Webcam, Wi-Fi, Bluetooth, Clavier AZERTY ....",
+        270000,
+        250000,
+        0,
+        1,
+        "2025-09-11 07:33:58.765951",
+        2,
+        0,
+        0,
+        "abbcbba15075442081ea3b8235e811bd",
+        "produits/lenovo_F9QMIIh.jpg",
+        "produits/lenovo2.jpeg",
+        "produits/lenovo3.jpeg"
+      ]
+    },
+    {
+      "table": "vente_pc_produit",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        "729b39a94c9144a8b497174b151686a6",
+        "Thinkpad T495",
+        "Ryzen 3 Pro 3500U w  10th gen @ 2,1GHz ",
+        "16 Go",
+        "256 Go SSD",
+        "",
+        "\u24d8 Ordinateur Portable Lenovo Thinkpad T495 \u00e9quivalent \u00e0 un CORE-I7 de 10 eme g\u00e9n\u00e9ration 2Go D\u00e9di\u00e9 \ud83d\udd25 \r\n\r\n\u2733\ufe0f Ryzen 3 Pro 3500U w  10th generation @ 2,1GHz ( 8CPUs) \r\n\r\n\u2733\ufe0f 16Go RAM, \r\n\r\n\u2733\ufe0f 256 Go SSD, \r\n\r\n\u2733\ufe0f WIndows 11\r\n\r\n\u2733\ufe0f Carte graphique AMD Radeon(TM) Vega 8 Graphics avec 2 Gb d\u00e9di\u00e9,   \r\n\r\n\u2733\ufe0f \u00c9cran 14\" FHD R\u00e9solution 1920 x 1080 Px, \r\n\r\n\u2733\ufe0f Webcam, Wi-Fi, Bluetooth, pack office...",
+        190000,
+        180000,
+        0,
+        1,
+        "2025-09-20 08:46:32.373059",
+        2,
+        0,
+        0,
+        "abbcbba15075442081ea3b8235e811bd",
+        "produits/lenovo_BqvslgC.jpg",
+        "produits/lenovo2_NE4hVe2.jpeg",
+        "produits/lenovo3_nNOLeci.jpeg"
+      ]
+    },
+    {
+      "table": "vente_pc_produit",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        "837cfd0d5d6041cb85528f5627031324",
+        "Latitude 5491",
+        "Intel Core i5-8300U",
+        "8 Go",
+        "256 Go SSD",
+        "",
+        "\u2b50\ufe0f DELL LATITUDE 5491 | *Core i5 de 8th G\u00e9n\u00e9ration* | 08GB RAM| 256GB SSD| Windows 11/10 Pro \ud83d\udd25\r\nPerformance + mobilit\u00e9 + confort\r\n\r\n\r\n\ud83c\udf41 Processeur : Intel Core i5-8300U (2.30GHz, boost ~2.80GHz) \u2013 Rapide, fluide, fiable\r\n\r\n\ud83c\udf41 RAM : 08 Go \u2013 Id\u00e9al pour le multit\u00e2che, les apps lourdes et la productivit\u00e9 maximale\r\n\r\n\ud83c\udf41 Stockage : SSD 256 GB \u2013 Ultra rapide pour les lancements et transferts\r\n\r\n\ud83c\udf41 \u00c9cran : 14 pouces \u2013 Naviguez du bout des doigts, boostez votre exp\u00e9rience\r\n\r\n\ud83c\udf41 Syst\u00e8me : Windows 11 Pro \u2013 Interface moderne, intuitive et s\u00e9curis\u00e9e\r\n\r\n\ud83c\udf41 Tout vos logiciels de base d\u00e9j\u00e0 install\u00e9 et activit\u00e9s gratuitement \ud83d\ude0a \r\n\r\n\r\n\ud83d\udce6 Parfait pour bureautique, pro, \u00e9tudiants, formateurs et entrepreneurs en mouvement\ud83d\udc4c",
+        135000,
+        130000,
+        0,
+        1,
+        "2025-09-20 13:20:58.688833",
+        1,
+        0,
+        0,
+        "48dba2ce6aa5414d8a14f268a1afae1e",
+        "produits/dell_4bn30aU.jpg",
+        null,
+        null
+      ]
+    },
+    {
+      "table": "vente_pc_vendeur",
+      "error": "relation \"vente_pc_vendeur\" does not exist\nLINE 1: INSERT INTO vente_pc_vendeur (\"id\", \"nom\", \"tel\", \"email\", \"...\n                    ^\n",
+      "row_data": [
+        "abbcbba15075442081ea3b8235e811bd",
+        "ultimate-technology",
+        "658562221",
+        "hackdumping@gmail.com",
+        "@Dumping0305",
+        5000,
+        "2025-09-18 12:29:25.740233",
+        null,
+        "logos/logo_page.png",
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "table": "vente_pc_vendeur",
+      "error": "current transaction is aborted, commands ignored until end of transaction block\n",
+      "row_data": [
+        "48dba2ce6aa5414d8a14f268a1afae1e",
+        "computer-market",
+        "699700012",
+        "erictchoupe5@gmail.com",
+        "qwerty",
+        2000,
+        "2025-09-18 23:24:32.232311",
+        "2025-09-26",
+        "logos/dumping.png",
+        1,
+        1,
+        2,
+        6
+      ]
+    }
+  ]
+}
