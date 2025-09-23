@@ -5,8 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="{% block og_image %}{% static 'images/ut_logo.png' %}{% endblock %}" translate="no">
+  <meta property="og:image" content="{% static 'images/ut_logo.png' %}" translate="no">
   <meta property="og:site_name" content="Ultimate-Technology" translate="no">
+  <meta property="og:title" content="{% block og_title %}Ultimate-Technology{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}Espace vendeurs{% endblock %}">
+
     <!-- Pour WhatsApp spécifiquement -->
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">

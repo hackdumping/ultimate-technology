@@ -221,7 +221,9 @@
       productsEl.innerHTML = list.map(p=>`
         <article class="card" data-id="${p.id}">
           <span style="${p.promo}" >Promo</span>
-          <img loading="lazy" src="${p.image}" alt="${p.name}" />
+          <a href="/vendeur/details/${p.id}/">
+            <img loading="lazy" src="${p.image}" alt="${p.name}" />
+          </a>
           <div style="display:flex;justify-content:space-between;align-items:center">
             <div>
               <div class="title">${p.name}</div>

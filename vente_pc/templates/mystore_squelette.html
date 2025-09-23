@@ -164,7 +164,9 @@
           {% if url_test %}
           <span style="color:#fff;font-weight:bold;position:absolute;display:block;background:#ef4444;padding:0.2rem;width:5rem;text-align:center;border-radius:10px" >Promo</span>
           {% endif %}
-          <img loading="lazy" src="${p.image}" alt="${p.name}" />
+          <a href="/vendeur/mystore/${p.vendeur}/${p.id}/">
+            <img loading="lazy" src="${p.image}" alt="${p.name}" />
+          </a>
           <div style="display:flex;justify-content:space-between;align-items:center">
             <div>
               <div class="title">${p.name}</div>

@@ -10,10 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
+from email.policy import default
 from pathlib import Path
 import dj_database_url
 import environ
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 
 from django.conf.global_settings import MEDIA_URL, DEBUG
 
@@ -22,17 +23,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 #env = environ.Env()
 #environ.Env.read_env()
-load_dotenv()
+load_dotenv(find_dotenv())
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-+w=+_m4c*8azlf=3h&y1pvd@u#$q!i*+wb33#9xy_2hd^m_x!r'
+SECRET_KEY = os.environ.get('SECRET_KEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 SHOW_CUSTOM_ERRORS = True
 
 #ALLOWED_HOSTS = ['4db1350b6a7c90.lhr.life', '127.0.0.1', 'localhost']
@@ -106,7 +108,7 @@ WSGI_APPLICATION = 'UltimateTechnology.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -114,11 +116,33 @@ DATABASES = {
     }
 }
 """
-
+DATABASES = {
+    'default':{
+        'ENGINE' : 'django.db.backends.postgresql',
+        'NAME' : os.environ.get('DB_NAME'),
+        'USER' : os.environ.get('DB_USER'),
+        'PASSWORD' : os.environ.get('DB_PASSWORD'),
+        'HOST' : os.environ.get('DB_HOST'),
+        'PORT' : os.environ.get('DB_PORT'),
+        'OPTIONS': {
+            'sslmode': 'require',
+        }
+    }
+}
+"""
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
+
+DATABASES = {
+    'default': dj_database_url.parse(
+        os.environ.get('DATABASE_URL'),
+        conn_max_age=600,
+        ssl_require=True
+    )
+}
 """
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -155,7 +179,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-MEDIA_URL = 'produits/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 NUMERO = "+237658562221"
