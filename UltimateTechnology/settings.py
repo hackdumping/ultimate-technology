@@ -42,11 +42,11 @@ SHOW_CUSTOM_ERRORS = True
 
 #ALLOWED_HOSTS = ['4db1350b6a7c90.lhr.life', '127.0.0.1', 'localhost']
 ALLOWED_HOSTS = ['*']
-"""CSRF_TRUSTED_ORIGINS = [
+CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
     'http://127.0.0.1:8000',
-    'https://4db1350b6a7c90.lhr.life',
-]"""
+    'https://ultimate-technology.vercel.app',
+]
 
 import time
 META_VERSION = int(time.time())  # Timestamp actuel
