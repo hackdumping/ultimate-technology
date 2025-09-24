@@ -36,13 +36,5 @@
       "src": "/(.*)",
       "dest": "UltimateTechnology/wsgi.py"
     }
-  ],
-  "env": {
-    "SECRET_KEY": "django-insecure-+w=+_m4c*8azlf=3h&y1pvd@u#$q!i*+wb33#9xy_2hd^m_x!r",
-    "DB_NAME": "postgres",
-    "DB_USER": "postgres.trbbxnkividdbhtmutpv",
-    "DB_PASSWORD": "@Dumping0305",
-    "DB_HOST": "aws-1-us-east-1.pooler.supabase.com",
-    "DB_PORT": "6543"
-  }
+  ]
 }
