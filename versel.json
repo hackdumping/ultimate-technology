@@ -10,7 +10,7 @@
             }
         },
         {
-            "sec": "setup.sh",
+            "sec": "build.sh",
             "use": "@vercel/static-build",
             "config": {
                 "distDir": "staticfiles"
