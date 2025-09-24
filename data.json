@@ -1,618 +1,2557 @@
 [
 {
-  "model": "auth.permission",
-  "pk": 1,
-  "fields": {
-    "name": "Can add log entry",
-    "content_type": 1,
-    "codename": "add_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 2,
-  "fields": {
-    "name": "Can change log entry",
-    "content_type": 1,
-    "codename": "change_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 3,
-  "fields": {
-    "name": "Can delete log entry",
-    "content_type": 1,
-    "codename": "delete_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 4,
-  "fields": {
-    "name": "Can view log entry",
-    "content_type": 1,
-    "codename": "view_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 5,
-  "fields": {
-    "name": "Can add permission",
-    "content_type": 2,
-    "codename": "add_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 6,
-  "fields": {
-    "name": "Can change permission",
-    "content_type": 2,
-    "codename": "change_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 7,
-  "fields": {
-    "name": "Can delete permission",
-    "content_type": 2,
-    "codename": "delete_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 8,
-  "fields": {
-    "name": "Can view permission",
-    "content_type": 2,
-    "codename": "view_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 9,
-  "fields": {
-    "name": "Can add group",
-    "content_type": 3,
-    "codename": "add_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 10,
-  "fields": {
-    "name": "Can change group",
-    "content_type": 3,
-    "codename": "change_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 11,
-  "fields": {
-    "name": "Can delete group",
-    "content_type": 3,
-    "codename": "delete_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 12,
-  "fields": {
-    "name": "Can view group",
-    "content_type": 3,
-    "codename": "view_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 13,
-  "fields": {
-    "name": "Can add user",
-    "content_type": 4,
-    "codename": "add_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 14,
-  "fields": {
-    "name": "Can change user",
-    "content_type": 4,
-    "codename": "change_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 15,
-  "fields": {
-    "name": "Can delete user",
-    "content_type": 4,
-    "codename": "delete_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 16,
-  "fields": {
-    "name": "Can view user",
-    "content_type": 4,
-    "codename": "view_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 17,
-  "fields": {
-    "name": "Can add content type",
-    "content_type": 5,
-    "codename": "add_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 18,
-  "fields": {
-    "name": "Can change content type",
-    "content_type": 5,
-    "codename": "change_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 19,
-  "fields": {
-    "name": "Can delete content type",
-    "content_type": 5,
-    "codename": "delete_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 20,
-  "fields": {
-    "name": "Can view content type",
-    "content_type": 5,
-    "codename": "view_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 21,
-  "fields": {
-    "name": "Can add session",
-    "content_type": 6,
-    "codename": "add_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 22,
-  "fields": {
-    "name": "Can change session",
-    "content_type": 6,
-    "codename": "change_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 23,
-  "fields": {
-    "name": "Can delete session",
-    "content_type": 6,
-    "codename": "delete_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 24,
-  "fields": {
-    "name": "Can view session",
-    "content_type": 6,
-    "codename": "view_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 25,
-  "fields": {
-    "name": "Can add marque",
-    "content_type": 7,
-    "codename": "add_marque"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 26,
-  "fields": {
-    "name": "Can change marque",
-    "content_type": 7,
-    "codename": "change_marque"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 27,
-  "fields": {
-    "name": "Can delete marque",
-    "content_type": 7,
-    "codename": "delete_marque"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 28,
-  "fields": {
-    "name": "Can view marque",
-    "content_type": 7,
-    "codename": "view_marque"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 29,
-  "fields": {
-    "name": "Can add produit",
-    "content_type": 8,
-    "codename": "add_produit"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 30,
-  "fields": {
-    "name": "Can change produit",
-    "content_type": 8,
-    "codename": "change_produit"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 31,
-  "fields": {
-    "name": "Can delete produit",
-    "content_type": 8,
-    "codename": "delete_produit"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 32,
-  "fields": {
-    "name": "Can view produit",
-    "content_type": 8,
-    "codename": "view_produit"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 33,
-  "fields": {
-    "name": "Can add staff",
-    "content_type": 9,
-    "codename": "add_staff"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 34,
-  "fields": {
-    "name": "Can change staff",
-    "content_type": 9,
-    "codename": "change_staff"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 35,
-  "fields": {
-    "name": "Can delete staff",
-    "content_type": 9,
-    "codename": "delete_staff"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 36,
-  "fields": {
-    "name": "Can view staff",
-    "content_type": 9,
-    "codename": "view_staff"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 37,
-  "fields": {
-    "name": "Can add client",
-    "content_type": 10,
-    "codename": "add_client"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 38,
-  "fields": {
-    "name": "Can change client",
-    "content_type": 10,
-    "codename": "change_client"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 39,
-  "fields": {
-    "name": "Can delete client",
-    "content_type": 10,
-    "codename": "delete_client"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 40,
-  "fields": {
-    "name": "Can view client",
-    "content_type": 10,
-    "codename": "view_client"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 41,
-  "fields": {
-    "name": "Can add forfait",
-    "content_type": 11,
-    "codename": "add_forfait"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 42,
-  "fields": {
-    "name": "Can change forfait",
-    "content_type": 11,
-    "codename": "change_forfait"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 43,
-  "fields": {
-    "name": "Can delete forfait",
-    "content_type": 11,
-    "codename": "delete_forfait"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 44,
-  "fields": {
-    "name": "Can view forfait",
-    "content_type": 11,
-    "codename": "view_forfait"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 45,
-  "fields": {
-    "name": "Can add vendeur",
-    "content_type": 12,
-    "codename": "add_vendeur"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 46,
-  "fields": {
-    "name": "Can change vendeur",
-    "content_type": 12,
-    "codename": "change_vendeur"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 47,
-  "fields": {
-    "name": "Can delete vendeur",
-    "content_type": 12,
-    "codename": "delete_vendeur"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 48,
-  "fields": {
-    "name": "Can view vendeur",
-    "content_type": 12,
-    "codename": "view_vendeur"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 49,
-  "fields": {
-    "name": "Can add pays",
-    "content_type": 13,
-    "codename": "add_pays"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 50,
-  "fields": {
-    "name": "Can change pays",
-    "content_type": 13,
-    "codename": "change_pays"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 51,
-  "fields": {
-    "name": "Can delete pays",
-    "content_type": 13,
-    "codename": "delete_pays"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 52,
-  "fields": {
-    "name": "Can view pays",
-    "content_type": 13,
-    "codename": "view_pays"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 53,
-  "fields": {
-    "name": "Can add ville",
-    "content_type": 14,
-    "codename": "add_ville"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 54,
-  "fields": {
-    "name": "Can change ville",
-    "content_type": 14,
-    "codename": "change_ville"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 55,
-  "fields": {
-    "name": "Can delete ville",
-    "content_type": 14,
-    "codename": "delete_ville"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 56,
-  "fields": {
-    "name": "Can view ville",
-    "content_type": 14,
-    "codename": "view_ville"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 1,
-  "fields": {
-    "app_label": "admin",
-    "model": "logentry"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 2,
-  "fields": {
-    "app_label": "auth",
-    "model": "permission"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 3,
-  "fields": {
-    "app_label": "auth",
-    "model": "group"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 4,
-  "fields": {
-    "app_label": "auth",
-    "model": "user"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 5,
-  "fields": {
-    "app_label": "contenttypes",
-    "model": "contenttype"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 6,
-  "fields": {
-    "app_label": "sessions",
-    "model": "session"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 7,
-  "fields": {
-    "app_label": "vente_pc",
-    "model": "marque"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 8,
-  "fields": {
-    "app_label": "vente_pc",
-    "model": "produit"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 9,
-  "fields": {
-    "app_label": "vente_pc",
-    "model": "staff"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 10,
-  "fields": {
-    "app_label": "vente_pc",
-    "model": "client"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 11,
-  "fields": {
-    "app_label": "vente_pc",
-    "model": "forfait"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 12,
-  "fields": {
-    "app_label": "vente_pc",
-    "model": "vendeur"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 13,
-  "fields": {
-    "app_label": "vente_pc",
-    "model": "pays"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 14,
-  "fields": {
-    "app_label": "vente_pc",
-    "model": "ville"
-  }
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "vente_pc",
+        "model": "produit"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "vente_pc",
+        "model": "marque"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "vente_pc",
+        "model": "staff"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "vente_pc",
+        "model": "client"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "vente_pc",
+        "model": "vendeur"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "vente_pc",
+        "model": "forfait"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "vente_pc",
+        "model": "ville"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "vente_pc",
+        "model": "pays"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "bqkx1euzxw2vxhoju26f3xa5x0ultqie",
+    "fields": {
+        "session_data": ".eJxFj8FuwjAQRH-l8rUY1nYcOzkhgdRbpVbqGTmJCaaJHTk2AiH-vZtSqcd9M7s7cycX6zubI6nvpA2dJTUxTdM2jWFUgpK0KDhQzayhotFcSKsZazqyIj6MaM5DcqNJlibbnnwYQn9DbTK3GcWdGW0M2SNJdkBQSl0KKEAhsaNxCzuZ9rvL4-R8v-0Xtm7x8oqM3YTqdv-UQIBEeHHDsGTch2wGg-AYjcNXEgBwCPFoXDo8o-2CR5DIP5-iu5Kawa-5w9QH52cbkwse_Ry4pFBRpl8Yr3lVc7lWBXAhXgFqAPK3Y69LsPfgLRIsHHDaTDF02aV5s4B5w5TUXJeKK81KLhRTpRaskkKD4Ko8fHj2-XV9W5-nHo-cQ45Ygj0eP4NEd6E:1uzzxl:X5Sg2sWcSNmL_cyqHPbfWk8Xwz2oPFH-c39oaayz5Tw",
+        "expire_date": "2025-10-04T15:57:25.089Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "dhlawb2tnv5e5iias9vl7vfwzidqsuvf",
+    "fields": {
+        "session_data": ".eJxFj9GOwiAQRX9lw-uKDrRo7ZOJPu8vGFrGitsyBMFojP--03WTfSGZcy_M4SluGByWJNqn6MmhaIXtur7rrJIGNkbWtQbZKLSy6hpdGWyU6pxYiEATl8uY_WQzyoz9OdBIw4OzaB9XDvd2wkQlMMk4MlibZl1BDRsmOFk_s7Ptv12Zog_DbpjZsueXF2JykdPd4R1BBYbhzY_j7HigYkfL4JSs51UGAHigdLI-H99qewoMsvjnMfm7aBX8lh1bH324YsqeAvc1aCNhK1XzoXSrt602y00Nuqo-AVoA8XcH77PYFwVkwh8mnlYxkSs-X1czeJ_HaAdcxjBw7UIlsaZ6vX4AR1NyOA:1v0SXY:zQS8AaopIJ3OyRN_oson8YDf4MUws_4LgUQJzM0y8vk",
+        "expire_date": "2025-10-05T22:28:16.910Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "g5an456chd0evv2q8tlxcnxbhxmw3zc3",
+    "fields": {
+        "session_data": ".eJxFkNGOwiAQRX9lw-uKDrRo7ZOJPu8vNLSMFbdlGgpGY_z3na6b7OOcc4E7PMUNg8McRf0UHTkUtbBt27WtVdLAzsiy1CArhVYWbaULg5VSrRMrEWjkcB6SH21CmbC7BBqof7Cb7GNmebQjRsqBScKBwdZU2wJK2DHB0fqFXWz37fI4-dAf-oWtO755JUY3sT2c3goKMAxvfhiWjifKdrAMztF6fsoAAA8Uz9an5l3tSIFBEv98iv4uagW_YcetGx9mjMlT4LwGbSTspao-lK71vtZmvStBF8UnQA0g_s7gfSn2RQGZ8MLE02aK5LJP84Z_o8d5E6hZ1Po69Zy6Uo7cUr1eP9JDccY:1uza9U:yU6EKS7rm4ng9nN5b49ENJaxrWfe9VdPxG-ZM8RfbVE",
+        "expire_date": "2025-10-03T12:23:48.050Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "j3amge9fdu5ezihivjhi2gxtat3u3amq",
+    "fields": {
+        "session_data": ".eJxFj8FuwjAQRH-l8rUY1nYcOzkhgdRbpVbqGTmJCaaJHTk2AiH-vZtSqcd9M7s7cycX6zubI6nvpA2dJTUxTdM2jWFUgpK0KDhQzayhotFcSKsZazqyIj6MaM5DcqNJlibbnnwYQn9DbTK3GcWdGW0M2SNJdkBQSl0KKEAhsaNxCzuZ9rvL4-R8v-0Xtm7x8oqM3YTqdv-UQIBEeHHDsGTch2wGg-AYjcNXEgBwCPFoXDo8o-2CR5DIP5-iu5Kawa-5w9QH52cbkwse_Ry4pFBRpl8Yr3lVc7lWBXAhXgFqAPK3Y69LsPfgLRIsHHDaTDF02aV5s4B5w5TUXJeKK81KLhRTpRaskkKD4Ko8fHj2-XV9W5-nHo-cQ45Ygj0eP4NEd6E:1v0QPq:29A03exfqIacqQqfC71PRED30NTxaWCTL6mdXQ2ieJY",
+        "expire_date": "2025-10-05T20:12:10.676Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "pv7mo8gg352g7zpy6ssd9ehpmhbfxr5b",
+    "fields": {
+        "session_data": ".eJxFj8FuwjAQRH-l8rUY1nYcOzkhgdRbpVbqGTmJCaaJHTk2AiH-vZtSqcd9M7s7cycX6zubI6nvpA2dJTUxTdM2jWFUgpK0KDhQzayhotFcSKsZazqyIj6MaM5DcqNJlibbnnwYQn9DbTK3GcWdGW0M2SNJdkBQSl0KKEAhsaNxCzuZ9rvL4-R8v-0Xtm7x8oqM3YTqdv-UQIBEeHHDsGTch2wGg-AYjcNXEgBwCPFoXDo8o-2CR5DIP5-iu5Kawa-5w9QH52cbkwse_Ry4pFBRpl8Yr3lVc7lWBXAhXgFqAPK3Y69LsPfgLRIsHHDaTDF02aV5s4B5w5TUXJeKK81KLhRTpRaskkKD4Ko8fHj2-XV9W5-nHo-cQ45Ygj0eP4NEd6E:1v0AOD:wWOQij2vydSUKlHlWixoRUZufZK0DPzrZtoHWLyjagA",
+        "expire_date": "2025-10-05T03:05:25.375Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "rkn1rzo4mt9q0rvpvjg6hk8h10b9u3tm",
+    "fields": {
+        "session_data": ".eJxFj8FuwjAQRH-l8rUY1nYcOzkhgdRbpVbqGTmJCaaJHTk2AiH-vZtSqcd9M7s7cycX6zubI6nvpA2dJTUxTdM2jWFUgpK0KDhQzayhotFcSKsZazqyIj6MaM5DcqNJlibbnnwYQn9DbTK3GcWdGW0M2SNJdkBQSl0KKEAhsaNxCzuZ9rvL4-R8v-0Xtm7x8oqM3YTqdv-UQIBEeHHDsGTch2wGg-AYjcNXEgBwCPFoXDo8o-2CR5DIP5-iu5Kawa-5w9QH52cbkwse_Ry4pFBRpl8Yr3lVc7lWBXAhXgFqAPK3Y69LsPfgLRIsHHDaTDF02aV5s4B5w5TUXJeKK81KLhRTpRaskkKD4Ko8fHj2-XV9W5-nHo-cQ45Ygj0eP4NEd6E:1v006Z:5CgOhxWGEy6-ZUP38vD4eG0pJD8Njq_49aSEoB-qBWc",
+        "expire_date": "2025-10-04T16:06:31.058Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ymbq47e3hy6ho108i0al4ukvolphvxhr",
+    "fields": {
+        "session_data": ".eJxFj8FuwjAQRH-l8rUY1nYcOzkhgdRbpVbqGTmJCaaJHTk2AiH-vZtSqcd9M7s7cycX6zubI6nvpA2dJTUxTdM2jWFUgpK0KDhQzayhotFcSKsZazqyIj6MaM5DcqNJlibbnnwYQn9DbTK3GcWdGW0M2SNJdkBQSl0KKEAhsaNxCzuZ9rvL4-R8v-0Xtm7x8oqM3YTqdv-UQIBEeHHDsGTch2wGg-AYjcNXEgBwCPFoXDo8o-2CR5DIP5-iu5Kawa-5w9QH52cbkwse_Ry4pFBRpl8Yr3lVc7lWBXAhXgFqAPK3Y69LsPfgLRIsHHDaTDF02aV5s4B5w5TUXJeKK81KLhRTpRaskkKD4Ko8fHj2-XV9W5-nHo-cQ45Ygj0eP4NEd6E:1v006h:JpV_rmJpmDuBYbjFWv32jhu8ht8C4J0lX0IFluJLRWU",
+        "expire_date": "2025-10-04T16:06:39.006Z"
+    }
+},
+{
+    "model": "vente_pc.marque",
+    "pk": 1,
+    "fields": {
+        "nom": "Dell"
+    }
+},
+{
+    "model": "vente_pc.marque",
+    "pk": 2,
+    "fields": {
+        "nom": "Lenovo"
+    }
+},
+{
+    "model": "vente_pc.marque",
+    "pk": 3,
+    "fields": {
+        "nom": "Hp"
+    }
+},
+{
+    "model": "vente_pc.pays",
+    "pk": 1,
+    "fields": {
+        "nom": "Cameroun"
+    }
+},
+{
+    "model": "vente_pc.ville",
+    "pk": 1,
+    "fields": {
+        "nom": "Douala"
+    }
+},
+{
+    "model": "vente_pc.ville",
+    "pk": 2,
+    "fields": {
+        "nom": "Yaounde"
+    }
+},
+{
+    "model": "vente_pc.forfait",
+    "pk": 1,
+    "fields": {
+        "nom": "Standard",
+        "prix": 5000
+    }
+},
+{
+    "model": "vente_pc.forfait",
+    "pk": 2,
+    "fields": {
+        "nom": "Confort",
+        "prix": 10000
+    }
+},
+{
+    "model": "vente_pc.vendeur",
+    "pk": "48dba2ce-6aa5-414d-8a14-f268a1afae1e",
+    "fields": {
+        "nom": "computer-market",
+        "pays": 1,
+        "tel": "699700012",
+        "email": "erictchoupe5@gmail.com",
+        "mdp": "qwerty",
+        "ville": 2,
+        "frais": 2000,
+        "forfait": 1,
+        "date_insertion": "2025-09-18T23:24:32.232Z",
+        "date_exp": "2025-09-26",
+        "logo": "logos/dumping.png",
+        "jours": 6
+    }
+},
+{
+    "model": "vente_pc.vendeur",
+    "pk": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+    "fields": {
+        "nom": "ultimate-technology",
+        "pays": 1,
+        "tel": "658562221",
+        "email": "hackdumping@gmail.com",
+        "mdp": "@Dumping0305",
+        "ville": 1,
+        "frais": 5000,
+        "forfait": 2,
+        "date_insertion": "2025-09-18T12:29:25.740Z",
+        "date_exp": null,
+        "logo": "logos/logo_page.png",
+        "jours": 1
+    }
+},
+{
+    "model": "vente_pc.produit",
+    "pk": "5791800e-f57f-4c36-96fa-9aeba059134d",
+    "fields": {
+        "vendeur": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "marque": 1,
+        "model": "Latitude 5310 ecran tactile",
+        "cpu": "intel Core i5-1065U @ 1.90 GHz",
+        "ram": "8 Go",
+        "stockage": "256 Go",
+        "graphic": "Intel UHD 620 professionnelle",
+        "description": "Ordinateur portable tactile rotatif à 360 degrés ✨ DELL LATITUDE 5310 CORE i5 couplé à un processeur de 10e génération🔥 |8gb RAM | 256GB SSD STOCKAGE \r\n\r\n🍁 Intel Core i5-1065U @ 1.90 GHz jusqu'à ~3.5 GHz Turbo-boost,\r\n\r\n🍁 8GB RAM extensible ,\r\n\r\n🍁 256 Go de stockage SSD extensible,\r\n\r\n🍁 Windows 11 Professional 64 bit,\r\n\r\n 🍁 Intel UHD 620 carte graphique professionnelle ,\r\n\r\n🍁 13.3\" FHD IPS 360-degree rotative touchscreen ,\r\n\r\n🍁 Webcam, Wi-Fi + Ethernet, Bluetooth, , Clavier rétroéclairé, 2 x USB 3.1 Type-C / 3 x USB 3.0 / 1 x HDMI / 1 x Mini-Display Port, ....",
+        "ancien_prix": 185000,
+        "nouveau_prix": 170000,
+        "est_promo": false,
+        "prix_promo": 0,
+        "est_pc": true,
+        "est_vendue": true,
+        "image": "image/upload/produits/dell_hihydFk.jpg",
+        "image2": null,
+        "image3": null,
+        "date_insertion": "2025-09-11T07:15:00.603Z"
+    }
+},
+{
+    "model": "vente_pc.produit",
+    "pk": "71ccdb16-c829-4289-8f79-fbaf310fb567",
+    "fields": {
+        "vendeur": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "marque": 2,
+        "model": "ThinkPad T460s  écran tactile",
+        "cpu": "Intel core i5 6300U @2.81 GHz",
+        "ram": "8 Go  DDR4",
+        "stockage": "256 Go SSD",
+        "graphic": "Intel HD Graphics 520 4GB",
+        "description": "💻  *Lenovo T460s  écran tactile 💦  ultra slim et rapide démarrages en 5 secondes✨️✨️\r\n\r\n👉🏼Intel core i5 6300U   6eme génération\r\n👉🏾 CPU: 2.81 GHz   ultra rapide \r\n👉🏼 Écran tactile et ulta Slim \r\n👉🏼Ram 8GB  ddr4 extensible a 24GB \r\n👉🏼disque dur 256GB SSD extensible\r\n👉🏼carte graphique Intel HD Graphics 520 4GB \r\n👉🏼écran 14\" UHD tactile 💦\r\n👉🏼 Autonomie de batterie puissant \r\n👉🏼Port USB 3.0 , port HDMI , bluetooth ,wifi ,Webcam \r\nLecteur sim🤩\r\n👉🏼 Bonus : Microsoft Office déjà installée gratuitement ainsi qu'un antivirus virus 2025",
+        "ancien_prix": 0,
+        "nouveau_prix": 130000,
+        "est_promo": false,
+        "prix_promo": 0,
+        "est_pc": true,
+        "est_vendue": false,
+        "image": "image/upload/produits/lenovo.jpg",
+        "image2": "image/upload/produits/lenovo2_8Fdewf9.jpeg",
+        "image3": "image/upload/produits/lenovo3_w87KIVK.jpeg",
+        "date_insertion": "2025-09-11T03:55:07.720Z"
+    }
+},
+{
+    "model": "vente_pc.produit",
+    "pk": "722fdcf9-6206-457e-b75d-08cd3e092ce7",
+    "fields": {
+        "vendeur": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "marque": 1,
+        "model": "Latitude 5400",
+        "cpu": "intel Core i7-8665U @ 2,0GHz",
+        "ram": "16 Go",
+        "stockage": "512Go SSD",
+        "graphic": "Intel UHD 620 couplé a 8Go mémoire graphique total",
+        "description": "💻 *Ordinateur Portable Mobile✨ DELL LATITUDE 5400 intel CORE I7 de   8th Génération et 16GB de RAM*✨️✨️\r\n \r\n✳️ *Intel Core i7-8665U @ 2,0GHz up to ~3.5 GHz ,*\r\n\r\n✳️ *16 GB RAM extensible* , \r\n\r\n✳️ *Stockage 512Go SSD  extensible* \r\n\r\n✳️ Windows 11 Professionnel 64 bit,\r\n\r\n✳️ Carte Graphique professionnelle Intel UHD 620 couplé a 8Go mémoire graphique total extensible, \r\n\r\n✳️ Écran 14.1\" FHD IPS , \r\n\r\n✳️ clavier retro-eclairé Webcam, Wi-Fi + Ethernet, Bluetooth, , Clavier Rétro-éclairé, 2 x USB 3.1 Type-C / 3 x USB 3.0 / 1 x HDMI / 1 x Mini-Display Port,  ....",
+        "ancien_prix": 180000,
+        "nouveau_prix": 170000,
+        "est_promo": false,
+        "prix_promo": 0,
+        "est_pc": true,
+        "est_vendue": false,
+        "image": "image/upload/produits/dell_8XJGiER.jpg",
+        "image2": null,
+        "image3": null,
+        "date_insertion": "2025-09-11T07:08:40.419Z"
+    }
+},
+{
+    "model": "vente_pc.produit",
+    "pk": "729b39a9-4c91-44a8-b497-174b151686a6",
+    "fields": {
+        "vendeur": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "marque": 2,
+        "model": "Thinkpad T495",
+        "cpu": "Ryzen 3 Pro 3500U w  10th gen @ 2,1GHz ",
+        "ram": "16 Go",
+        "stockage": "256 Go SSD",
+        "graphic": "",
+        "description": "ⓘ Ordinateur Portable Lenovo Thinkpad T495 équivalent à un CORE-I7 de 10 eme génération 2Go Dédié 🔥 \r\n\r\n✳️ Ryzen 3 Pro 3500U w  10th generation @ 2,1GHz ( 8CPUs) \r\n\r\n✳️ 16Go RAM, \r\n\r\n✳️ 256 Go SSD, \r\n\r\n✳️ WIndows 11\r\n\r\n✳️ Carte graphique AMD Radeon(TM) Vega 8 Graphics avec 2 Gb dédié,   \r\n\r\n✳️ Écran 14\" FHD Résolution 1920 x 1080 Px, \r\n\r\n✳️ Webcam, Wi-Fi, Bluetooth, pack office...",
+        "ancien_prix": 190000,
+        "nouveau_prix": 180000,
+        "est_promo": false,
+        "prix_promo": 0,
+        "est_pc": true,
+        "est_vendue": false,
+        "image": "image/upload/produits/lenovo_BqvslgC.jpg",
+        "image2": "image/upload/produits/lenovo2_NE4hVe2.jpeg",
+        "image3": "image/upload/produits/lenovo3_nNOLeci.jpeg",
+        "date_insertion": "2025-09-20T08:46:32.373Z"
+    }
+},
+{
+    "model": "vente_pc.produit",
+    "pk": "837cfd0d-5d60-41cb-8552-8f5627031324",
+    "fields": {
+        "vendeur": "48dba2ce-6aa5-414d-8a14-f268a1afae1e",
+        "marque": 1,
+        "model": "Latitude 5491",
+        "cpu": "Intel Core i5-8300U",
+        "ram": "8 Go",
+        "stockage": "256 Go SSD",
+        "graphic": "",
+        "description": "⭐️ DELL LATITUDE 5491 | *Core i5 de 8th Génération* | 08GB RAM| 256GB SSD| Windows 11/10 Pro 🔥\r\nPerformance + mobilité + confort\r\n\r\n\r\n🍁 Processeur : Intel Core i5-8300U (2.30GHz, boost ~2.80GHz) – Rapide, fluide, fiable\r\n\r\n🍁 RAM : 08 Go – Idéal pour le multitâche, les apps lourdes et la productivité maximale\r\n\r\n🍁 Stockage : SSD 256 GB – Ultra rapide pour les lancements et transferts\r\n\r\n🍁 Écran : 14 pouces – Naviguez du bout des doigts, boostez votre expérience\r\n\r\n🍁 Système : Windows 11 Pro – Interface moderne, intuitive et sécurisée\r\n\r\n🍁 Tout vos logiciels de base déjà installé et activités gratuitement 😊 \r\n\r\n\r\n📦 Parfait pour bureautique, pro, étudiants, formateurs et entrepreneurs en mouvement👌",
+        "ancien_prix": 135000,
+        "nouveau_prix": 130000,
+        "est_promo": false,
+        "prix_promo": 0,
+        "est_pc": true,
+        "est_vendue": false,
+        "image": "image/upload/produits/dell_4bn30aU.jpg",
+        "image2": null,
+        "image3": null,
+        "date_insertion": "2025-09-20T13:20:58.688Z"
+    }
+},
+{
+    "model": "vente_pc.produit",
+    "pk": "cac1f0c1-a985-47fd-b62e-c46c9cd572a2",
+    "fields": {
+        "vendeur": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "marque": 1,
+        "model": "Latitude 7450",
+        "cpu": "Core Ultra 7 14th Génération",
+        "ram": "32 Go DDR5",
+        "stockage": "512 Go SSD M.2",
+        "graphic": "",
+        "description": "ⓘ Ordinateur Portable Dell Latitude 7450 | Core Ultra 7 14th Génération | 32Go RAM | 512 Go SSD AVEC Intel AI Boost l'unité de traitement neuronal (NPU) intégrée aux processeurs Intel® Core™ Ultra, qui accélère les charges de travail d'intelligence artificielle (IA) et d'apprentissage automatique de manière efficace et à faible consommation d'énergie.\r\n\r\n✨ Intel® Core™ Ultra 7 de 14e génération (12 Mo de cache, 10 cœurs, 14 threads, jusqu'à 4,7 GHz Turbo)\r\n\r\n✨ 32 Go DDR5, 6400 MT/s, double canal, non ECC\r\n\r\n✨ SSD M.2 2230 PCIe NVMe de 512 Go, classe 35\r\n\r\n✨ Écran FHD 36,0 cm (14\") (1 920 x 1 200), 250 cd/m², faible réflexion, avec IPS, caméra FHD IR, WLAN/WWAN (4G)\r\n\r\n\r\n✨ Wi-Fi 6E AX211, 2 x 2, 802.11ax, avec Bluetooth®\r\n\r\n✨ 1200p à 30 ips, caméra grand écran FHD RVB, microphones double rangée\r\n\r\n✨ Clickpad de précision avec prise en charge des gestes multi-touch\r\n\r\n✨ Clavier rétroéclairé à pointage unique avec lecteur d'empreinte digitale & Déverrouillage Facial\r\n\r\n✨ 2 ports Thunderbolt™ 4 avec mode alternatif DisplayPort™/USB",
+        "ancien_prix": 380000,
+        "nouveau_prix": 350000,
+        "est_promo": false,
+        "prix_promo": 0,
+        "est_pc": true,
+        "est_vendue": false,
+        "image": "image/upload/produits/dell.jpg",
+        "image2": "image/upload/produits/dell2_YfKIBIF.jpeg",
+        "image3": "image/upload/produits/dell3_tySWoyI.jpeg",
+        "date_insertion": "2025-09-11T03:45:23.236Z"
+    }
+},
+{
+    "model": "vente_pc.produit",
+    "pk": "e77713b1-0e7d-44b6-8d65-c040003930bd",
+    "fields": {
+        "vendeur": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "marque": 3,
+        "model": "PROBOOK 455G3",
+        "cpu": "AMD Radeon R5 @ 2.20Ghz",
+        "ram": "8 Go",
+        "stockage": "500Go HDD",
+        "graphic": "4GO de Carte graphique total 1GO dédié AMD  Radeon graphique",
+        "description": "ORDINATEURS HP PROBOOK 455G3 AMD Radeon R5 ÉQUIVALENT a UN CORE-I5 de 6eme GÉNÉRATION ET COUPLÉ à 8Go ✨🍁\r\n\r\n*et avec une carte graphique professionnelle 1Go dédiée*🔥🔥 \r\n\r\nLogiciel supporter (  Logiciel d'architecture) tout la gamme Adobe et logiciel de dessin ingénierie (AutoCad achicard etc...) tout les jeux vidéo même les plus récents \r\n\r\n \r\n🍁Fréquence 2.20ghz up  4.Ghz  turbo bost \r\n\r\n🍁Disque dur 500Go  extensible \r\n\r\n🍁8Go de RAM extensible jusqu'à 64Go \r\n\r\n🍁4GO de Carte graphique total 1GO dédié AMD  Radeon graphique 🔥\r\n\r\n🍁ÉCRAN 15.6 Pouces FHD avec PAVÉ NUMÉRIQUE 🔥\r\n\r\n🍁Windows 10 professionnelle \r\n\r\n🍁 -ports USB- WEBCAM HDMI WIFI BLUETOOTH PORT Réseau etc....\r\n\r\n☺️Bonus : Microsoft Office déjà installé et activé  gratuitement",
+        "ancien_prix": 0,
+        "nouveau_prix": 125000,
+        "est_promo": false,
+        "prix_promo": 0,
+        "est_pc": true,
+        "est_vendue": false,
+        "image": "image/upload/produits/HP_rRhXKDo.jpg",
+        "image2": "image/upload/produits/hp2.jpeg",
+        "image3": "image/upload/produits/hp3.jpeg",
+        "date_insertion": "2025-09-11T04:07:27.573Z"
+    }
+},
+{
+    "model": "vente_pc.produit",
+    "pk": "e7e9f0f4-c64a-4031-a908-05ac13695294",
+    "fields": {
+        "vendeur": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "marque": 1,
+        "model": "Latitude 5450",
+        "cpu": "core i5-53000U @ 2.30Ghz",
+        "ram": "8 Go DDR3",
+        "stockage": "500 Go HDD",
+        "graphic": "INTEL ULTRA HD GRAPHIC 520 4Gb Total",
+        "description": "ⓘ  DELL 5450 | Ultra slim laptop | Core i5 couplé à un processeur de 5ème génération | 8gb RAM .\r\n\r\n °Pour l'infographie, la programmation, la gestion de données, les étudiants, la comptabilité/le marketing numérique, le montage vidéo de base, les études de dessin technique, etc...\r\n\r\n Caractéristiques\r\n\r\n✳️DELL  5450 i5-53000U (5ème génération) Cpu : 2.30Ghz UP to ~ 3.5 GHz Turbo-boost ⚡️\r\n\r\n✳️ RAM 8 GB DDR3 Extensible jusqu'à 32gb\r\n\r\n✳️ Disque dur 500 Go de STOCKAGE  extensible \r\n\r\n✳️ Mémoire graphique INTEL ULTRA HD GRAPHIC 520 4Gb Total  \r\n\r\n✳️ Écran : 14.1'' Inch full HD \r\n\r\n✳️ Sortie USB 3.O,  WiFi, Bluetooth, HDMI, PLAYER, webcam \r\n\r\n✳️ Windows 10 Pro -OFFICE 2021 déjà installé et activé \r\n\r\n✳️ Autonomie de la batterie 💪🏼",
+        "ancien_prix": 95000,
+        "nouveau_prix": 90000,
+        "est_promo": false,
+        "prix_promo": 0,
+        "est_pc": true,
+        "est_vendue": false,
+        "image": "image/upload/produits/dell_4cKayiJ.jpg",
+        "image2": "image/upload/produits/dell2.jpeg",
+        "image3": "image/upload/produits/dell3.jpeg",
+        "date_insertion": "2025-09-11T07:21:41.264Z"
+    }
+},
+{
+    "model": "vente_pc.produit",
+    "pk": "f16c1ae4-a5fc-4f55-9eed-49a04d281ef4",
+    "fields": {
+        "vendeur": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "marque": 1,
+        "model": "Latitude 5580",
+        "cpu": "Intel core i5-6600U @ 2.60Ghz",
+        "ram": "16 Go PC4",
+        "stockage": "512 Go SSD",
+        "graphic": "NVIDIA Gforce 950MX  2GB dédié GDDR5",
+        "description": "🔴 *DELL 5580, workstation  encore appelé « SATAN 2 »  ( i5)  de 6em et  7em génération couplé à 😳16GB Ram😳 extensible jusqu'à 64GB Ram 🤕 et une carte graphique professionnelle avec 2GB dédié NVIDIA Gforce 950MX GDDR5🔥* \r\n\r\nLogiciels supportés :  Lumion (Logiciel d'architecture le plus lourd) Toute la gamme Adobe Tous logiciels de dessin en ingénierie ( AutoCad, SoliWork, ..) Tous les jeux vidéos même les plus récents\r\n\r\n👉 Intel core i5 2.60Ghz  6600U \r\n👉Ram 16GB PC4  extensible a 64GB  \r\n👉disque dur *512GB SSD* (extensinle jusqu'a 1TB)\r\n👉 carte graphique NVIDIA Gforce 950MX  2GB dédié GDDR5🔥 \r\n👉Clavier rétro-éclairé \r\n👉écran 15.6\" POUCES \r\n👉 ports type-C  - empreinte digitale- ports USB - écouteur-HDMI-VGA-Carte SD. \r\n\r\nOFFERT:\r\n🎁 Windows 11/10 professionnel 64bits\r\n🎁 Suite office déjà installée\r\n🎁 Chargeur d'origine",
+        "ancien_prix": 200000,
+        "nouveau_prix": 185000,
+        "est_promo": true,
+        "prix_promo": 180000,
+        "est_pc": true,
+        "est_vendue": true,
+        "image": "image/upload/produits/dell_2ulLFVl.jpg",
+        "image2": null,
+        "image3": null,
+        "date_insertion": "2025-09-11T04:02:31.650Z"
+    }
+},
+{
+    "model": "vente_pc.produit",
+    "pk": "f6afe236-4e7e-406b-820a-9d3b3d74f277",
+    "fields": {
+        "vendeur": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "marque": 2,
+        "model": "V15-G4 IRU",
+        "cpu": "intel Core i5-13420H",
+        "ram": "8 Go RAM DDR4",
+        "stockage": "256Go SSD M.2",
+        "graphic": "Intel(R) UHD Graphics Family",
+        "description": "ⓘ Ordinateur Portable Lenovo V15-G4 IRU\r\n\r\n✨Processeur : Intel Core i5-13420H 13ème génération (4 Performance-Cores 4.6 GHz Turbo + 4 Efficient-Cores 3.4 GHz Turbo - 12 Threads - Cache 12 Mo),\r\n\r\n✨Ram : 8 Go RAM DDR4 3200MHz, \r\n\r\n✨Disque Dur : 256Go SSDSSD (Solid State Drive) M.2 - PCI-E 4.0 4x,\r\n\r\n✨Système Windows 11, \r\n\r\n✨Graphisme : Carte graphique Intel(R) UHD Graphics Family, \r\n\r\n✨Écran 15.6\" FHD IPS Résolution 1920 x 1080 Px, 60Hz\r\n\r\n✨Webcam, Wi-Fi, Bluetooth, Clavier AZERTY ....",
+        "ancien_prix": 270000,
+        "nouveau_prix": 250000,
+        "est_promo": false,
+        "prix_promo": 0,
+        "est_pc": true,
+        "est_vendue": false,
+        "image": "image/upload/produits/lenovo_F9QMIIh.jpg",
+        "image2": "image/upload/produits/lenovo2.jpeg",
+        "image3": "image/upload/produits/lenovo3.jpeg",
+        "date_insertion": "2025-09-11T07:33:58.765Z"
+    }
+},
+{
+    "model": "vente_pc.staff",
+    "pk": 1,
+    "fields": {
+        "nom": "Tchoupe Eric",
+        "alias": "Hack Dumping",
+        "role": "Fondateur & Informaticien",
+        "tel": "+237 658 630 407",
+        "image": "staff/profil.jpg",
+        "date_insertion": "2025-09-14T08:33:35.244Z"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add produit",
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "codename": "add_produit"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change produit",
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "codename": "change_produit"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete produit",
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "codename": "delete_produit"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view produit",
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "codename": "view_produit"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add marque",
+        "content_type": [
+            "vente_pc",
+            "marque"
+        ],
+        "codename": "add_marque"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change marque",
+        "content_type": [
+            "vente_pc",
+            "marque"
+        ],
+        "codename": "change_marque"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete marque",
+        "content_type": [
+            "vente_pc",
+            "marque"
+        ],
+        "codename": "delete_marque"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view marque",
+        "content_type": [
+            "vente_pc",
+            "marque"
+        ],
+        "codename": "view_marque"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add staff",
+        "content_type": [
+            "vente_pc",
+            "staff"
+        ],
+        "codename": "add_staff"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change staff",
+        "content_type": [
+            "vente_pc",
+            "staff"
+        ],
+        "codename": "change_staff"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete staff",
+        "content_type": [
+            "vente_pc",
+            "staff"
+        ],
+        "codename": "delete_staff"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view staff",
+        "content_type": [
+            "vente_pc",
+            "staff"
+        ],
+        "codename": "view_staff"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add client",
+        "content_type": [
+            "vente_pc",
+            "client"
+        ],
+        "codename": "add_client"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change client",
+        "content_type": [
+            "vente_pc",
+            "client"
+        ],
+        "codename": "change_client"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete client",
+        "content_type": [
+            "vente_pc",
+            "client"
+        ],
+        "codename": "delete_client"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view client",
+        "content_type": [
+            "vente_pc",
+            "client"
+        ],
+        "codename": "view_client"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add vendeur",
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "codename": "add_vendeur"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change vendeur",
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "codename": "change_vendeur"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete vendeur",
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "codename": "delete_vendeur"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view vendeur",
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "codename": "view_vendeur"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add forfait",
+        "content_type": [
+            "vente_pc",
+            "forfait"
+        ],
+        "codename": "add_forfait"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change forfait",
+        "content_type": [
+            "vente_pc",
+            "forfait"
+        ],
+        "codename": "change_forfait"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete forfait",
+        "content_type": [
+            "vente_pc",
+            "forfait"
+        ],
+        "codename": "delete_forfait"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view forfait",
+        "content_type": [
+            "vente_pc",
+            "forfait"
+        ],
+        "codename": "view_forfait"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add ville",
+        "content_type": [
+            "vente_pc",
+            "ville"
+        ],
+        "codename": "add_ville"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change ville",
+        "content_type": [
+            "vente_pc",
+            "ville"
+        ],
+        "codename": "change_ville"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete ville",
+        "content_type": [
+            "vente_pc",
+            "ville"
+        ],
+        "codename": "delete_ville"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view ville",
+        "content_type": [
+            "vente_pc",
+            "ville"
+        ],
+        "codename": "view_ville"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add pays",
+        "content_type": [
+            "vente_pc",
+            "pays"
+        ],
+        "codename": "add_pays"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change pays",
+        "content_type": [
+            "vente_pc",
+            "pays"
+        ],
+        "codename": "change_pays"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete pays",
+        "content_type": [
+            "vente_pc",
+            "pays"
+        ],
+        "codename": "delete_pays"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view pays",
+        "content_type": [
+            "vente_pc",
+            "pays"
+        ],
+        "codename": "view_pays"
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$9SuF7PqcnrCy4djuzbYm7t$Bxcwt67/v2lanQZr/4qK7jXQkbzEVedihSrBlSLyCjA=",
+        "last_login": "2025-09-22T13:09:24.726Z",
+        "is_superuser": true,
+        "username": "dumping",
+        "first_name": "",
+        "last_name": "",
+        "email": "hackdumping@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-09-11T01:36:40.610Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2025-09-11T03:37:12.214Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "marque"
+        ],
+        "object_id": "1",
+        "object_repr": "Dell",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2025-09-11T03:45:23.238Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "cac1f0c1-a985-47fd-b62e-c46c9cd572a2",
+        "object_repr": "Dell Latitude 7450",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2025-09-11T03:51:44.753Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "marque"
+        ],
+        "object_id": "2",
+        "object_repr": "Lenovo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2025-09-11T03:55:07.721Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "71ccdb16-c829-4289-8f79-fbaf310fb567",
+        "object_repr": "Lenovo T460s  écran tactile --- RAM 8GB  DDR4 - 256GB SSD",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2025-09-11T04:02:31.659Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "f16c1ae4-a5fc-4f55-9eed-49a04d281ef4",
+        "object_repr": "Dell Latitude 5580 --- RAM 16GB PC4 - 512GB SSD",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2025-09-11T04:04:07.062Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "marque"
+        ],
+        "object_id": "3",
+        "object_repr": "HP",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2025-09-11T04:07:27.574Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "e77713b1-0e7d-44b6-8d65-c040003930bd",
+        "object_repr": "HP PROBOOK 455G3 --- RAM 8Go - 500Go HDD",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2025-09-11T04:14:33.412Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "ee41c984-ba04-4d15-922f-231f4317e869",
+        "object_repr": "HP EliteBook  745 G6 --- RAM 16 Go DDR4 - SSD M2 NVME 256 Go",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2025-09-11T06:39:57.305Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "ee41c984-ba04-4d15-922f-231f4317e869",
+        "object_repr": "HP EliteBook  745 G6 --- RAM 16 Go DDR4 - SSD M2 NVME 256 Go",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Nouveau prix\", \"Prix promo\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2025-09-11T06:41:52.931Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "f16c1ae4-a5fc-4f55-9eed-49a04d281ef4",
+        "object_repr": "Dell Latitude 5580 --- RAM 16GB PC4 - 512GB SSD",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Nouveau prix\", \"Prix promo\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2025-09-11T07:08:40.421Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "722fdcf9-6206-457e-b75d-08cd3e092ce7",
+        "object_repr": "Dell Latitude 5400 --- RAM 16 Go - 512Go SSD",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2025-09-11T07:15:00.607Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "5791800e-f57f-4c36-96fa-9aeba059134d",
+        "object_repr": "Dell Latitude 5310 ecran tactile --- RAM 8 Go - 256 Go",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2025-09-11T07:21:41.266Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "e7e9f0f4-c64a-4031-a908-05ac13695294",
+        "object_repr": "Dell Latitude 5450 --- RAM 8 Go DDR3 - 500 Go HDD",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2025-09-11T07:33:58.766Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "f6afe236-4e7e-406b-820a-9d3b3d74f277",
+        "object_repr": "Lenovo V15-G4 IRU --- RAM 8 Go RAM DDR4 - 256Go SSD M.2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2025-09-12T00:07:30.052Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "722fdcf9-6206-457e-b75d-08cd3e092ce7",
+        "object_repr": "Dell Latitude 5400 --- RAM 16 Go - 512Go SSD",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Cpu\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2025-09-12T00:08:45.091Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "f6afe236-4e7e-406b-820a-9d3b3d74f277",
+        "object_repr": "Lenovo V15-G4 IRU --- RAM 8 Go RAM DDR4 - 256Go SSD M.2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Cpu\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2025-09-12T00:08:56.544Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "e7e9f0f4-c64a-4031-a908-05ac13695294",
+        "object_repr": "Dell Latitude 5450 --- RAM 8 Go DDR3 - 500 Go HDD",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2025-09-12T00:09:17.840Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "5791800e-f57f-4c36-96fa-9aeba059134d",
+        "object_repr": "Dell Latitude 5310 ecran tactile --- RAM 8 Go - 256 Go",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Cpu\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2025-09-12T00:09:27.787Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "722fdcf9-6206-457e-b75d-08cd3e092ce7",
+        "object_repr": "Dell Latitude 5400 --- RAM 16 Go - 512Go SSD",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2025-09-12T00:09:51.627Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "ee41c984-ba04-4d15-922f-231f4317e869",
+        "object_repr": "HP EliteBook  745 G6 --- RAM 16 Go DDR4 - SSD M2 NVME 256 Go",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Cpu\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2025-09-12T00:10:13.254Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "e77713b1-0e7d-44b6-8d65-c040003930bd",
+        "object_repr": "HP PROBOOK 455G3 --- RAM 8 Go - 500Go HDD",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Cpu\", \"Ram\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2025-09-12T00:11:02.498Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "f16c1ae4-a5fc-4f55-9eed-49a04d281ef4",
+        "object_repr": "Dell Latitude 5580 --- RAM 16 Go PC4 - 512 Go SSD",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Cpu\", \"Ram\", \"Stockage\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2025-09-12T00:11:51.653Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "71ccdb16-c829-4289-8f79-fbaf310fb567",
+        "object_repr": "Lenovo ThinkPad T460s  écran tactile --- RAM 8 Go  DDR4 - 256 Go SSD",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Model\", \"Cpu\", \"Ram\", \"Stockage\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2025-09-12T00:12:14.993Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "cac1f0c1-a985-47fd-b62e-c46c9cd572a2",
+        "object_repr": "Dell Latitude 7450 --- RAM 32 Go DDR5 - 512 Go SSD M.2",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2025-09-12T05:50:10.056Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "f16c1ae4-a5fc-4f55-9eed-49a04d281ef4",
+        "object_repr": "Dell Latitude 5580 --- RAM 16 Go PC4 - 512 Go SSD",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2025-09-13T18:53:59.891Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "5791800e-f57f-4c36-96fa-9aeba059134d",
+        "object_repr": "Dell Latitude 5310 ecran tactile --- RAM 8 Go - 256 Go",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Est vendue\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2025-09-14T08:33:35.245Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "staff"
+        ],
+        "object_id": "1",
+        "object_repr": "Tchoupe Eric -- +237 658 630 407",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2025-09-16T00:18:27.652Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "client"
+        ],
+        "object_id": "1",
+        "object_repr": "hackdumping@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2025-09-16T15:12:32.044Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "client"
+        ],
+        "object_id": "3",
+        "object_repr": "erictchoupe5@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2025-09-16T15:12:39.591Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "client"
+        ],
+        "object_id": "2",
+        "object_repr": "hackdumping@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2025-09-16T15:22:48.843Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "client"
+        ],
+        "object_id": "4",
+        "object_repr": "erictchoupe5@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2025-09-16T15:29:27.126Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "client"
+        ],
+        "object_id": "5",
+        "object_repr": "erictchoupe5@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2025-09-16T16:26:45.897Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "f6afe236-4e7e-406b-820a-9d3b3d74f277",
+        "object_repr": "Lenovo V15-G4 IRU --- RAM 8 Go RAM DDR4 - 256Go SSD M.2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image2\", \"Image3\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2025-09-16T16:31:52.048Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "ee41c984-ba04-4d15-922f-231f4317e869",
+        "object_repr": "HP EliteBook  745 G6 --- RAM 16 Go DDR4 - SSD M2 NVME 256 Go",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Est promo\", \"Est vendue\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2025-09-16T16:36:18.013Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "e7e9f0f4-c64a-4031-a908-05ac13695294",
+        "object_repr": "Dell Latitude 5450 --- RAM 8 Go DDR3 - 500 Go HDD",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image2\", \"Image3\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2025-09-16T16:41:28.848Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "722fdcf9-6206-457e-b75d-08cd3e092ce7",
+        "object_repr": "Dell Latitude 5400 --- RAM 16 Go - 512Go SSD",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image2\", \"Image3\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2025-09-16T16:45:41.604Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "e77713b1-0e7d-44b6-8d65-c040003930bd",
+        "object_repr": "HP PROBOOK 455G3 --- RAM 8 Go - 500Go HDD",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image2\", \"Image3\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2025-09-16T16:49:05.240Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "f16c1ae4-a5fc-4f55-9eed-49a04d281ef4",
+        "object_repr": "Dell Latitude 5580 --- RAM 16 Go PC4 - 512 Go SSD",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image2\", \"Image3\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2025-09-16T16:57:39.580Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "71ccdb16-c829-4289-8f79-fbaf310fb567",
+        "object_repr": "Lenovo ThinkPad T460s  écran tactile --- RAM 8 Go  DDR4 - 256 Go SSD",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image2\", \"Image3\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2025-09-16T17:01:36.956Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "cac1f0c1-a985-47fd-b62e-c46c9cd572a2",
+        "object_repr": "Dell Latitude 7450 --- RAM 32 Go DDR5 - 512 Go SSD M.2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image2\", \"Image3\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2025-09-17T23:57:56.513Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "client"
+        ],
+        "object_id": "6",
+        "object_repr": "hackdumping@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2025-09-18T11:11:00.251Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "forfait"
+        ],
+        "object_id": "1",
+        "object_repr": "Standard - 5000 XAF / mois",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2025-09-18T11:11:20.522Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "forfait"
+        ],
+        "object_id": "2",
+        "object_repr": "Confort - 10000 XAF / mois",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2025-09-18T11:54:27.831Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "c2b6f5f2-6fe1-4bfe-9706-d5a1f74d0962",
+        "object_repr": "ultimate-technologie[658630407 - forfait Confort - 1 jours restant",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2025-09-18T12:06:31.505Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "707f17e2-7a45-40cf-988e-2ac913c869a1",
+        "object_repr": "ultimate-technologie[658630407 - forfait Confort - 1 jours restant",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2025-09-18T12:24:16.761Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "bd082e09-23c7-4505-9890-576cfc376c8f",
+        "object_repr": "ultimate-technologie[658630407 - forfait Confort - 1 jours restant",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2025-09-18T12:24:23.000Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "bd082e09-23c7-4505-9890-576cfc376c8f",
+        "object_repr": "ultimate-technologie[658630407 - forfait Confort - 1 jours restant",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2025-09-18T12:28:09.235Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "f70b069d-0668-4e76-b82c-4a91242b0184",
+        "object_repr": "ultimate-technologie[658630407 - forfait Confort - 1 jours restant",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2025-09-18T12:29:01.003Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "ede0ebab-bc75-4372-acb5-5c7c97cc68c0",
+        "object_repr": "ultimate-technologie[658630407 - forfait Confort - 1 jours restant",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2025-09-18T13:19:02.244Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "f6afe236-4e7e-406b-820a-9d3b3d74f277",
+        "object_repr": "Lenovo V15-G4 IRU --- RAM 8 Go RAM DDR4 - 256Go SSD M.2 en rupture : False",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2025-09-18T13:19:09.583Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "e7e9f0f4-c64a-4031-a908-05ac13695294",
+        "object_repr": "Dell Latitude 5450 --- RAM 8 Go DDR3 - 500 Go HDD en rupture : False",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2025-09-18T13:19:19.487Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "e7e9f0f4-c64a-4031-a908-05ac13695294",
+        "object_repr": "Dell Latitude 5450 --- RAM 8 Go DDR3 - 500 Go HDD en rupture : False",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2025-09-18T13:19:25.395Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "5791800e-f57f-4c36-96fa-9aeba059134d",
+        "object_repr": "Dell Latitude 5310 ecran tactile --- RAM 8 Go - 256 Go en rupture : True",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2025-09-18T13:19:31.732Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "722fdcf9-6206-457e-b75d-08cd3e092ce7",
+        "object_repr": "Dell Latitude 5400 --- RAM 16 Go - 512Go SSD en rupture : False",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2025-09-18T13:19:35.203Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "722fdcf9-6206-457e-b75d-08cd3e092ce7",
+        "object_repr": "Dell Latitude 5400 --- RAM 16 Go - 512Go SSD en rupture : False",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2025-09-18T13:19:45.949Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "ee41c984-ba04-4d15-922f-231f4317e869",
+        "object_repr": "HP EliteBook  745 G6 --- RAM 16 Go DDR4 - SSD M2 NVME 256 Go en rupture : True",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2025-09-18T13:19:57.284Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "e77713b1-0e7d-44b6-8d65-c040003930bd",
+        "object_repr": "HP PROBOOK 455G3 --- RAM 8 Go - 500Go HDD en rupture : False",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2025-09-18T13:20:08.307Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "f16c1ae4-a5fc-4f55-9eed-49a04d281ef4",
+        "object_repr": "Dell Latitude 5580 --- RAM 16 Go PC4 - 512 Go SSD en rupture : False",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2025-09-18T13:20:17.359Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "71ccdb16-c829-4289-8f79-fbaf310fb567",
+        "object_repr": "Lenovo ThinkPad T460s  écran tactile --- RAM 8 Go  DDR4 - 256 Go SSD en rupture : False",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2025-09-18T13:20:23.352Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "cac1f0c1-a985-47fd-b62e-c46c9cd572a2",
+        "object_repr": "Dell Latitude 7450 --- RAM 32 Go DDR5 - 512 Go SSD M.2 en rupture : False",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Vendeur\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2025-09-18T13:20:50.426Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "object_repr": "ultimate-technology[658630407 - forfait Standard - 1 jours restant",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Nom\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2025-09-18T13:28:49.308Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "object_repr": "ultimate-technology[658630407 - forfait Standard - 1 jours restant",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Jours\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2025-09-18T13:29:59.709Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "object_repr": "ultimate-technology[658630407 - forfait Standard - 1 jours restant",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Jours\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2025-09-18T13:31:14.103Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "object_repr": "ultimate-technology[658630407 - forfait Standard - 0 jours restant",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Jours\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2025-09-18T13:34:32.693Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "object_repr": "ultimate-technology[658630407 - forfait Standard - 1 jours restant",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Jours\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2025-09-18T15:03:12.326Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "ville"
+        ],
+        "object_id": "1",
+        "object_repr": "Douala",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2025-09-18T15:03:23.289Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "pays"
+        ],
+        "object_id": "1",
+        "object_repr": "Cameroun",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2025-09-18T15:03:49.857Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "object_repr": "ultimate-technology[658630407 - forfait Standard - 0 jours restant",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Pays\", \"Ville\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2025-09-18T17:58:15.413Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "object_repr": "ultimate-technology[658630407 - forfait Standard - 0 jours restant",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2025-09-18T18:40:44.889Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "object_repr": "ultimate-technology[658630407 - forfait Confort - 0 jours restant",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Forfait\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2025-09-18T21:57:54.119Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "object_repr": "ultimate-technology[658630407 - forfait Confort - 1 jours restant",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Jours\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2025-09-18T23:22:39.938Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "ville"
+        ],
+        "object_id": "2",
+        "object_repr": "Yaounde",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2025-09-18T23:24:32.235Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "48dba2ce-6aa5-414d-8a14-f268a1afae1e",
+        "object_repr": "computer-market[699700012 - forfait Standard - 8 jours restant",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2025-09-20T07:51:07.451Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "produit"
+        ],
+        "object_id": "e77713b1-0e7d-44b6-8d65-c040003930bd",
+        "object_repr": "HP PROBOOK 455G3 --- RAM 8 Go - 500Go HDD en rupture : False",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2025-09-21T03:17:38.357Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "marque"
+        ],
+        "object_id": "3",
+        "object_repr": "Hp",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Nom\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2025-09-21T15:20:09.814Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "object_repr": "ultimate-technology[658630407 - forfait Confort - 0 jours restant",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Jours\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2025-09-21T20:10:37.566Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "object_repr": "ultimate-technology[658630407 - forfait Confort - 0 jours restant",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Jours\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2025-09-21T20:12:02.560Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "object_repr": "ultimate-technology[658630407 - forfait Confort - 1 jours restant",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Jours\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2025-09-22T13:09:52.089Z",
+        "user": [
+            "dumping"
+        ],
+        "content_type": [
+            "vente_pc",
+            "vendeur"
+        ],
+        "object_id": "abbcbba1-5075-4420-81ea-3b8235e811bd",
+        "object_repr": "ultimate-technology[658562221 - forfait Confort - 1 jours restant",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Tel\"]}}]"
+    }
 }
 ]

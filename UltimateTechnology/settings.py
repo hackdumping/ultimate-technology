@@ -15,6 +15,9 @@ from pathlib import Path
 import dj_database_url
 import environ
 from dotenv import load_dotenv, find_dotenv
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 from django.conf.global_settings import MEDIA_URL, DEBUG, DEFAULT_FILE_STORAGE
 
@@ -34,8 +37,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-SHOW_CUSTOM_ERRORS = True
+DEBUG = True
+SHOW_CUSTOM_ERRORS = False
 
 #ALLOWED_HOSTS = ['4db1350b6a7c90.lhr.life', '127.0.0.1', 'localhost']
 ALLOWED_HOSTS = ['*']
@@ -131,6 +134,7 @@ DATABASES = {
         }
     }
 }
+
 """
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
@@ -190,7 +194,7 @@ CLOUDINARY_STORAGE = {
     'SECURE': True,
     'MEDIA_TAG': 'media',
 }
-import cloudinary
+
 cloudinary.config(
     cloud_name = 'dxcbksigt',
     api_key = '529168959236142',
@@ -199,7 +203,8 @@ cloudinary.config(
 )
 
 #Definir cloudinary comme fichier de stockage par defaut
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage',
+#DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage',
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
 STATIC_URL = 'static/'
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')

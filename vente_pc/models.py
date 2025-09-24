@@ -1,5 +1,6 @@
 import uuid
 
+from cloudinary.models import CloudinaryField
 from django.db import models
 from django.utils import timezone
 from django.db.models.fields import BooleanField
@@ -44,7 +45,8 @@ class Vendeur(models.Model):
     forfait = models.ForeignKey(Forfait, on_delete=models.PROTECT, default=None, null=True, blank=True)
     date_insertion = models.DateTimeField(auto_now_add=True)
     date_exp = models.DateField(verbose_name="Date expiration", null=True, blank=True)
-    logo = models.ImageField(upload_to='logos/', blank=True, null=True, default="images/no_logo.jpg")
+    #logo = models.ImageField(upload_to='logos/', blank=True, null=True, default="images/no_logo.jpg")
+    logo = CloudinaryField('logo', folder='produits/', blank=True, null=True, default="images/no_logo.jpg")
     jours = models.PositiveIntegerField(default=0) #, editable=False)
 
     class Meta:
@@ -85,33 +87,40 @@ class Produit(models.Model):
     prix_promo = models.PositiveIntegerField(blank=True, default=0)
     est_pc = models.BooleanField(default=True)
     est_vendue = models.BooleanField(default=False)
-    image = ResizedImageField(
+    """image = ResizedImageField(
         size=[500, 500],  # Carré 500x500
         crop=['middle', 'center'],  # Centrage
         quality=75,
         upload_to='produits/',
         blank=True,
         null=True
-    )
-    image2 = ResizedImageField(
+    )"""
+    image = CloudinaryField('image', folder='produits/', blank=True, null=True)
+
+
+    """image2 = ResizedImageField(
         size=[500, 500],  # Carré 500x500
         crop=['middle', 'center'],  # Centrage
         quality=75,
         upload_to='produits/',
         blank=True,
         null=True
-    )
-    image3 = ResizedImageField(
+    )"""
+    image2 = CloudinaryField('image2', folder='produits/', blank=True, null=True )
+
+    """image3 = ResizedImageField(
         size=[500, 500],  # Carré 500x500
         crop=['middle', 'center'],  # Centrage
         quality=75,
         upload_to='produits/',
         blank=True,
         null=True
-    )
+    )"""
     #image = models.ImageField(upload_to='produits/', blank=True, null=True)
     #image2 = models.ImageField(upload_to='produits/', blank=True, null=True)
     #image3 = models.ImageField(upload_to='produits/', blank=True, null=True)
+    image3 = CloudinaryField('image3', folder='produits/', blank=True, null=True)
+
     date_insertion = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -120,12 +129,38 @@ class Produit(models.Model):
     def __str__(self):
         return f"{self.marque.nom} {self.model} --- RAM {self.ram} - {self.stockage} en rupture : {self.est_vendue}"
 
+    """
+    # Propriété pour compatibilité
+    @property
+    def image_url(self):
+        #Retourne l'URL Cloudinary de l'image
+        if self.image:
+            return self.image.url
+        if self.image2:
+            return self.image2.url
+        if self.image3:
+            return self.image3.url
+        return None
+
+    @property
+    def thumbnail_url(self):
+        #URL avec transformations pour thumbnail
+        if self.image:
+            return self.image.build_url(width=300, height=200, crop="fill")
+        if self.image2:
+            return self.image2.build_url(width=300, height=200, crop="fill")
+        if self.image3:
+            return self.image3.build_url(width=300, height=200, crop="fill")
+        return None
+    """
+
 class Staff(models.Model):
     nom = models.CharField(max_length=255)
     alias = models.CharField(max_length=255, default="", blank=True)
     role = models.CharField(max_length=255)
     tel = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='staff/', blank=True, null=True)
+    #image = models.ImageField(upload_to='staff/', blank=True, null=True)
+    image = CloudinaryField('image', folder='staff/', blank=True, null=True )
     date_insertion = models.DateTimeField(auto_now_add=True)
 
     class Meta:

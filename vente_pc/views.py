@@ -389,8 +389,9 @@ def login(request):
         try:
             # Convertir en UUID
             uuid_obj = uuid.UUID(code)
-            vdr = get_object_or_404(Vendeur, id=uuid_obj)
-            if vdr:
+            #vdr = get_object_or_404(Vendeur, id=uuid_obj)
+            if Vendeur.objects.filter(id=uuid_obj).exists():
+                vdr = get_object_or_404(Vendeur, id=uuid_obj)
                 if mdp != vdr.mdp:
                     context['msg'] = "Mot de passe incorrect !"
                 elif vdr.jours_restants() == 0:
@@ -399,7 +400,6 @@ def login(request):
                     request.session['vendeur'] = {
                         'code' : str(vdr.id),
                         'nom' : vdr.nom,
-                        'pays' : vdr.pays,
                         'tel' : vdr.tel,
                         'email' : vdr.email,
                         'mdp' : vdr.mdp,
