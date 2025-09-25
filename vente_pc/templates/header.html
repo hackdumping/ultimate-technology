@@ -146,7 +146,7 @@
             <a href="{% url 'vendeur' %}" class="{% if request.resolver_match.url_name == 'vendeur' %}active{% endif %}">Vendeur</a>
             <a href="{% url 'a-propos' %}" class="{% if request.resolver_match.url_name == 'a-propos' %}active{% endif %}">À propos</a>
             <a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
-            {endif}
+            {% endif %}
         </nav>
 
         <div class="actions">
@@ -181,7 +181,7 @@
     <a href="{% url 'vendeur' %}" class="{% if request.resolver_match.url_name == 'vendeur' %}active{% endif %}">Vendeur</a>
     <a href="{% url 'a-propos' %}" class="{% if request.resolver_match.url_name == 'a-propos' %}active{% endif %}">À propos</a>
     <a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
-    {endif}
+    {% endif %}
 </nav>
 
 <script>
