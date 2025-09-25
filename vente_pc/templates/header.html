@@ -131,22 +131,15 @@
         </a>
 
         <nav class="main-nav">
-            {% if request.session.vendeur %}
             <a href="/#home" class="{% if request.resolver_match.url_name == 'accueil' %}active{% endif %}">Accueil</a>
             <a href="/#shop" class="{% if '/#shop' in request.path %}active{% endif %}">Boutique</a>
             <a href="{% url 'promotion' %}" class="{% if request.resolver_match.url_name == 'promotion' %}active{% endif %}">Promotions</a>
             <a href="{% url 'vendeur' %}" class="{% if request.resolver_match.url_name == 'vendeur' %}active{% endif %}">Vendeur</a>
             <a href="{% url 'a-propos' %}" class="{% if request.resolver_match.url_name == 'a-propos' %}active{% endif %}">À propos</a>
             <a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
-            <a href="{% url 'profil' %}" class="{% if request.resolver_match.url_name == 'profil' %}active{% endif %}" >Mon profil</a>
-            {% else %}
-            <a href="/#home" class="{% if request.resolver_match.url_name == 'accueil' %}active{% endif %}">Accueil</a>
-            <a href="/#shop" class="{% if '/#shop' in request.path %}active{% endif %}">Boutique</a>
-            <a href="{% url 'promotion' %}" class="{% if request.resolver_match.url_name == 'promotion' %}active{% endif %}">Promotions</a>
-            <a href="{% url 'vendeur' %}" class="{% if request.resolver_match.url_name == 'vendeur' %}active{% endif %}">Vendeur</a>
-            <a href="{% url 'a-propos' %}" class="{% if request.resolver_match.url_name == 'a-propos' %}active{% endif %}">À propos</a>
-            <a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
-            {% endif %}
+        {% if request.session.vendeur %}
+            <a href="{% url 'profil' %}" class="{% if '/profil' in request.path %}active{% endif %}" >Mon profil</a>
+        {% endif %}
         </nav>
 
         <div class="actions">
@@ -166,21 +159,14 @@
 <!-- Menu mobile -->
 <nav id="mobileNav" class="mobile-nav">
     <div class="mobile-nav-close" id="closeMobileNav">✕</div>
+    <a href="/#home" class="{% if request.resolver_match.url_name == 'accueil' %}active{% endif %}">Accueil</a>
+    <a href="/#shop" class="{% if '/#shop' in request.path %}active{% endif %}">Boutique</a>
+    <a href="{% url 'promotion' %}" class="{% if request.resolver_match.url_name == 'promotion' %}active{% endif %}">Promotions</a>
+    <a href="{% url 'vendeur' %}" class="{% if request.resolver_match.url_name == 'vendeur' %}active{% endif %}">Vendeur</a>
+    <a href="{% url 'a-propos' %}" class="{% if request.resolver_match.url_name == 'a-propos' %}active{% endif %}">À propos</a>
+    <a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
     {% if request.session.vendeur %}
-    <a href="/#home" class="{% if request.resolver_match.url_name == 'accueil' %}active{% endif %}">Accueil</a>
-    <a href="/#shop" class="{% if '/#shop' in request.path %}active{% endif %}">Boutique</a>
-    <a href="{% url 'promotion' %}" class="{% if request.resolver_match.url_name == 'promotion' %}active{% endif %}">Promotions</a>
-    <a href="{% url 'vendeur' %}" class="{% if request.resolver_match.url_name == 'vendeur' %}active{% endif %}">Vendeur</a>
-    <a href="{% url 'a-propos' %}" class="{% if request.resolver_match.url_name == 'a-propos' %}active{% endif %}">À propos</a>
-    <a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
-    <a href="{% url 'profil' %}" class="{% if request.resolver_match.url_name == 'profil' %}active{% endif %}" >Mon profil</a>
-    {% else %}
-    <a href="/#home" class="{% if request.resolver_match.url_name == 'accueil' %}active{% endif %}">Accueil</a>
-    <a href="/#shop" class="{% if '/#shop' in request.path %}active{% endif %}">Boutique</a>
-    <a href="{% url 'promotion' %}" class="{% if request.resolver_match.url_name == 'promotion' %}active{% endif %}">Promotions</a>
-    <a href="{% url 'vendeur' %}" class="{% if request.resolver_match.url_name == 'vendeur' %}active{% endif %}">Vendeur</a>
-    <a href="{% url 'a-propos' %}" class="{% if request.resolver_match.url_name == 'a-propos' %}active{% endif %}">À propos</a>
-    <a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
+        <a href="{% url 'profil' %}" class="{% if '/profil' in request.path %}active{% endif %}" >Mon profil</a>
     {% endif %}
 </nav>
 
