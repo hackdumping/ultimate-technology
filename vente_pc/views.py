@@ -258,6 +258,10 @@ j'aimerais acheté ce produit :
     context['test_utl_detail'] = f"{produit.id}" in str(request.build_absolute_uri())
     context['model'] = produit.model
     context['marque'] = produit.marque
+    context['cpu'] = produit.cpu
+    context['ram'] = produit.ram
+    context['graphic'] = produit.graphic
+    context['stockage'] = produit.stockage
     parsed = urllib.parse.urlparse(request.build_absolute_uri())
     root = urllib.parse.urlunparse((parsed.scheme, parsed.netloc, '', '', '', ''))
 
@@ -1052,6 +1056,11 @@ def mystore_details(request, id, id2):
     context['test_utl_detail'] = f"{produit.id}" in str(request.build_absolute_uri())
     context['model'] = produit.model
     context['marque'] = produit.marque
+    context['cpu'] = produit.cpu
+    context['ram'] = produit.ram
+    context['graphic'] = produit.graphic
+    context['stockage'] = produit.stockage
+
     parsed = urllib.parse.urlparse(request.build_absolute_uri())
     root = urllib.parse.urlunparse((parsed.scheme, parsed.netloc, '', '', '', ''))
     context['vendeur'] = vendeur
