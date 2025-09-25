@@ -187,8 +187,8 @@ USE_TZ = True
 # connexion cloudinary
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dxcbksigt',
-    'API_KEY': '529168959236142',
-    'API_SECRET': 'd0pkAYk8Ba-BaLM61RRP56MjLqk',
+    'API_KEY': os.environ.get('API_KEY'),
+    'API_SECRET': os.environ.get('API_SECRET'),
     'QUALITY': 'auto:good',
     'FORMAT': 'webp',
     'SECURE': True,
@@ -197,8 +197,8 @@ CLOUDINARY_STORAGE = {
 
 cloudinary.config(
     cloud_name = 'dxcbksigt',
-    api_key = '529168959236142',
-    api_secret = 'd0pkAYk8Ba-BaLM61RRP56MjLqk',
+    api_key = os.environ.get('API_KEY'),
+    api_secret = os.environ.get('API_SECRET'),
     secure = True
 )
 
@@ -231,5 +231,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'ultimate.technology.cm@gmail.com'
-EMAIL_HOST_PASSWORD = 'rxnrqanicvdylqyb'
+EMAIL_HOST_PASSWORD =  os.environ.get('SMTP_PASSWORD')
 DEFAULT_FROM_EMAIL = 'ultimate.technology.cm@gmail.com'
