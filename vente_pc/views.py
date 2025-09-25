@@ -261,7 +261,7 @@ j'aimerais acheté ce produit :
     parsed = urllib.parse.urlparse(request.build_absolute_uri())
     root = urllib.parse.urlunparse((parsed.scheme, parsed.netloc, '', '', '', ''))
 
-    context['url_image'] = f"{root}{produit.image.url}"
+    context['url_image'] = f"{produit.image.url}"
     #if not ('vendeur' in request.session):
     #    return redirect('login_vendeur')
     return render(request, 'details.html', context=context)
@@ -1055,7 +1055,7 @@ def mystore_details(request, id, id2):
     parsed = urllib.parse.urlparse(request.build_absolute_uri())
     root = urllib.parse.urlunparse((parsed.scheme, parsed.netloc, '', '', '', ''))
     context['vendeur'] = vendeur
-    context['url_image'] = f"{root}{produit.image.url}"
+    context['url_image'] = f"{produit.image.url}"
 
     return render(request, 'mystore_details.html', context=context)
 
