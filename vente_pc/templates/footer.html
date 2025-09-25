@@ -35,7 +35,7 @@
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> Douala, Cameroun</li>
                         <li><i class="fas fa-phone"></i> +237 658 562 221</li>
-                        <li><i class="fas fa-envelope"></i> hackdumping@gmail.com</li>
+                        <li><i class="fas fa-envelope"></i> ultimate.technology.cm@gmail.com</li>
                     </ul>
                     
                     <div class="social-icons">
@@ -50,6 +50,7 @@
                     <h3>Newsletter</h3>
                     <p>Inscrivez-vous à notre newsletter pour recevoir nos offres exclusives</p>
                     <form id="form1" method="POST" class="newsletter">
+                        {% csrf_token %}
                         <input type="email" id="email_client" name="email_client" placeholder="Votre adresse email" required>
                         <button type="submit" id="btnFooter" class="btn">S'inscrire</button>
                     </form>

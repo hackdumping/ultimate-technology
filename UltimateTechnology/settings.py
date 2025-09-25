@@ -37,7 +37,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 SHOW_CUSTOM_ERRORS = True
 
 #ALLOWED_HOSTS = ['4db1350b6a7c90.lhr.life', '127.0.0.1', 'localhost']
@@ -230,6 +230,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'hackdumping@gmail.com'
-EMAIL_HOST_PASSWORD = 'djvrbzkxcaohpcxh'
-DEFAULT_FROM_EMAIL = 'hackdumping@mail.com'
+EMAIL_HOST_USER = 'ultimate.technology.cm@gmail.com'
+EMAIL_HOST_PASSWORD = 'rxnrqanicvdylqyb'
+DEFAULT_FROM_EMAIL = 'ultimate.technology.cm@gmail.com'

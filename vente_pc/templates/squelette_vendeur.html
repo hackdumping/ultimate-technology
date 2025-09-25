@@ -3,7 +3,7 @@
 {% include 'metadata.html' %}
 
 <body>
-  {% include 'header_vendeur.html' %}
+  {% include 'header.html' %}
 
   <main id="main" class="container" translate="no">
     {% block content %}
@@ -58,7 +58,7 @@
           <input type="text" value="" id="dataField" name="data">
           <input type="text" value="" id="totalField" name="total">
 
-      </form>
+        </form>
       <div id="checkoutMessage" style="display:none;margin-top:12px;color:var(--text)"></div>
     </div>
   </main>
@@ -123,7 +123,6 @@
             background: #c82333;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #f8f9fa;
         }
     `;

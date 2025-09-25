@@ -287,7 +287,7 @@ j'aimerais acheté ce produit :
     parsed = urllib.parse.urlparse(request.build_absolute_uri())
     root = urllib.parse.urlunparse((parsed.scheme, parsed.netloc, '', '', '', ''))
 
-    context['url_image'] = f"{root}{produit.image.url}"
+    context['url_image'] = f"{produit.image.url}"
 
     return render(request, 'details_vendeur.html', context=context)
 
@@ -514,7 +514,7 @@ def register(request):
                 sujet,
                 message_texte,
                 settings.EMAIL_HOST_USER,
-                [settings.EMAIL_HOST_USER],
+                [email],
                 html_message=html_message
             )
 
@@ -551,7 +551,7 @@ def recover(request):
                 sujet,
                 message_texte,
                 settings.EMAIL_HOST_USER,
-                [settings.EMAIL_HOST_USER],
+                [email],
                 html_message=html_message
             )
         else:
@@ -808,7 +808,7 @@ def mystore_index(request, id):
 
     vendeur = Vendeur.objects.get(id=id)
     if vendeur.forfait.nom == "Standard":
-        return redirect("index")
+        return redirect("error_404")
     if vendeur.jours == 0:
         return redirect("error_404")
     context = {}
