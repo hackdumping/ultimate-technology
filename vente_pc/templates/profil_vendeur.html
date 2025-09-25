@@ -143,6 +143,10 @@
   {% include 'footer.html' %}
 <script src="{% static 'js/source.js' %}" ></script>
   <script>
+
+   if (window.history.replaceState) {
+      window.history.replaceState(null, null, window.location.href);
+   }
     // Mobile nav
     document.querySelector('.mobile-menu-btn').addEventListener('click',()=>document.getElementById('mobileNav').classList.add('open'));
     document.getElementById('closeMobileNav').addEventListener('click',()=>document.getElementById('mobileNav').classList.remove('open'));

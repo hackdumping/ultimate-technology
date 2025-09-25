@@ -678,9 +678,9 @@ def profil(request):
 
         vendeur = Vendeur.objects.get(id=id)
 
-        if not Pays.objects.get(nom=pays):
+        if not Pays.objects.filter(nom=pays).exists():
             Pays(nom=pays).save()
-        if not Ville.objects.get(nom=ville):
+        if not Ville.objects.filter(nom=ville).exists():
             Ville(nom=ville).save()
         p = Pays.objects.get(nom=pays)
         v = Ville.objects.get(nom=ville)
@@ -688,8 +688,8 @@ def profil(request):
         vendeur.nom = nom
         vendeur.email = email
         vendeur.tel = tel
-        vendeur.frais
-        vendeur.mdp
+        vendeur.frais = frais
+        vendeur.mdp = mdp
         vendeur.ville = v
         vendeur.pays = p
         if 'logo' in request.FILES :
