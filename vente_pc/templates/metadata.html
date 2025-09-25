@@ -10,7 +10,7 @@
     <meta name="keywords" content="ordinateur, pc, gaming, professionnel, laptop, desktop, informatique, vente, ultimate, technology" >
     {% if test_utl_detail|default:False %}
     <meta property="og:title" content="{{ marque }} {{ model }}">
-    <meta property="og:description" content="{% block og_description %}{{ cpu }} | RAM {{ ram }} | Disque Dur {{ stockage }} | {{ graphic }}{% endblock %}">
+    <meta property="og:description" content="{{ cpu }} | RAM {{ ram }} | Disque Dur {{ stockage }} | {{ graphic }}">
     <meta property="og:image" content="{{ url_image }}">
     <meta property="og:url" content="{{ request.build_absolute_uri }}">
     {% else %}
