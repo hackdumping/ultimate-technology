@@ -86,7 +86,7 @@
         tmp = {
             id: el['id'], name: el['marque'] + " " + el['model'], brand: el['marque'],
             price: el['nouveau_prix'], oldPrice: el['ancien_prix'], rating: 5,
-            image: el['image'],
+            image: el['image'], promo: el['prix_promo'],
             specs: [el['cpu'], el['ram'] + " RAM", el['stockage'], "Carte graphique : " + el['graphic']],
             decription: el['description'],
             status : el['est_vendue'].toLowerCase(),
@@ -157,7 +157,11 @@ function initFilters(){
   countries.forEach(c=>{let o=document.createElement('option');o.value=c;o.textContent=c;countryFilter.appendChild(o);});
   const cities=[...new Set(PRODUCTS.map(p=>p.city))];
   cities.forEach(c=>{let o=document.createElement('option');o.value=c;o.textContent=c;cityFilter.appendChild(o);});
+  {% if request.resolver_match.url_name == 'promotion' %}
+  const max=Math.max(...PRODUCTS.map(p=>p.promo));
+  {% else %}
   const max=Math.max(...PRODUCTS.map(p=>p.price));
+  {% endif %}
   priceRange.max=max; priceRange.value=max; priceLabel.textContent='Jusqu\'à '+money(max);
 }
 

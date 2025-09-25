@@ -86,7 +86,7 @@
         tmp = {
             id: el['id'], name: el['marque'] + " " + el['model'], brand: el['marque'],
             price: el['nouveau_prix'], oldPrice: el['ancien_prix'], rating: 5,
-            image: el['image'],
+            image: el['image'], promo : el['prix_promo'],
             specs: [el['cpu'], el['ram'] + " RAM", el['stockage'], "Carte graphique : " + el['graphic']],
             decription: el['description'],
             status : el['est_vendue'].toLowerCase(),
@@ -142,7 +142,12 @@
 
 
       // set price range max
-      const max = Math.max(...PRODUCTS.map(p=>p.price));
+      {% if request.resolver_match.url_name == 'mystore_promotion' %}
+      const max=Math.max(...PRODUCTS.map(p=>p.promo));
+      {% else %}
+      const max=Math.max(...PRODUCTS.map(p=>p.price));
+      {% endif %}
+      //const max = Math.max(...PRODUCTS.map(p=>p.price));
       priceRange.max = Math.ceil(max / 5000) * 5000;
       priceRange.value = priceRange.max;
       priceLabel.textContent = `Jusqu'à ${money(priceRange.value)}`;
