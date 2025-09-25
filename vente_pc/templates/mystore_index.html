@@ -7,14 +7,14 @@
         <div id="profilVendeur">
           <img src="{{ vendeur.logo.url }}" style="width:8rem;height:8rem;border-radius:6rem;box-shadow: var(--shadow);" />
             <div style="margin-left:0.3rem;padding:1rem" id="profilContent">
-                <h1 style="" translate="no">#{{ vendeur.nom }}</h1>
+                <h1 style="font-size:1.2rem" translate="no">#{{ vendeur.nom }}</h1>
                 <h4 translate="no" style="margin:0"><a href="https://wa.me/{{ vendeur.tel }}/" style="color:var(--text)" target="_blank">{{ vendeur.tel }}</a></h4>
-                <h4 translate="no" style="margin:0"><a href="mailto:{{ vendeur.email }}/" style="color:var(--text)" target="_blank">{{ vendeur.email }}</a></h4>
+                <h4 id="hEmail" translate="no" style="margin:0"><a href="mailto:{{ vendeur.email }}/" style="color:var(--text)" target="_blank">{{ vendeur.email }}</a></h4>
             </div>
         </div>
-                  <p>Bienvenue dans notre boutique. Nous avons une selection de meilleurs ordinateurs avec rapport qualité-prix extrèmement satisfaisant</p>
-          <p translate="no">By Ultimate-Technology</p>
-        <div class="cta">
+                  <p style="font-size:0.9rem" >Bienvenue dans notre boutique. Nous avons une selection de meilleurs ordinateurs avec rapport qualité-prix extrèmement satisfaisant</p>
+          <p translate="no" style="font-size:0.9rem">By Ultimate-Technology</p>
+        <div class="cta" id="btnVisiter">
           <button id="shopNow" class="btn" style="width:12rem">Visiter la boutique</button>
         </div>
 

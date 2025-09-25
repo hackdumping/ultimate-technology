@@ -236,6 +236,21 @@ footer{background:#1e293b;color:#fff;padding:40px 24px;margin-top:60px; font-siz
     width: 380px;
   }
 }
+
+@media(max-width:410px){
+  #hEmail{
+    display: none
+  }
+  #home{
+    margin:0;
+    padding:0;
+    padding-left:11px;;
+  }
+ #btnVisiter{
+    text-align:center;
+ }
+}
+
 @media(max-width:535px){
     .hero h1{font-size:20px;margin:0}
     #home{width:100%; margin:0}

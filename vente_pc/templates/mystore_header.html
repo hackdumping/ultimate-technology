@@ -15,8 +15,29 @@
     transition: all 0.3s ease;
 }
 
+.mobile-nav a {
+    text-align:center;
+    position: relative;
+    text-decoration: none;
+    color: var(--text);
+    /*padding: 0.5rem 1rem;*/
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
 /* Effet de soulignement au survol */
 .main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--text);  /*var(--primary);*/
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+.mobile-nav a::after {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -31,9 +52,16 @@
 .main-nav a:hover::after {
     width: 80%;
 }
+.mobile-nav a:hover::after {
+    width: 80%;
+}
 
 /* État actif */
 .main-nav a.active {
+    color: var(--text);  /*var(--primary);*/
+    font-weight: 600;
+}
+.mobile-nav a.active {
     color: var(--text);  /*var(--primary);*/
     font-weight: 600;
 }
@@ -41,6 +69,10 @@
 .main-nav a.active::after {
     width: 80%;
 }
+.mobile-nav a.active::after {
+    width: 80%;
+}
+
 
 /* Boutons avec transition */
 .icon-btn {
@@ -103,7 +135,8 @@
         <nav class="main-nav">
             <a href="{% url 'mystore_index' id=vendeur.id %}#home" class="{% if '/#home' in request.path %}active{% endif %}">Accueil</a>
             <a href="{% url 'mystore_index' id=vendeur.id %}#shop" class="{% if '/#shop' in request.path %}active{% endif %}">Boutique</a>
-            <a href="{% url 'mystore_promotion' id=vendeur.id %}" class="{% if request.resolver_match.url_name == 'mystore_promotion' %}active{% endif %}">Promotions</a></nav>
+            <a href="{% url 'mystore_promotion' id=vendeur.id %}" class="{% if request.resolver_match.url_name == 'mystore_promotion' %}active{% endif %}">Promotions</a>
+        </nav>
 
         <div class="actions">
             <div class="search" style="display:none">
@@ -122,9 +155,9 @@
 <!-- Menu mobile -->
 <nav id="mobileNav" class="mobile-nav">
     <div class="mobile-nav-close" id="closeMobileNav">✕</div>
-    <a href="{% url 'mystore_index' id=vendeur.id %}#home" class="{% if '/#home' in request.path %}active{% endif %}">Accueil</a>
-    <a href="/#shop" class="{% if '/#shop' in request.path %}active{% endif %}">Boutique</a>
-    <a href="{% url 'mystore_promotion' id=vendeur.id %}" class="{% if request.resolver_match.url_name == 'mystore_promotion' %}active{% endif %}">Promotions</a>
+        <a href="{% url 'mystore_index' id=vendeur.id %}#home" class="{% if '/#home' in request.path %}active{% endif %}">Accueil</a>
+        <a href="{% url 'mystore_index' id=vendeur.id %}#shop" class="{% if '/#shop' in request.path %}active{% endif %}">Boutique</a>
+        <a href="{% url 'mystore_promotion' id=vendeur.id %}" class="{% if request.resolver_match.url_name == 'mystore_promotion' %}active{% endif %}">Promotions</a>
 </nav>
 
 <script>
