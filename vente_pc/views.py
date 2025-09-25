@@ -795,8 +795,9 @@ def ajouter_produit(request):
         image2 = request.FILES.get('image2', None)
         image3 = request.FILES.get('image3', None)
 
-        if not Marque.objects.get(nom=marque):
-            Marque(nom=marque).save()
+        if not Marque.objects.filter(nom=marque).exists():
+            m = Marque(nom=marque)
+            m.save()
         vdr = Vendeur.objects.get(id=request.session['vendeur']['code'])
         produit = Produit(vendeur=vdr, marque=Marque.objects.get(nom=marque), model=model, cpu=cpu, ram=ram,stockage=stockage,graphic=graphic, description=description, ancien_prix=ancien_prix, nouveau_prix=nouveau_prix, est_promo=est_promo, est_pc=est_pc, prix_promo=prix_promo, est_vendue=est_vendue, image=image, image2=image2, image3=image3)
         produit.save()
