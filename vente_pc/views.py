@@ -331,6 +331,7 @@ j'aimerais acheté ce produit :
         }
         list_produits.append(tmp)
     context['produits'] = list_produits
+    context['root'] = root
     context[ 'url_test'] = "promotions" in str(request.build_absolute_uri())
 
     return render(request, 'promotions.html', context=context)

@@ -2,7 +2,7 @@
 {% block content %}
   <!-- Content -->
   <main class="container">
-    <h1>Nos Promotions</h1>
+    <h1 id="prom">Nos Promotions</h1>
     <!-- Controls: category, sort, price -->
     <div class="controls" id="shop">
       <div>
@@ -33,6 +33,9 @@
         <div style="font-size:13px;color:var(--muted)" id="priceLabel">Jusqu'à —</div>
       </div>
     </div>
+    <a href="#prom" class="scroll-btn scroll-up fixed-btn"  title="Remonter en haut">
+        ⬆
+    </a>
       <!-- Products grid -->
     <div class="grid" id="products" aria-live="polite"></div>
 
