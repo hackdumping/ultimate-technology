@@ -69,7 +69,7 @@ def index(request):
     parsed = urllib.parse.urlparse(request.build_absolute_uri())
     root = urllib.parse.urlunparse((parsed.scheme, parsed.netloc, '', '', '', ''))
 
-    produits = Produit.objects.all()
+    produits = Produit.objects.filter(vendeur__jours__gt=0).all()  #Produit.objects.all()
 
     list_produits = []
 
@@ -297,7 +297,7 @@ j'aimerais acheté ce produit :
 
 
 def promotions(request):
-    produits = Produit.objects.filter(est_promo=True).all()
+    produits = Produit.objects.filter(est_promo=True, vendeur__jours__gt=0).all()
     context = {}
     list_produits = []
     parsed = urllib.parse.urlparse(request.build_absolute_uri())

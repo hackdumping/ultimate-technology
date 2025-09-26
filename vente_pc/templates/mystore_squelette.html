@@ -322,7 +322,7 @@
     function updateCartUI(){
       const ids = Object.keys(cart);
       if(ids.length === 0){
-        cartItemsEl.innerHTML = '<div style="color:var(--muted); padding-top: 40%; text-align: center"><span style="font-size: 4rem;">_🛒</span><br>Votre panier est vide.</div>';
+        cartItemsEl.innerHTML = '<div style="color:var(--muted); padding-top: 10%; text-align: center"><span style="font-size: 4rem;">_🛒</span><br>Votre panier est vide.</div>';
         cartCount.style.display = 'none';
         //document.getElementById('posCart').style.display = 'none';
       } else {
