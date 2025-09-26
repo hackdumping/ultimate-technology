@@ -831,7 +831,7 @@ def mystore_index(request, id):
         message = f"""
                 Salut !
         j'aimerais acheté ce produit : 
-        {root}/{str(produit.id)}
+        {root}/vendeur/mystore/{id}/{str(produit.id)}
 
         #ultimate-technology
                 """
@@ -1000,7 +1000,7 @@ def mystore_promotion(request, id):
         message = f"""
                 Salut !
     j'aimerais acheté ce produit : 
-    {root}/{str(produit.id)}
+    {root}/vendeur/mystore/{str(id)}/{str(produit.id)}
 
     #ultimate-technology
                 """
