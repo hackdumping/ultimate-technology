@@ -239,6 +239,8 @@
       else if(sort === 'name-asc') filteredProducts.sort((a,b)=>a.name.localeCompare(b.name));
       else filteredProducts.sort((a,b)=>a.price-b.price);
 
+      filteredProducts.sort((a,b)=>a.price-b.price);
+
       renderProducts(filteredProducts);
     }
 
