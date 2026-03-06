@@ -2,93 +2,35 @@
 {% include 'metadata_connexion.html' %}
 <body>
   {% include 'header.html' %}
-
-  <main>
-    <div class="form-box">
-      <h2>Connexion vendeur</h2>
-      <form method="POST" id="loginForm">
-          {% csrf_token %}
-        <p style="color: red; font-size : 0.9rem; margin-bottom:25px;text-align:center">{{ msg }}</p>
-        <div class="form-group">
-          <input type="text" id="code" name="code" placeholder=" " value="{{ donnees.code }}" required>
-          <label for="code">Code unique (attribué par admin)</label>
+  <main class="container-main">
+    <section class="form-shell" style="max-width:560px">
+      <div class="quick-links">
+        <a class="quick-link" href="{% url 'login_vendeur' %}">Connexion</a>
+        <a class="quick-link" href="{% url 'register_vendeur' %}">Inscription</a>
+        <a class="quick-link" href="{% url 'recover_vendeur' %}">Recuperation</a>
+      </div>
+      <h1 class="section-title">Connexion vendeur</h1>
+      <form method="POST" class="form-grid" style="margin-top:.5rem">
+        {% csrf_token %}
+        <p style="grid-column:1/-1;color:var(--danger);margin:0">{{ msg }}</p>
+        <div class="form-field" style="grid-column:1/-1"><label>Code unique</label><input type="text" name="code" value="{{ donnees.code }}" required></div>
+        <div class="form-field" style="grid-column:1/-1">
+          <label>Mot de passe</label>
+          <div class="password-wrap">
+            <input id="loginPassword" type="password" name="password" value="{{ donnees.mdp }}" required>
+            <button class="toggle-password" type="button" data-toggle-password="loginPassword" aria-label="Afficher ou masquer">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
         </div>
-        <div class="form-group">
-          <input type="password" id="loginPass" name="password" placeholder=" " value="{{ donnees.mdp }}" required>
-          <label for="loginPass">Mot de passe</label>
-          <span class="toggle-eye">👁️</span>
-        </div>
-        <button type="submit" id="loginBtn" class="btn">Se connecter</button>
-        <div class="form-footer">
-          <a href="{% url 'recover_vendeur' %}">Mot de passe ou code oublié ?</a><br><br>
-          <a href="{% url 'register_vendeur' %}">Pas encore de compte ?</a><br><br>
-          Besoin d'aide ? <a href="https://wa.me/{{ numero }}" target="_blank">Contactez l'admin</a>
+        <div style="grid-column:1/-1;display:flex;gap:.35rem;flex-wrap:wrap">
+          <button type="submit" class="btn">Se connecter</button>
+          <a class="btn ghost" href="{% url 'recover_vendeur' %}">Mot de passe oublie</a>
         </div>
       </form>
-    </div>
+    </section>
   </main>
-
   {% include 'footer.html' %}
-
   <script src="{% static 'js/source.js' %}"></script>
- <script>
-
-        // Masquer le panier
-    panier = document.getElementById('cartBtn');
-    panier.style.display = 'none';
-
-        if (window.history.replaceState) {
-            window.history.replaceState(null, null, window.location.href);
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('loginForm');
-
-            form.addEventListener('submit', function() {
-                // Changer l'URL sans recharger la page
-                if (window.history.replaceState) {
-                    window.history.replaceState(null, null, window.location.href);
-                }
-            });
-        });
-
-    document.getElementById('loginForm').addEventListener('submit', async function(e) {
-        e.preventDefault();
-        // Vérification de connexion sans CORS
-        const isConnected = await checkInternetConnection();
-
-        if (!isConnected) {
-            showToast('❌ Connexion internet requise. Veuillez vérifier votre connexion.');
-            return false;
-        }
-
-        document.getElementById('loginForm').submit();
-
-        document.getElementById('loginForm').reset()
-
-    });
-
-          // Toggle password visibility
-document.querySelectorAll('.toggle-eye').forEach(eye => {
-    eye.addEventListener('click', () => {
-      const loginPass = document.getElementById('loginPass'); //eye.previousElementSibling;
-      if (loginPass.type === "password") {
-        loginPass.type = "text";
-        eye.textContent = "🙈";
-      } else {
-        loginPass.type = "password";
-        eye.textContent = "👁️";
-      }
-    });
-  });
-
-        // Mobile nav
-    document.querySelector('.mobile-menu-btn').addEventListener('click',()=>document.getElementById('mobileNav').classList.add('open'));
-    document.getElementById('closeMobileNav').addEventListener('click',()=>document.getElementById('mobileNav').classList.remove('open'));
-    document.addEventListener('click', function(event){
-      if(!document.getElementById('mobileNav').contains(event.target) && event.target !== document.querySelector('.mobile-menu-btn')){
-        document.getElementById('mobileNav').classList.remove('open');
-      }
-    });
- </script>
 </body>
 </html>

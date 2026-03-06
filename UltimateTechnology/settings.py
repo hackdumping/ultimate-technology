@@ -40,7 +40,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 SHOW_CUSTOM_ERRORS = True
 
-#ALLOWED_HOSTS = ['4db1350b6a7c90.lhr.life', '127.0.0.1', 'localhost']
+#ALLOWED_HOSTS = ['19352155f80705.lhr.life', '127.0.0.1', 'localhost']
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
@@ -88,6 +88,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.middleware.gzip.GZipMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -131,11 +132,12 @@ WSGI_APPLICATION = 'UltimateTechnology.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        'CONN_MAX_AGE': int(os.environ.get('DB_CONN_MAX_AGE', 60)),
     }
 }
 """
@@ -152,7 +154,7 @@ DATABASES = {
         }
     }
 }
-
+"""
 """
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
@@ -235,6 +237,24 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+REDIS_URL = os.environ.get('REDIS_URL')
+if REDIS_URL:
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.redis.RedisCache',
+            'LOCATION': REDIS_URL,
+            'TIMEOUT': int(os.environ.get('CACHE_DEFAULT_TIMEOUT', 120)),
+        }
+    }
+else:
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+            'LOCATION': 'ultimate-technology-cache',
+            'TIMEOUT': int(os.environ.get('CACHE_DEFAULT_TIMEOUT', 120)),
+        }
+    }
 
 NUMERO = "+237658562221"
 

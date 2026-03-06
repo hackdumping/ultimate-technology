@@ -4,233 +4,181 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenue - Ultimate-Technology</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        /* Reset CSS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
+            margin: 0;
             padding: 20px;
+            background: #f2f4f8;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #12263a;
         }
 
-        .email-container {
-            max-width: 500px;
+        .wrapper {
+            max-width: 620px;
             margin: 0 auto;
-            background: white;
-            border-radius: 10px;
+            background: #ffffff;
+            border: 1px solid #d9e2ec;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            text-align: center;
         }
 
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px 30px;
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .tagline {
-            font-size: 16px;
-            opacity: 0.9;
-        }
-
-        .content {
-            padding: 40px 30px;
-        }
-
-        .welcome-icon {
-            font-size: 60px;
-            margin-bottom: 20px;
-        }
-
-        .welcome-title {
-            color: #2c3e50;
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        .welcome-message {
-            color: #666;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .benefits {
-            text-align: left;
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 25px 0;
-        }
-
-        .benefits-title {
-            color: #2c3e50;
-            font-size: 18px;
-            margin-bottom: 15px;
+            background: #102a43;
+            color: #ffffff;
+            padding: 28px 24px;
             text-align: center;
         }
 
-        .benefit-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 12px;
+        .brand {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
         }
 
-        .benefit-icon {
-            color: #667eea;
-            margin-right: 10px;
-            font-weight: bold;
+        .subtitle {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #d9e2ec;
+        }
+
+        .content {
+            padding: 28px 24px;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 26px;
+            color: #102a43;
+        }
+
+        p {
+            margin: 0 0 16px;
+            line-height: 1.6;
+            color: #334e68;
+        }
+
+        .benefits {
+            margin: 20px 0;
+            border: 1px solid #d9e2ec;
+            border-radius: 10px;
+            background: #f8fbff;
+            padding: 16px;
+        }
+
+        .benefits h2 {
+            margin: 0 0 10px;
+            font-size: 16px;
+            color: #243b53;
+        }
+
+        .benefits ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .benefits li {
+            margin-bottom: 8px;
+            color: #334e68;
+            line-height: 1.5;
+        }
+
+        .actions {
+            margin-top: 20px;
         }
 
         .btn {
             display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 14px 30px;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin: 15px 0;
+            padding: 12px 18px;
+            border-radius: 8px;
+            background: #243b53;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 14px;
         }
 
         .footer {
-            background: #2c3e50;
-            color: white;
-            padding: 30px;
+            border-top: 1px solid #d9e2ec;
+            background: #f8fafc;
+            color: #486581;
+            padding: 22px 24px;
             text-align: center;
+            font-size: 13px;
+            line-height: 1.6;
         }
 
-        .social-links {
-            margin: 20px 0;
-        }
-
-        .social-link {
-            display: inline-block;
-            margin: 0 10px;
-            color: white;
+        .footer a {
+            color: #243b53;
             text-decoration: none;
+            font-weight: 700;
         }
 
-        .contact-info {
-            margin-top: 20px;
-            font-size: 14px;
-            opacity: 0.8;
-        }
-
-        .unsubscribe {
-            margin-top: 20px;
+        .small {
+            margin-top: 12px;
             font-size: 12px;
-            color: #95a5a6;
+            color: #829ab1;
         }
 
-        @media (max-width: 500px) {
-            .content {
-                padding: 30px 20px;
+        @media (max-width: 620px) {
+            body {
+                padding: 10px;
             }
 
-            .header {
-                padding: 30px 20px;
-            }
-
-            .welcome-icon {
-                font-size: 50px;
-            }
-
-            .welcome-title {
-                font-size: 22px;
+            .header,
+            .content,
+            .footer {
+                padding-left: 16px;
+                padding-right: 16px;
             }
 
             .btn {
-                padding: 12px 25px;
+                display: block;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
-    <div class="email-container">
-        <!-- En-tête -->
+    <div class="wrapper">
         <div class="header">
-            <div class="logo">ULTIMATE-TECHNOLOGY</div>
-            <div class="tagline">Votre partenaire technologique de confiance</div>
+            <div class="brand">ULTIMATE-TECHNOLOGY</div>
+            <div class="subtitle">Votre partenaire technologique de confiance</div>
         </div>
 
-        <!-- Contenu principal -->
         <div class="content">
-            <div class="welcome-icon">🎉</div>
-            <h1 class="welcome-title">Bienvenue dans notre communauté !</h1>
-
-            <p class="welcome-message">
-                Merci de vous être abonné à la newsletter d'Ultimate-Technology.
-                Vous faites maintenant partie de notre communauté passionnée par la technologie.
-            </p>
+            <h1>Bienvenue dans notre communaute</h1>
+            <p>Merci de vous etre abonne a la newsletter d'Ultimate-Technology. Vous faites maintenant partie de notre communaute passionnee par la technologie.</p>
 
             <div class="benefits">
-                <h3 class="benefits-title">Ce qui vous attend :</h3>
-
-                <div class="benefit-item">
-                    <span class="benefit-icon">✓</span>
-                    <span>Les dernières actualités technologiques</span>
-                </div>
-
-                <div class="benefit-item">
-                    <span class="benefit-icon">✓</span>
-                    <span>Offres exclusives et promotions spéciales</span>
-                </div>
-
-                <div class="benefit-item">
-                    <span class="benefit-icon">✓</span>
-                    <span>Conseils d'experts pour optimiser votre équipement</span>
-                </div>
-
-                <div class="benefit-item">
-                    <span class="benefit-icon">✓</span>
-                    <span>Preview des nouveaux produits en avant-première</span>
-                </div>
-
-                <div class="benefit-item">
-                    <span class="benefit-icon">✓</span>
-                    <span>Invitations à des événements exclusifs</span>
-                </div>
+                <h2>Ce qui vous attend</h2>
+                <ul>
+                    <li>Les dernieres actualites technologiques</li>
+                    <li>Offres exclusives et promotions speciales</li>
+                    <li>Conseils d'experts pour optimiser votre equipement</li>
+                    <li>Preview des nouveaux produits en avant-premiere</li>
+                    <li>Invitations a des evenements exclusifs</li>
+                </ul>
             </div>
 
-            <a href="{{ root }}#shop" class="btn">Découvrir nos produits</a>
+            <div class="actions">
+                <a href="{{ root }}#shop" class="btn">Decouvrir nos produits</a>
+            </div>
 
-            <p style="color: #666; font-size: 14px; margin-top: 20px;">
-                Préparez-vous à recevoir des contenus exclusifs directement dans votre boîte mail !
-            </p>
+            <p style="margin-top:16px;">Preparez-vous a recevoir des contenus exclusifs directement dans votre boite mail.</p>
         </div>
 
-        <!-- Pied de page -->
         <div class="footer">
-            <div class="social-links">
-                <a href="https://wa.me/237658630407" class="social-link">WhatsApp</a>
-                <a class="social-link" href="https://www.facebook.com/profile.php?id=61576774057709" title="page facebook utltimate-technology" target="_blank">Facebook</a>
+            <div>
+                <a href="https://wa.me/237658630407" target="_blank">WhatsApp</a>
+                &nbsp;|&nbsp;
+                <a href="https://www.facebook.com/profile.php?id=61576774057709" target="_blank">Facebook</a>
             </div>
-
-            <div class="contact-info">
-                <p>Ultimate-Technology © 2025. Tous droits réservés.</p>
-                <p>Service client: (+237) 658-562-221| Email: ultimate.technology.cm@gmail.com</p>
-                <p>Heures d'ouverture: Lun - Sam: 8h - 18h</p>
+            <div style="margin-top:10px;">
+                Ultimate-Technology &copy; 2025. Tous droits reserves.<br>
+                Service client: (+237) 658-562-221 | Email: ultimate.technology.cm@gmail.com<br>
+                Heures d'ouverture: Lun - Sam: 8h - 18h
             </div>
-
-            <div class="unsubscribe">
-                <p>Vous recevez cet email parce que vous êtes inscrit à notre newsletter.<!-- <a href="#" style="color: #95a5a6;">Se désabonner</a>--></p>
-            </div>
+            <div class="small">Vous recevez cet email parce que vous etes inscrit a notre newsletter.</div>
         </div>
     </div>
 </body>

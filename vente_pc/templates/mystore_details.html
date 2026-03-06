@@ -1,133 +1,100 @@
 {% extends 'mystore_squelette.html' %}
-{% load static %}
-
 {% block content %}
-  <!-- Détails produit -->
-  <main class="container">
-    <div class="product-detail">
-      <!-- Carrousel -->
-      <div class="carousel" id="carousel" style="background:none;border:none">
-        <img src="{{ produit.image.url }}" class="active" alt="Vue 1 ordinateur">
-          {% if produit.image2 %}
-        <img src="{{ produit.image2.url }}" alt="Vue 2 ordinateur">
-          {% endif %}
-          {% if produit.image3 %}
-        <img src="{{ produit.image3.url }}" alt="Vue 3 ordinateur">
-          {% endif %}
-        <button class="carousel-btn prev">‹</button>
-        <button class="carousel-btn next">›</button>
+<section class="section-block detail-shell" id="home">
+  <div class="detail-topbar">
+    <a class="btn ghost" href="{% url 'mystore_index' id=vendeur.id %}#shop">← Retour catalogue</a>
+    <span class="detail-ref">Ref: {{ produit.id }}</span>
+  </div>
+
+  <div class="detail-layout">
+    <div class="detail-gallery">
+      <div class="detail-image-wrap">
+        <img id="mainImage" src="{{ produit.image.url }}" alt="{{ produit.marque.nom }} {{ produit.model }}">
       </div>
-
-      <!-- Infos produit -->
-      <div class="product-info">
-        <h2 id="nom_pro">{{ produit.marque.nom }} {{ produit.model }}</h2>
-          {% if produit.est_promo %}
-          <h4 style="border:2px dashed var(--text);border-radius: 20px;text-align:center;padding:0.8rem;background:var(--card);font-family:'liberation Mono'">PRODUIT EN PROMOTION</h4>
-          {% endif %}
-        <p class="price" id="nouveau_prix" style="font-size:1.5rem"></p>
-          <p id="ancien_prix" style="color:gray;text-decoration:line-through;font-size:1rem;"></p>
-          {% if produit.est_vendue %}
-          <p style="font-family:'liberation Mono', Cambria" translate="no">[ EN RUPTURE ]</p>
-          {% else %}
-          <p style="font-family:'liberation Mono', Cambria" translate="no">[ EN STOCK ]</p>
-          {% endif %}
-        <ul>
-          <li>Processeur : {{ produit.cpu }}</li>
-          <li>Mémoire RAM : {{ produit.ram }}</li>
-          <li>Stockage : {{ produit.stockage }}</li>
-            {% if produit.graphic != "" %}
-          <li>Carte graphique : {{ produit.graphic }}</li>
-            {% endif %}
-        </ul>
-        <div style="margin-top:20px; display:column">
-          <!--<button class="btn" id="addToCart">Ajouter au panier</button>-->
-            {% if produit.est_vendue %}
-          <a href="{{ lien }}" target="_blank" style="border:none;text-decoration:none" translate="no" aria-disabled="true">
-            <button class="btn whatsapp" style="font-size:1rem;background:#119933;width:12rem" translate="yes" disabled>Commander sur <i class="fab fa-whatsapp" style="font-size:1.2rem"></i></button>
-          </a>
-            {% else %}
-            <a href="{{ lien }}" target="_blank" style="border:none;text-decoration:none" translate="no">
-            <button class="btn whatsapp" style="font-size:1rem;background:#119933;width:12rem" translate="yes" disabled="{{ produit.est_vendue }}">Commander sur <i class="fab fa-whatsapp" style="font-size:1.2rem"></i></button>
-          </a>
-            {% endif %}
-          <div class="link-container" style="background:var(--card);border:1px solid var(--text)" translate="no">
-              <i style="display:block;margin:0.6rem;color:var(--text)" class="large material-icons">share</i>
-              <input style="border-left:1px solid var(--text);color:var(--text);width:30%" type="text" class="link-input" id="link-to-copy" value="" readonly>
-            <button class="copy-btn" id="copy-button" translate="on" onclick="setupCopyButton('copy-button', 'link-to-copy')">Copier</button>
-        </div>
-        </div>
-
-        <!-- Description -->
-        <div class="product-description" style="margin-top:30px">
-          <h3 style="color:var(--text)">Description du produit</h3>
-          <div style="white-space: pre-wrap;">{{ produit.description }}</div>
-        </div>
+      <div class="detail-thumbs">
+        <button type="button" class="active" data-img="{{ produit.image.url }}"><img src="{{ produit.image.url }}" alt="Vue principale"></button>
+        {% if produit.image2 %}<button type="button" data-img="{{ produit.image2.url }}"><img src="{{ produit.image2.url }}" alt="Vue secondaire"></button>{% endif %}
+        {% if produit.image3 %}<button type="button" data-img="{{ produit.image3.url }}"><img src="{{ produit.image3.url }}" alt="Vue additionnelle"></button>{% endif %}
       </div>
     </div>
-  </main>
 
+    <aside class="detail-aside">
+      <div class="detail-status-row">
+        {% if produit.est_promo %}<span class="hero-tag">Promotion active</span>{% endif %}
+        <span class="detail-stock {% if produit.est_vendue %}out{% else %}in{% endif %}">{% if produit.est_vendue %}En rupture{% else %}Disponible{% endif %}</span>
+      </div>
 
-  <script>
-      // Mobile nav
-    document.querySelector('.mobile-menu-btn').addEventListener('click',()=>document.getElementById('mobileNav').classList.add('open'));
-    document.getElementById('closeMobileNav').addEventListener('click',()=>document.getElementById('mobileNav').classList.remove('open'));
-    document.addEventListener('click', function(event){
-      if(!document.getElementById('mobileNav').contains(event.target) && event.target !== document.querySelector('.mobile-menu-btn')){
-        document.getElementById('mobileNav').classList.remove('open');
-      }
-    });
+      <h1 class="detail-title">{{ produit.marque.nom }} {{ produit.model }}</h1>
+      <p class="detail-price" id="livePrice"></p>
+      <p class="detail-price-old" id="oldPrice"></p>
 
-    // Masquer le panier
-    panier = document.getElementById('cartBtn');
-    panier.style.display = 'none';
+      <ul class="detail-spec-grid">
+        <li><span>Processeur</span><strong>{{ produit.cpu }}</strong></li>
+        <li><span>RAM</span><strong>{{ produit.ram }}</strong></li>
+        <li><span>Stockage</span><strong>{{ produit.stockage }}</strong></li>
+        {% if produit.graphic %}<li><span>Graphique</span><strong>{{ produit.graphic }}</strong></li>{% endif %}
+      </ul>
 
-      // gerer la monais
-      money = n => new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'XAF', maximumFractionDigits: 0 }).format(n);
-      promo = "{{ produit.est_promo }}";
-      if(promo == "True"){
-        ancien_prix = {{ produit.nouveau_prix}} ;
-        nouveau_prix = {{ produit.prix_promo }} ;
-      }else{
-        ancien_prix = {{ produit.ancien_prix }} ;
-        nouveau_prix = {{ produit.nouveau_prix }} ;
-      }
-      document.getElementById('link-to-copy').value = document.URL;
-      document.getElementById('ancien_prix').innerHTML = ancien_prix != 0 ? `${money(ancien_prix)}` : "";
-      document.getElementById('nouveau_prix').innerHTML = `${money(nouveau_prix)}`
+      <div class="detail-actions">
+        <a class="btn whatsapp detail-whatsapp-btn" href="{{ lien }}" target="_blank" rel="noopener" {% if produit.est_vendue %}style="pointer-events:none;opacity:.5"{% endif %}>WhatsApp</a>
+        <button id="copyLink" class="btn ghost" type="button">Copier le lien</button>
+      </div>
 
-    // Carrousel
-    const carousel=document.getElementById('carousel');
-    const imgs=carousel.querySelectorAll('img');
-    const prev=carousel.querySelector('.prev');
-    const next=carousel.querySelector('.next');
-    let idx=0;
-    function show(i){
-      imgs.forEach((img,j)=>img.classList.toggle('active',j===i));
+      <div class="detail-link-box">
+        <label for="productLinkInput">Lien du produit</label>
+        <div class="detail-link-row">
+          <input id="productLinkInput" type="text" value="{{ product_link }}" readonly>
+          <button id="copyLinkInline" class="btn ghost" type="button">Copier</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="detail-content-grid">
+    <article class="detail-card detail-card-wide">
+      <h3>Fiche technique complete</h3>
+      <p class="detail-summary detail-long-text">{{ description_premium.full_description|linebreaksbr }}</p>
+    </article>
+  </div>
+</section>
+
+<script>
+(function(){
+  const money = n => new Intl.NumberFormat('fr-FR',{style:'currency',currency:'XAF',maximumFractionDigits:0}).format(Number(n||0));
+  const promo = "{{ produit.est_promo }}" === 'True';
+  const current = promo ? {{ produit.prix_promo|default:0 }} : {{ produit.nouveau_prix|default:0 }};
+  const old = promo ? {{ produit.nouveau_prix|default:0 }} : {{ produit.ancien_prix|default:0 }};
+  document.getElementById('livePrice').textContent = money(current);
+  document.getElementById('oldPrice').textContent = old ? money(old) : '';
+  const thumbs = document.querySelectorAll('[data-img]');
+  thumbs.forEach((btn) => btn.addEventListener('click', () => {
+    document.getElementById('mainImage').src = btn.dataset.img;
+    thumbs.forEach((el) => el.classList.remove('active'));
+    btn.classList.add('active');
+  }));
+
+  function copyCurrentLink(triggerBtn){
+    const linkInput = document.getElementById('productLinkInput');
+    const text = linkInput ? linkInput.value : window.location.href;
+    const onSuccess = () => {
+      const previous = triggerBtn.textContent;
+      triggerBtn.textContent = 'Lien copie';
+      setTimeout(() => { triggerBtn.textContent = previous; }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(onSuccess);
+      return;
     }
-    prev.onclick=()=>{idx=(idx-1+imgs.length)%imgs.length;show(idx);}
-    next.onclick=()=>{idx=(idx+1)%imgs.length;show(idx);}
-    setInterval(()=>{idx=(idx+1)%imgs.length;show(idx)},5000);
+    if (linkInput) {
+      linkInput.focus();
+      linkInput.select();
+      document.execCommand('copy');
+      onSuccess();
+    }
+  }
 
-      //copier le lien
-  function setupCopyButton(buttonId, inputId) {
-    const copyButton = document.getElementById(buttonId);
-    const linkInput = document.getElementById(inputId);
-
-    copyButton.addEventListener('click', function() {
-        // Copier le texte
-        linkInput.select();
-        navigator.clipboard.writeText(linkInput.value).then(function() {
-            // Changer le texte du bouton temporairement
-            const originalText = copyButton.textContent;
-            copyButton.innerHTML = 'Copié ! <i class="material-icons" style="font-size:1rem;font-weight:bold" >check</i>';
-            // Revenir après 1 seconde
-            setTimeout(function() {
-                copyButton.textContent = originalText;
-
-            }, 1000);
-        });
-    });
-}
-
-  </script>
+  document.getElementById('copyLink').addEventListener('click', function(){ copyCurrentLink(this); });
+  document.getElementById('copyLinkInline').addEventListener('click', function(){ copyCurrentLink(this); });
+})();
+</script>
 {% endblock %}

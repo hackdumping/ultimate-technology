@@ -1,75 +1,54 @@
-{%include 'metadata.html' %}
-{% include 'header.html' %}
+{% include 'metadata.html' %}
 {% load static %}
 <body>
-  <!-- Page À propos -->
-  <main class="container">
-    <!-- Présentation entreprise -->
-    <section class="section bg-white" style="color:var(--text)">
-      <h1 style="color:var(--text)" >À propos de Ultimate-Technology</h1>
-      <p style="color:var(--text)">
-        Ultimate-Technology est votre boutique spécialisée dans la vente d'ordinateurs portables et de bureau au Cameroun.
-        Nous combinons expertise technique et service client exceptionnel pour offrir la meilleure expérience d'achat possible.
-      </p>
-      <p style="color:var(--text)">
-        Depuis notre création, notre objectif est de fournir des produits de qualité, adaptés aux besoins des professionnels, gamers et étudiants.
-        Nous mettons un point d'honneur à accompagner nos clients dans le choix et l’utilisation de leurs équipements informatiques.
-      </p>
-    </section>
+  {% include 'header.html' %}
 
-    <!-- Mission / Vision -->
-    <section class="section grid-2">
+  <main class="container-main">
+    <section class="hero" id="home">
       <div>
-        <h2 style="color:var(--text)">Notre Mission</h2>
-        <p style="color:var(--text)">
-          Fournir des ordinateurs et accessoires performants et fiables, tout en garantissant un service après-vente irréprochable.
-          Nous voulons que chaque client reparte satisfait et bien équipé pour ses projets.
-        </p>
+        <h1>Ultimate-Technology: une vision moderne de la vente informatique</h1>
+        <p>Ultimate-Technology est votre boutique specialisee dans la vente d'ordinateurs portables et de bureau au Cameroun. Nous combinons expertise technique et service client pour une experience d'achat fluide et fiable.</p>
+        <p style="margin-top:.35rem">Notre ambition: offrir des produits adaptes aux besoins des professionnels, gamers et etudiants, tout en gardant une relation client proche et transparente.</p>
       </div>
-      <div>
-        <h2 style="color:var(--text)">Notre Vision</h2>
-        <p style="color:var(--text)">
-          Devenir la référence incontournable au Cameroun pour l’achat et le conseil en informatique,
-          en mettant l’accent sur la qualité, l’innovation et la proximité avec nos clients.
-        </p>
+      <div class="soft-card" style="padding:.5rem">
+        <img src="{% static 'images/a_propos_img.png' %}" alt="A propos Ultimate-Technology" style="border-radius:12px;border:1px solid var(--line)">
       </div>
     </section>
 
-    <!-- Équipe -->
-    <section class="section bg-white">
-      <h2 style="color:var(--text)">Notre Équipe</h2>
-      <div class="team">
-          {% for staff in staffs %}
-        <div class="team-member">
-          <img src="{{ staff.image.url }}" alt="{{ staff.nom }}">
-          <h4>{{ staff.nom }}</h4>
+    <section class="section-block">
+      <div class="soft-grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+        <article class="soft-card" style="padding:.7rem">
+          <h2 class="section-title" style="font-size:.95rem">Notre Mission</h2>
+          <p class="section-subtitle">Fournir des ordinateurs et accessoires performants et fiables, avec un service apres-vente irreprochable et un accompagnement concret a chaque etape.</p>
+        </article>
+        <article class="soft-card" style="padding:.7rem">
+          <h2 class="section-title" style="font-size:.95rem">Notre Vision</h2>
+          <p class="section-subtitle">Devenir la reference incontournable au Cameroun pour l'achat et le conseil en informatique, en mettant l'accent sur la qualite, l'innovation et la proximite.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <h2 class="section-title">Notre equipe</h2>
+      <p class="section-subtitle">Des experts impliques pour construire une experience premium de vente et de support.</p>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.45rem;margin-top:.55rem">
+        {% for staff in staffs %}
+        <article class="card" style="padding:.55rem;text-align:center">
+          <img src="{{ staff.image.url }}" alt="{{ staff.nom }}" style="width:92px;height:92px;object-fit:cover;border-radius:999px;border:1px solid var(--line);margin:0 auto .45rem">
+          <div class="card-body" style="padding:0">
+            <h3 class="card-title" style="font-size:.74rem">{{ staff.nom }}</h3>
             {% if staff.alias != "" %}
-            <p style="font-size:0.8rem">{{ staff.alias }}</p>
+            <p class="section-subtitle" style="font-size:.6rem;margin-top:.08rem">{{ staff.alias }}</p>
             {% endif %}
-          <p>{{ staff.role }}</p>
-        </div>
-          {% endfor %}
-
+            <p class="section-subtitle" style="font-size:.62rem;margin-top:.12rem">{{ staff.role }}</p>
+          </div>
+        </article>
+        {% endfor %}
       </div>
     </section>
   </main>
 
-{% include 'footer.html' %}
-
+  {% include 'footer.html' %}
   <script src="{% static 'js/source.js' %}"></script>
-  <script>
-   // Mobile nav
-    document.querySelector('.mobile-menu-btn').addEventListener('click',()=>document.getElementById('mobileNav').classList.add('open'));
-    document.getElementById('closeMobileNav').addEventListener('click',()=>document.getElementById('mobileNav').classList.remove('open'));
-    document.addEventListener('click', function(event){
-      if(!document.getElementById('mobileNav').contains(event.target) && event.target !== document.querySelector('.mobile-menu-btn')){
-        document.getElementById('mobileNav').classList.remove('open');
-      }
-    });
-
-        // Masquer le panier
-    panier = document.getElementById('cartBtn');
-    panier.style.display = 'none';
-  </script>
 </body>
 </html>

@@ -1,259 +1,47 @@
 {% load static %}
-<style>
-/* Transitions pour la navigation */
-.site-header {
-    transition: all 0.3s ease;
-}
-
-.main-nav a {
-    position: relative;
-    text-decoration: none;
-    color: var(--text);
-    border-radius: 6px;
-    transition: all 0.3s ease;
-}
-.mobile-nav a {
-    text-align: center;
-    position: relative;
-    text-decoration: none;
-    color: var(--text);
-    border-radius: 6px;
-    transition: all 0.3s ease;
-}
-
-/* Effet de soulignement au survol */
-.main-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: var(--text);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-.mobile-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: var(--text);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.main-nav a:hover::after {
-    width: 80%;
-}
-.mobile-nav a:hover::after {
-    width: 80%;
-}
-
-/* État actif */
-.main-nav a.active {
-    color: var(--text);
-    font-weight: 600;
-}
-.mobile-nav a.active {
-    color: var(--text);
-    font-weight: 600;
-}
-
-.main-nav a.active::after {
-    width: 80%;
-}
-.mobile-nav a.active::after {
-    width: 80%;
-}
-
-
-/* Boutons avec transition */
-.icon-btn {
-    transition: all 0.3s ease;
-    transform: scale(1);
-}
-
-.icon-btn:hover {
-    transform: scale(1.1);
-    background: var(--hover);
-}
-
-
-/* Compteur panier avec animation */
-.cart-count {
-    transition: all 0.3s ease;
-    transform: scale(1);
-}
-
-.cart-count.update {
-    transform: scale(1.2);
-    background: var(--accent);
-}
-
-/* Logo avec effet subtil */
-.logo {
-    transition: transform 0.3s ease;
-}
-
-.logo:hover {
-    transform: scale(1.02);
-}
-
-/* Recherche avec transition */
-.search input {
-    transition: all 0.3s ease;
-    border: 1px solid var(--border);
-}
-
-.search input:focus {
-    border-color: var(--primary);
-    transform: scale(1.02);
-}
-
-/* Style conditionnel pour le profil */
-.profil-link {
-    color: var(--text);
-    transition: all 0.3s ease;
-}
-
-.profil-link:hover {
-    color: var(--primary);
-}
-</style>
-
-<!-- Header -->
 <header class="site-header">
-    <div class="container header-inner">
-        <a href="/#home" style="color:var(--text);display:block;text-decoration:none;cursor:pointer">
-            <div class="logo" translate="no">
-                <div class="mark" style="background:none">
-                    <img src="{% static 'images/ut_logo.png' %}" width="90px" height="90px" style="margin-top:0.5rem;margin-right:0.3rem">
-                </div>
-                <div>
-                    <div id="nom1">Ultimate-Technology</div>
-                    <div id="nom2" style="color:var(--muted)">Boutique d'ordinateurs</div>
-                </div>
-            </div>
-        </a>
+  <div class="container-main nav-top">
+    <a class="brand" href="{% url 'index' %}">
+      <span class="brand-logo"><img src="{% static 'images/ut_logo.png' %}" alt="Ultimate-Technology"></span>
+      <span>
+        <strong class="brand-title">Ultimate-Technology</strong>
+        <small class="brand-sub">Marketplace informatique pro</small>
+      </span>
+    </a>
 
-        <nav class="main-nav">
-            <a href="/#home" class="{% if request.resolver_match.url_name == 'accueil' %}active{% endif %}">Accueil</a>
-            <a href="/#shop" class="{% if '/#shop' in request.path %}active{% endif %}">Boutique</a>
-            <a href="{% url 'promotion' %}" class="{% if request.resolver_match.url_name == 'promotion' %}active{% endif %}">Promotions</a>
-            <a href="{% url 'login_vendeur' %}" class="{% if request.resolver_match.url_name == 'login_vendeur' %}active{% endif %}">Vendeur</a>
-            <a href="{% url 'a-propos' %}" class="{% if request.resolver_match.url_name == 'a-propos' %}active{% endif %}">À propos</a>
-            <a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
-
-            <!-- Lien Mon Profil ajouté -->
-            {% if request.session.vendeur %}
-            <a href="{% url 'profil' %}" class="{% if request.resolver_match.url_name == 'profil' %}active{% endif %} profil-link">
-                Mon profil
-            </a>
-            {% endif %}
-        </nav>
-
-        <div class="actions">
-            <div class="search" style="display:none">
-                <input id="searchInput" placeholder="Rechercher (ex: Dell, i7, 16GB)" aria-label="Recherche produits" />
-            </div>
-            <button id="themeToggle" class="icon-btn">🌙</button>
-            <button class="icon-btn mobile-menu-btn">≡</button>
-            <button id="cartBtn" class="icon-btn cart-btn">
-                🛒
-                <span style="display: block; position: absolute; top:-2px; right:0;" id="cartCount" class="cart-count" style="display:none">0</span>
-            </button>
-        </div>
+    <div class="nav-search">
+      <i class="fas fa-search"></i>
+      <input id="searchInput" placeholder="Rechercher un produit" aria-label="Recherche">
     </div>
+
+    <div class="nav-actions">
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Theme">◐</button>
+      <button class="icon-btn mobile-menu-btn" type="button" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      <button id="cartBtn" class="icon-btn" type="button" aria-label="Panier">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cartCount" class="cart-count" style="display:none">0</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="container-main nav-links">
+    <a class="nav-pill {% if request.resolver_match.url_name == 'index' %}active{% endif %}" href="{% url 'index' %}">Accueil</a>
+    <a class="nav-pill" href="{% url 'index' %}#shop">Catalogue</a>
+    <a class="nav-pill {% if request.resolver_match.url_name == 'promotion' %}active{% endif %}" href="{% url 'promotion' %}">Promotions</a>
+    <a class="nav-pill {% if request.resolver_match.url_name == 'a-propos' %}active{% endif %}" href="{% url 'a-propos' %}">A propos</a>
+    <a class="nav-pill {% if request.resolver_match.url_name == 'contact' %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
+    <a class="nav-pill" href="{% url 'login_vendeur' %}">Espace vendeur</a>
+    {% if request.session.vendeur %}<a class="nav-pill" href="{% url 'vendeur' %}">Mon dashboard</a>{% endif %}
+  </div>
 </header>
 
-<!-- Menu mobile -->
 <nav id="mobileNav" class="mobile-nav">
-    <div class="mobile-nav-close" id="closeMobileNav">✕</div>
-    <a href="/#home" class="{% if request.resolver_match.url_name == 'accueil' %}active{% endif %}">Accueil</a>
-    <a href="/#shop" class="{% if '/#shop' in request.path %}active{% endif %}">Boutique</a>
-    <a href="{% url 'promotion' %}" class="{% if request.resolver_match.url_name == 'promotion' %}active{% endif %}">Promotions</a>
-    <a href="{% url 'login_vendeur' %}" class="{% if request.resolver_match.url_name == 'login_vendeur' %}active{% endif %}">Vendeur</a>
-    <a href="{% url 'a-propos' %}" class="{% if request.resolver_match.url_name == 'a-propos' %}active{% endif %}">À propos</a>
-    <a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
-
-    <!-- Lien Mon Profil ajouté -->
-    {% if request.session.vendeur %}
-    <a href="{% url 'profil' %}" class="{% if request.resolver_match.url_name == 'profil' %}active{% endif %} profil-link">
-        Mon profil
-    </a>
-    {% endif %}
+  <button id="closeMobileNav" class="icon-btn mobile-nav-close" type="button" aria-label="Fermer"><i class="fas fa-times"></i></button>
+  <a class="nav-pill" href="{% url 'index' %}">Accueil</a>
+  <a class="nav-pill" href="{% url 'index' %}#shop">Catalogue</a>
+  <a class="nav-pill" href="{% url 'promotion' %}">Promotions</a>
+  <a class="nav-pill" href="{% url 'a-propos' %}">A propos</a>
+  <a class="nav-pill" href="{% url 'contact' %}">Contact</a>
+  <a class="nav-pill" href="{% url 'login_vendeur' %}">Espace vendeur</a>
+  {% if request.session.vendeur %}<a class="nav-pill" href="{% url 'vendeur' %}">Mon dashboard</a>{% endif %}
 </nav>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Gestion du menu mobile
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const mobileNav = document.getElementById('mobileNav');
-    const closeMobileNav = document.getElementById('closeMobileNav');
-
-    if (mobileMenuBtn && mobileNav) {
-        mobileMenuBtn.addEventListener('click', function() {
-            mobileNav.classList.add('active');
-        });
-
-        closeMobileNav.addEventListener('click', function() {
-            mobileNav.classList.remove('active');
-        });
-    }
-
-    // Highlight automatique de la page active
-    function highlightActiveNav() {
-        const currentPath = window.location.pathname + window.location.hash;
-        const navLinks = document.querySelectorAll('.main-nav a, .mobile-nav a');
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            const linkHref = link.getAttribute('href');
-
-            // Correspondance exacte ou partielle
-            if (currentPath === linkHref ||
-                (linkHref !== '/#home' && currentPath.startsWith(linkHref.replace('/#', '/'))) ||
-                (currentPath === '/' && linkHref === '/#home')) {
-                link.classList.add('active');
-            }
-
-            // Gestion spéciale pour les URLs Django avec
-            if (linkHref && linkHref.includes('profil') && currentPath.includes('profil')) {
-                link.classList.add('active');
-            }
-        });
-    }
-
-    // Animation du compteur panier
-    function animateCartCount() {
-        const cartCount = document.getElementById('cartCount');
-        if (cartCount) {
-            cartCount.classList.add('update');
-            setTimeout(() => {
-                cartCount.classList.remove('update');
-            }, 300);
-        }
-    }
-
-    // Gestion du changement de thème avec transition
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-        themeToggle.addEventListener('click', function() {
-            document.body.style.transition = 'all 0.3s ease';
-            // Votre logique de changement de thème ici
-        });
-    }
-
-    // Initialisation
-    highlightActiveNav();
-
-    // Re-highlight sur le changement de hash (pour les ancres)
-    window.addEventListener('hashchange', highlightActiveNav);
-
-    // Re-highlight sur le changement de page (pour SPA-like behavior)
-    window.addEventListener('popstate', highlightActiveNav);
-});
-</script>

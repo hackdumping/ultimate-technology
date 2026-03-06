@@ -1,115 +1,36 @@
 {% extends 'mystore_squelette.html' %}
 {% load static %}
-
 {% block content %}
 <section class="hero" id="home">
-      <div>
-        <div id="profilVendeur">
-          <img src="{{ vendeur.logo.url }}" style="width:8rem;height:8rem;border-radius:6rem;box-shadow: var(--shadow);" />
-            <div style="margin-left:0.3rem;padding:1rem" id="profilContent">
-                <h1 style="font-size:1.2rem" translate="no">#{{ vendeur.nom }}</h1>
-                <h4 translate="no" style="margin:0"><a href="https://wa.me/{{ vendeur.tel }}/" style="color:var(--text)" target="_blank">{{ vendeur.tel }}</a></h4>
-                <h4 id="hEmail" translate="no" style="margin:0"><a href="mailto:{{ vendeur.email }}/" style="color:var(--text)" target="_blank">{{ vendeur.email }}</a></h4>
-            </div>
-        </div>
-                  <p style="font-size:0.9rem" >Bienvenue dans notre boutique. Nous avons une selection de meilleurs ordinateurs avec rapport qualité-prix extrèmement satisfaisant</p>
-          <p translate="no" style="font-size:0.9rem">By Ultimate-Technology</p>
-        <div class="cta" id="btnVisiter">
-          <button id="shopNow" class="btn" style="width:12rem">Visiter la boutique</button>
-        </div>
-
-        <div class="features">
-          <div class="spec-badge">Vente</div>
-          <div class="spec-badge">Dépannage</div>
-          <div class="spec-badge">Maintenance</div>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <img src="{% static 'images/hope.gif' %}" alt="Ordinateur moderne" style="max-width:100%;border-radius:10px"/>
-      </div>
-    </section>
-    <a href="#home" class="scroll-btn scroll-up fixed-btn"  title="Remonter en haut">
-        ⬆
-    </a>
-
-    <!-- Controls: category, sort, price -->
-    <div class="controls" id="shop">
-      <div>
-        <label class="small">Catégorie</label>
-        <select id="categoryFilter">
-          <option value="all">Tout</option>
-        </select>
-      </div>
-
-
-<!--
-      <div>
-        <label class="small">Pays</label>
-        <select id="paysFilter">
-          <option value="all">Tout</option>
-        </select>
-      </div>
-
-      <div>
-        <label class="small">Ville</label>
-        <select id="villeFilter">
-          <option value="all">Tout</option>
-        </select>
-      </div>
--->
-      <div>
-        <label class="small">Trier par</label>
-        <select id="sortSelect">
-          <option value="popular">Ajout recent</option>
-          <option value="price-asc">Prix croissant</option>
-          <option value="price-desc">Prix décroissant</option>
-          <option value="name-asc">A → Z</option>
-        </select>
-      </div>
-
-      <div style="flex:1">
-        <label class="small">Rechercher</label>
-        <input id="miniSearch" placeholder="Filtrer noms ou specs" style="width:100%;padding:10px;border-radius:10px;border:1px solid #e6eef2" />
-      </div>
-
-      <div style="margin-left:auto">
-        <label class="small">Prix max</label>
-        <div class="range-wrap"><input id="priceRange" type="range" min="0" max="1000000" step="5000" value="1000000" /></div>
-        <div style="font-size:13px;color:var(--muted)" id="priceLabel">Jusqu'à —</div>
+  <div>
+    <h1>{{ vendeur.nom }}</h1>
+    <p>Bienvenue dans cette boutique partenaire. Explorez les produits, comparez les configurations et commandez rapidement.</p>
+    <div class="hero-cta">
+      <a href="#shop" class="btn">Voir les produits</a>
+      <a href="https://wa.me/{{ vendeur.tel }}" target="_blank" rel="noopener" class="btn whatsapp">Contacter vendeur</a>
+    </div>
+    <div class="hero-tags">
+      <span class="hero-tag">{{ vendeur.ville.nom }}</span>
+      <span class="hero-tag">Livraison {{ vendeur.frais }} XAF</span>
+    </div>
+  </div>
+  <div class="hero-visual partner-hero-visual" aria-hidden="true">
+    <div class="hero-lines"></div>
+    <div class="hero-chip-wrap">
+      <div class="hero-chip partner-logo-card">
+        <img src="{{ vendeur.logo.url }}" alt="{{ vendeur.nom }}">
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- Products grid -->
-    <div class="grid" id="products" aria-live="polite"></div>
+<div class="controls" id="shop">
+  <div><label>Categorie</label><select id="categoryFilter"><option value="all">Toutes</option></select></div>
+  <div><label>Trier</label><select id="sortSelect"><option value="popular">Pertinence</option><option value="price-asc">Prix croissant</option><option value="price-desc">Prix decroissant</option><option value="name-asc">Nom A-Z</option></select></div>
+  <div><label>Recherche</label><input id="miniSearch" placeholder="Rechercher un produit"></div>
+  <div><label>Budget max</label><input id="priceRange" type="range" min="0" max="1000000" step="5000" value="1000000"><div id="priceLabel" style="font-size:.62rem;color:var(--muted);margin-top:.12rem">Jusqu'a -</div></div>
+</div>
 
-    <!-- Product Modal
-    <div id="overlay" class="overlay"></div>
-    <div id="productModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
-      <button id="closeModal" class="close" aria-label="Fermer">✕</button>
-      <div id="modalContent"></div>
-    </div>-->
-
-    <script>
-
-        if (window.history.replaceState) {
-            window.history.replaceState(null, null, window.location.href);
-        }
-
-    // quick handlers
-    document.getElementById('shopNow').addEventListener('click', ()=>{ document.querySelector('#shop').scrollIntoView({behavior:'smooth'})});
-
-        // Afficher/masquer le bouton fixe selon la position
-        window.addEventListener('scroll', function() {
-            const fixedBtn = document.querySelector('.fixed-btn');
-            if (window.scrollY > 500) {
-                fixedBtn.style.display = 'flex';
-            } else {
-                fixedBtn.style.display = 'none';
-            }
-        });
-
-        // Masquer initialement le bouton fixe
-        document.querySelector('.fixed-btn').style.display = 'none';
-    </script>
+<div class="grid" id="products" aria-live="polite"></div>
+<a href="#home" class="scroll-btn">↑</a>
 {% endblock %}

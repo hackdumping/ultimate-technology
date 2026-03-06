@@ -1,45 +1,91 @@
- // Mode sombre
- /*    themeToggle.addEventListener('click',()=>{
-      document.body.classList.toggle('dark');
-      themeToggle.textContent=document.body.classList.contains('dark')?"☀️":"🌙";
+(function () {
+  function byId(id) { return document.getElementById(id); }
+
+  function applyTheme(theme) {
+    const isDark = theme === 'dark';
+    document.body.classList.toggle('dark', isDark);
+    const toggle = byId('themeToggle');
+    if (toggle) {
+      toggle.textContent = isDark ? '☀' : '◐';
+      toggle.setAttribute('aria-label', isDark ? 'Activer mode clair' : 'Activer mode sombre');
+    }
+    localStorage.setItem('ut_theme', theme);
+  }
+
+  function initTheme() {
+    const saved = localStorage.getItem('ut_theme');
+    if (saved === 'dark' || saved === 'light') {
+      applyTheme(saved);
+      return;
+    }
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(prefersDark ? 'dark' : 'light');
+  }
+
+  function initMobileNav() {
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = byId('mobileNav');
+    const closeBtn = byId('closeMobileNav');
+
+    if (mobileBtn && mobileNav) {
+      mobileBtn.addEventListener('click', function () {
+        mobileNav.classList.add('open');
+      });
+    }
+
+    if (closeBtn && mobileNav) {
+      closeBtn.addEventListener('click', function () {
+        mobileNav.classList.remove('open');
+      });
+    }
+
+    document.addEventListener('click', function (event) {
+      if (!mobileNav || !mobileBtn) return;
+      if (!mobileNav.contains(event.target) && !mobileBtn.contains(event.target)) {
+        mobileNav.classList.remove('open');
+      }
     });
-  */
+  }
 
-// Fonctions pour gérer le thème
-function setTheme(theme) {
-  //  document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-    themeToggle.textContent = theme === 'dark' ? "☀️":"🌙";
-    if(localStorage.getItem('theme') == 'dark'){
-        document.body.classList.add('dark');
-    }else{
-        document.body.classList.remove('dark');
+  function initScrollTop() {
+    const scrollBtn = document.querySelector('.scroll-btn');
+    if (!scrollBtn) return;
+
+    window.addEventListener('scroll', function () {
+      scrollBtn.style.display = window.scrollY > 420 ? 'grid' : 'none';
+    });
+  }
+
+  function initPasswordToggles() {
+    document.querySelectorAll('[data-toggle-password]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var inputId = btn.getAttribute('data-toggle-password');
+        var input = document.getElementById(inputId);
+        if (!input) return;
+        var isHidden = input.type === 'password';
+        input.type = isHidden ? 'text' : 'password';
+        var icon = btn.querySelector('i');
+        if (icon) {
+          icon.classList.toggle('fa-eye', !isHidden);
+          icon.classList.toggle('fa-eye-slash', isHidden);
+        }
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    initTheme();
+
+    const toggle = byId('themeToggle');
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        const next = document.body.classList.contains('dark') ? 'light' : 'dark';
+        applyTheme(next);
+      });
     }
-}
 
-function toggleTheme() {
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-}
-
-// Initialisation au chargement de la page
-document.addEventListener('DOMContentLoaded', function() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
-
-    // Événement sur le toggle
-    themeToggle.addEventListener('click', toggleTheme);
-});
-
-// Pour s'assurer que le thème est appliqué immédiatement
-/*(function() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        document.documentElement.setAttribute('data-theme', savedTheme);
-    }
+    initMobileNav();
+    initScrollTop();
+    initPasswordToggles();
+  });
 })();
-*/
-
-
-

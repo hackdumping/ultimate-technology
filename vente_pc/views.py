@@ -12,6 +12,7 @@ from django.conf import settings
 import urllib.parse
 import json
 from django.views.decorators.csrf import csrf_exempt, ensure_csrf_cookie
+from django.views.decorators.cache import cache_page
 from django.core.mail import send_mail, send_mass_mail, EmailMessage
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
@@ -61,7 +62,26 @@ def statut_produit(est_vendue):
         return "EN STOCK"
 
 
+def build_premium_description(produit):
+    raw_description = produit.description or ""
+    product_name = f"{produit.marque.nom} {produit.model}".strip()
+    return {
+        "title": f"{product_name} - Fiche Technique",
+        "summary": raw_description,
+        "full_description": raw_description,
+    }
+
+def products_with_related():
+    return Produit.objects.select_related(
+        'marque',
+        'vendeur',
+        'vendeur__ville',
+        'vendeur__pays',
+    )
+
+
 @csrf_exempt
+@cache_page(60)
 def index(request):
     context = {}
 
@@ -69,7 +89,7 @@ def index(request):
     parsed = urllib.parse.urlparse(request.build_absolute_uri())
     root = urllib.parse.urlunparse((parsed.scheme, parsed.netloc, '', '', '', ''))
 
-    produits = Produit.objects.filter(vendeur__jours__gt=0).all()  #Produit.objects.all()
+    produits = products_with_related().filter(vendeur__jours__gt=0)
 
     list_produits = []
 
@@ -126,9 +146,16 @@ def index(request):
 
                         """
 
+            product_ids = [data[el].get('id') for el in data]
+            product_map = {
+                str(prod.id): prod
+                for prod in products_with_related().filter(id__in=product_ids)
+            }
             produits = []
             for el in data:
-                produit = Produit.objects.filter(id=data[el].get('id')).first()
+                produit = product_map.get(str(data[el].get('id')))
+                if not produit:
+                    continue
 
                 tmp2 = {
                     'id': str(produit.id),
@@ -149,8 +176,12 @@ def index(request):
             liste = regrouper_par_vendeur(produits)
             total = 0
             f = 0
+            vendor_ids = list(liste.keys())
+            vendors_map = {str(v.id): v for v in Vendeur.objects.filter(id__in=vendor_ids)}
             for vendeur_id, produits_vendeur in liste.items():
-                vendeur = Vendeur.objects.get(id=vendeur_id)
+                vendeur = vendors_map.get(str(vendeur_id))
+                if not vendeur:
+                    continue
                 messages = ""
                 i = 0
                 t_promo = 0
@@ -244,7 +275,7 @@ def index(request):
     return render(request, 'index.html', context=context)
 
 def details(request, id):
-    produit = Produit.objects.filter(id=id).first()
+    produit = products_with_related().filter(id=id).first()
     context = {}
     context['produit'] = produit
     message = f"""
@@ -262,6 +293,8 @@ j'aimerais acheté ce produit :
     context['ram'] = produit.ram
     context['graphic'] = produit.graphic
     context['stockage'] = produit.stockage
+    context['description_premium'] = build_premium_description(produit)
+    context['product_link'] = request.build_absolute_uri()
     parsed = urllib.parse.urlparse(request.build_absolute_uri())
     root = urllib.parse.urlunparse((parsed.scheme, parsed.netloc, '', '', '', ''))
 
@@ -274,7 +307,7 @@ j'aimerais acheté ce produit :
 def details_vendeur(request, id):
     if not request.session['vendeur']:
         return redirect('login_vendeur')
-    produit = Produit.objects.filter(id=id).first()
+    produit = products_with_related().filter(id=id).first()
     context = {}
     context['produit'] = produit
     message = f"""
@@ -288,6 +321,8 @@ j'aimerais acheté ce produit :
     context['test_utl_detail'] = f"{produit.id}" in str(request.build_absolute_uri())
     context['model'] = produit.model
     context['marque'] = produit.marque
+    context['description_premium'] = build_premium_description(produit)
+    context['product_link'] = request.build_absolute_uri()
     parsed = urllib.parse.urlparse(request.build_absolute_uri())
     root = urllib.parse.urlunparse((parsed.scheme, parsed.netloc, '', '', '', ''))
 
@@ -296,8 +331,9 @@ j'aimerais acheté ce produit :
     return render(request, 'details_vendeur.html', context=context)
 
 
+@cache_page(60)
 def promotions(request):
-    produits = Produit.objects.filter(est_promo=True, vendeur__jours__gt=0).all()
+    produits = products_with_related().filter(est_promo=True, vendeur__jours__gt=0)
     context = {}
     list_produits = []
     parsed = urllib.parse.urlparse(request.build_absolute_uri())
@@ -340,6 +376,7 @@ j'aimerais acheté ce produit :
 
     return render(request, 'promotions.html', context=context)
 
+@cache_page(300)
 def a_propos(request):
     staffs = Staff.objects.all()
     context = {}
@@ -593,7 +630,7 @@ def index_vendeur(request):
                 return redirect('login_vendeur')
 
         # Récupérer les produits
-        produits = Produit.objects.filter(vendeur=vdr)
+        produits = products_with_related().filter(vendeur=vdr)
         context['produits'] = produits
         context['vendeur'] = vdr
 
@@ -823,7 +860,7 @@ def mystore_index(request, id):
     parsed = urllib.parse.urlparse(request.build_absolute_uri())
     root = urllib.parse.urlunparse((parsed.scheme, parsed.netloc, '', '', '', ''))
     context['root'] = root
-    produits = Produit.objects.filter(vendeur_id=id)
+    produits = products_with_related().filter(vendeur_id=id)
 
     list_produits = []
 
@@ -882,9 +919,16 @@ def mystore_index(request, id):
             i = 0
             t_promo = 0
             t_reel = 0
+            product_ids = [data[el].get('id') for el in data]
+            product_map = {
+                str(prod.id): prod
+                for prod in products_with_related().filter(id__in=product_ids)
+            }
             produits = []
             for el in data:
-                produit = Produit.objects.filter(id=data[el].get('id')).first()
+                produit = product_map.get(str(data[el].get('id')))
+                if not produit:
+                    continue
 
                 tmp2 = {
                     'id': str(produit.id),
@@ -984,13 +1028,14 @@ def mystore_index(request, id):
 
     return render(request, 'mystore_index.html', context=context)
 
+@cache_page(60)
 def mystore_promotion(request, id):
     vendeur = Vendeur.objects.get(id=id)
     if vendeur.forfait.nom == "Standard":
         return redirect("index")
     if vendeur.jours == 0:
         return redirect("error_404")
-    produits = Produit.objects.filter(vendeur_id=id, est_promo=True).all()
+    produits = products_with_related().filter(vendeur_id=id, est_promo=True)
     context = {}
     list_produits = []
     parsed = urllib.parse.urlparse(request.build_absolute_uri())
@@ -1042,7 +1087,7 @@ def mystore_details(request, id, id2):
         return redirect("index")
     if vendeur.jours == 0:
         return redirect("error_404")
-    produit = Produit.objects.get(id=id2)
+    produit = products_with_related().get(id=id2)
     context = {}
     context['produit'] = produit
     message = f"""
@@ -1060,6 +1105,8 @@ def mystore_details(request, id, id2):
     context['ram'] = produit.ram
     context['graphic'] = produit.graphic
     context['stockage'] = produit.stockage
+    context['description_premium'] = build_premium_description(produit)
+    context['product_link'] = request.build_absolute_uri()
 
     parsed = urllib.parse.urlparse(request.build_absolute_uri())
     root = urllib.parse.urlunparse((parsed.scheme, parsed.netloc, '', '', '', ''))
