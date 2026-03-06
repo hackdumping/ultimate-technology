@@ -3,7 +3,7 @@ echo "[+]============== Déploiement en cours..."
 
 # Installer les dépendances
 echo "[+]============== Installation des dépendances..."
-python3.12 -m pip install -r requirements.txt
+python3.12 -m pip install -r requirements.txt --break-system-packages
 
 echo "[+]============== Application des migrations..."
 python3.12 manage.py makemigrations --noinput
