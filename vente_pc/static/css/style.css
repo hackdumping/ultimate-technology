@@ -417,7 +417,7 @@ img { max-width: 100%; display: block; }
 .grid {
   margin-top: .85rem;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 3fr));
   gap: .55rem;
 }
 .card {
