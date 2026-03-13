@@ -420,6 +420,9 @@ img { max-width: 100%; display: block; }
   grid-template-columns: repeat(5, minmax(0, 3fr));
   gap: .55rem;
 }
+.vendor-grid {
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
 .card {
   border: 1px solid var(--line);
   border-radius: 13px;
@@ -427,13 +430,25 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
   box-shadow: var(--shadow);
 }
+.card.ghost-card {
+  visibility: hidden;
+  pointer-events: none;
+}
 .card-media {
   position: relative;
   aspect-ratio: 4/3;
   border-bottom: 1px solid var(--line);
   background: var(--surface-soft);
+  display: grid;
+  place-items: center;
 }
-.card-media img { width: 100%; height: 100%; object-fit: cover; }
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
 .badge-promo {
   position: absolute;
   top: .36rem;
@@ -978,6 +993,7 @@ body.dark footer { background: linear-gradient(140deg, #070d1f, #091129 58%, #07
   .brand-sub { display:none; }
   .controls { grid-template-columns: 1fr; }
   .grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .vendor-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .card-actions { grid-template-columns: 1fr; }
   .card-actions .whatsapp .wa-icon { display: none; }
   .card-actions .whatsapp .wa-text { display: inline; font-size: .56rem; line-height: 1; font-weight: 800; }
@@ -988,4 +1004,8 @@ body.dark footer { background: linear-gradient(140deg, #070d1f, #091129 58%, #07
   .partner-logo-card img { border-radius: 10px; }
   .footer-top { grid-template-columns: 1fr; }
   .hero-visual { min-height: 170px; }
+}
+@media (max-width: 280px) {
+  .grid,
+  .vendor-grid { grid-template-columns: 1fr; }
 }

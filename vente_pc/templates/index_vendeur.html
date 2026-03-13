@@ -34,31 +34,167 @@
 
 <section class="section-block">
   <h2 class="section-title">Produits publies</h2>
-  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(190px,1fr));margin-top:.65rem">
-    {% for p in produits %}
-    <article class="card">
-      <div class="card-media">
-        <a href="{% url 'detail_vendeur' id=p.id %}">
-          <img src="{{ p.image }}" alt="{{ p.marque }} {{ p.model }}">
-        </a>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">{{ p.marque }} {{ p.model }}</h3>
-        <p class="card-specs">{{ p.cpu }} • {{ p.ram }} • {{ p.stockage }}</p>
-        <div class="card-price">{{ p.nouveau_prix }} XAF</div>
-        <div class="card-actions" style="grid-template-columns:1fr 1fr;margin-top:.25rem">
-          <a class="btn ghost" href="{% url 'detail_vendeur' id=p.id %}">Voir</a>
-          <a class="btn" href="{% url 'editer_produit' id=p.id %}">Editer</a>
-        </div>
-      </div>
-    </article>
-    {% empty %}
-    <div class="card" style="padding:.8rem">Aucun produit disponible.</div>
-    {% endfor %}
+  <div class="controls" id="shop" style="margin-top:.65rem">
+    <div>
+      <label>Categorie</label>
+      <select id="categoryFilter"><option value="all">Toutes</option></select>
+    </div>
+    <div>
+      <label>Pays</label>
+      <select id="countryFilter"><option value="all">Tous</option></select>
+    </div>
+    <div>
+      <label>Ville</label>
+      <select id="cityFilter"><option value="all">Toutes</option></select>
+    </div>
+    <div>
+      <label>Trier</label>
+      <select id="sortSelect">
+        <option value="popular">Pertinence</option>
+        <option value="price-asc">Prix croissant</option>
+        <option value="price-desc">Prix decroissant</option>
+        <option value="name-asc">Nom A-Z</option>
+      </select>
+    </div>
+    <div>
+      <label>Recherche</label>
+      <input id="miniSearch" placeholder="Marque, modele, config">
+    </div>
+    <div>
+      <label>Budget max</label>
+      <input id="priceRange" type="range" min="0" max="1000000" step="5000" value="1000000">
+      <div id="priceLabel" style="font-size:.62rem;color:var(--muted);margin-top:.12rem">Jusqu'a -</div>
+    </div>
   </div>
+
+  <div class="grid vendor-grid" id="products" aria-live="polite" style="margin-top:.65rem"></div>
 </section>
 
 <script>
+  (function () {
+    const money = (n) => new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'XAF', maximumFractionDigits: 0 }).format(Number(n || 0));
+    const productsRaw = {{ produits|default:'[]'|safe }};
+    const PRODUCTS = (productsRaw || []).map((el) => ({
+      id: el.id,
+      name: `${el.marque} ${el.model}`,
+      brand: el.marque,
+      price: Number(el.nouveau_prix || 0),
+      oldPrice: Number(el.ancien_prix || 0),
+      promo: Number(el.prix_promo || 0),
+      sold: String(el.est_vendue) === 'True',
+      image: el.image,
+      cpu: el.cpu,
+      ram: el.ram,
+      stockage: el.stockage,
+      graphic: el.graphic,
+      country: el.pays,
+      city: el.ville
+    }));
+
+    const listEl = document.getElementById('products');
+    const categoryEl = document.getElementById('categoryFilter');
+    const countryEl = document.getElementById('countryFilter');
+    const cityEl = document.getElementById('cityFilter');
+    const sortEl = document.getElementById('sortSelect');
+    const rangeEl = document.getElementById('priceRange');
+    const rangeLabel = document.getElementById('priceLabel');
+    const searchMini = document.getElementById('miniSearch');
+
+    let filtered = PRODUCTS.slice();
+
+    function finalPrice(p) { return p.promo > 0 ? p.promo : p.price; }
+    function detailUrl(p) { return `/vendeur/details/${p.id}/`; }
+    function editUrl(p) { return `/vendeur/editer/${p.id}/`; }
+
+    function initFilters() {
+      if (categoryEl) [...new Set(PRODUCTS.map((p) => p.brand))].sort().forEach((v) => categoryEl.insertAdjacentHTML('beforeend', `<option value="${v}">${v}</option>`));
+      if (countryEl) [...new Set(PRODUCTS.map((p) => p.country))].sort().forEach((v) => countryEl.insertAdjacentHTML('beforeend', `<option value="${v}">${v}</option>`));
+      if (cityEl) [...new Set(PRODUCTS.map((p) => p.city))].sort().forEach((v) => cityEl.insertAdjacentHTML('beforeend', `<option value="${v}">${v}</option>`));
+      if (rangeEl && PRODUCTS.length) {
+        const max = Math.max(...PRODUCTS.map((p) => finalPrice(p)));
+        rangeEl.max = String(max);
+        rangeEl.value = String(max);
+        if (rangeLabel) rangeLabel.textContent = `Jusqu'a ${money(max)}`;
+      }
+    }
+
+    function renderProducts(items) {
+      if (!listEl) return;
+      if (!items.length) {
+        listEl.innerHTML = '<div class="card" style="padding:.8rem">Aucun produit disponible.</div>';
+        return;
+      }
+      const ghostCard = () => `
+        <article class="card ghost-card" aria-hidden="true">
+          <div class="card-media"></div>
+          <div class="card-body">
+            <h3 class="card-title">&nbsp;</h3>
+            <p class="card-specs">&nbsp;</p>
+            <div class="card-price">&nbsp;</div>
+            <div class="card-price-old">&nbsp;</div>
+            <div class="card-meta">&nbsp;</div>
+            <div class="card-actions" style="grid-template-columns:1fr 1fr;margin-top:.25rem">
+              <span class="btn ghost">&nbsp;</span>
+              <span class="btn">&nbsp;</span>
+            </div>
+          </div>
+        </article>
+      `;
+      const ghostCount = Math.max(0, PRODUCTS.length - items.length);
+      listEl.innerHTML = items.map((p) => `
+        <article class="card" data-id="${p.id}">
+          <div class="card-media">
+            ${p.promo > 0 ? '<span class="badge-promo">Promo</span>' : ''}
+            <a href="${detailUrl(p)}">
+              <img loading="lazy" src="${p.image}" alt="${p.name}">
+            </a>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">${p.name}</h3>
+            <p class="card-specs">${p.cpu} • ${p.ram} • ${p.stockage}</p>
+            <div class="card-price">${money(finalPrice(p))}</div>
+            <div class="card-price-old">${p.promo > 0 ? money(p.price) : (p.oldPrice ? money(p.oldPrice) : '')}</div>
+            <div class="card-meta">${p.sold ? 'En rupture' : 'En stock'} • ${p.country || ''} ${p.city || ''}</div>
+            <div class="card-actions" style="grid-template-columns:1fr 1fr;margin-top:.25rem">
+              <a class="btn ghost" href="${detailUrl(p)}">Voir</a>
+              <a class="btn" href="${editUrl(p)}">Editer</a>
+            </div>
+          </div>
+        </article>
+      `).join('') + Array.from({ length: ghostCount }, ghostCard).join('');
+    }
+
+    function applyFilters() {
+      const q = (searchMini && searchMini.value || '').toLowerCase().trim();
+      const brand = categoryEl ? categoryEl.value : 'all';
+      const country = countryEl ? countryEl.value : 'all';
+      const city = cityEl ? cityEl.value : 'all';
+      const max = rangeEl ? Number(rangeEl.value || 0) : Number.MAX_SAFE_INTEGER;
+
+      filtered = PRODUCTS.filter((p) => {
+        if (brand !== 'all' && p.brand !== brand) return false;
+        if (country !== 'all' && p.country !== country) return false;
+        if (city !== 'all' && p.city !== city) return false;
+        if (finalPrice(p) > max) return false;
+        if (!q) return true;
+        return (`${p.name} ${p.cpu} ${p.ram} ${p.stockage} ${p.graphic}`).toLowerCase().includes(q);
+      });
+
+      const sort = sortEl ? sortEl.value : 'popular';
+      if (sort === 'price-asc') filtered.sort((a, b) => finalPrice(a) - finalPrice(b));
+      if (sort === 'price-desc') filtered.sort((a, b) => finalPrice(b) - finalPrice(a));
+      if (sort === 'name-asc') filtered.sort((a, b) => a.name.localeCompare(b.name));
+      renderProducts(filtered);
+    }
+
+    initFilters();
+    applyFilters();
+    [categoryEl, countryEl, cityEl, sortEl, rangeEl, searchMini].filter(Boolean).forEach((el) => {
+      const evt = el === searchMini ? 'input' : 'change';
+      el.addEventListener(evt, applyFilters);
+    });
+  })();
+
   const cp = document.getElementById('copyStoreLink');
   if (cp) {
     cp.addEventListener('click', () => {
