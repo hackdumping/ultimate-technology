@@ -124,23 +124,6 @@
         listEl.innerHTML = '<div class="card" style="padding:.8rem">Aucun produit disponible.</div>';
         return;
       }
-      const ghostCard = () => `
-        <article class="card ghost-card" aria-hidden="true">
-          <div class="card-media"></div>
-          <div class="card-body">
-            <h3 class="card-title">&nbsp;</h3>
-            <p class="card-specs">&nbsp;</p>
-            <div class="card-price">&nbsp;</div>
-            <div class="card-price-old">&nbsp;</div>
-            <div class="card-meta">&nbsp;</div>
-            <div class="card-actions" style="grid-template-columns:1fr 1fr;margin-top:.25rem">
-              <span class="btn ghost">&nbsp;</span>
-              <span class="btn">&nbsp;</span>
-            </div>
-          </div>
-        </article>
-      `;
-      const ghostCount = Math.max(0, PRODUCTS.length - items.length);
       listEl.innerHTML = items.map((p) => `
         <article class="card" data-id="${p.id}">
           <div class="card-media">
@@ -161,7 +144,7 @@
             </div>
           </div>
         </article>
-      `).join('') + Array.from({ length: ghostCount }, ghostCard).join('');
+      `).join('');
     }
 
     function applyFilters() {
@@ -193,6 +176,11 @@
       const evt = el === searchMini ? 'input' : 'change';
       el.addEventListener(evt, applyFilters);
     });
+    if (rangeEl && rangeLabel) {
+      rangeEl.addEventListener('input', () => {
+        rangeLabel.textContent = `Jusqu'a ${money(rangeEl.value)}`;
+      });
+    }
   })();
 
   const cp = document.getElementById('copyStoreLink');
