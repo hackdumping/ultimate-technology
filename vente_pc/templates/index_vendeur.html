@@ -27,8 +27,13 @@
     <form method="POST" style="margin-top:.45rem">{% csrf_token %}<button class="btn ghost" type="submit">Se deconnecter</button></form>
   </div>
 
-  <div class="soft-card" style="padding:.5rem">
-    <img src="{{ vendeur.logo.url }}" alt="{{ vendeur.nom }}" style="border-radius:12px;border:1px solid var(--line);max-height:300px;object-fit:cover;width:100%">
+  <div class="hero-visual" aria-hidden="true">
+    <div class="hero-lines"></div>
+    <div class="hero-chip-wrap">
+      <div class="hero-gif-frame vendor-logo-square">
+        <img class="hero-gif vendor-logo-img" src="{{ vendeur.logo.url }}" alt="{{ vendeur.nom }}">
+      </div>
+    </div>
   </div>
 </section>
 
@@ -67,7 +72,7 @@
     </div>
   </div>
 
-  <div class="grid vendor-grid" id="products" aria-live="polite" style="margin-top:.65rem"></div>
+  <div class="grid" id="products" aria-live="polite" style="margin-top:.65rem"></div>
 </section>
 
 <script>
